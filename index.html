@@ -241,41 +241,41 @@
             <div class="swiper consequent-slider">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide consequent">
-                        <div class="consequent__bg"  style="background-image: url(assets/img/img-slide6.jpg);"></div>
+                        <div class="consequent__bg" style="background-image: url(assets/img/img-slide6.jpg);"></div>
                         <div class="consequent__text">
                             Погіршується пам’ять, увага
                             і здатність до навчання
                         </div>
                     </div>
                     <div class="swiper-slide consequent">
-                        <div class="consequent__bg"  style="background-image: url(assets/img/img-slide1.jpg);"></div>
+                        <div class="consequent__bg" style="background-image: url(assets/img/img-slide1.jpg);"></div>
                         <div class="consequent__text">
                             Погіршується травлення і прогресують захворювання шлунковo-кишкового тракту
                             (гастрит, виразкова хвороба і т.п.)
                         </div>
                     </div>
                     <div class="swiper-slide consequent">
-                        <div class="consequent__bg"  style="background-image: url(assets/img/img-slide2.jpg);"></div>
+                        <div class="consequent__bg" style="background-image: url(assets/img/img-slide2.jpg);"></div>
                         <div class="consequent__text">
                             Порушується робота ендокринної системи
                             (збільшення чи втрата ваги, цукровий діабет)
                         </div>
                     </div>
                     <div class="swiper-slide consequent">
-                    <div class="consequent__bg"  style="background-image: url(assets/img/img-slide3.jpg);"></div>
+                        <div class="consequent__bg" style="background-image: url(assets/img/img-slide3.jpg);"></div>
                         <div class="consequent__text">
                             Розвивається безсоння, невротичні розлади і депресія
                         </div>
                     </div>
 
                     <div class="swiper-slide consequent">
-                        <div class="consequent__bg"  style="background-image: url(assets/img/img-slide4.jpg);"></div>
+                        <div class="consequent__bg" style="background-image: url(assets/img/img-slide4.jpg);"></div>
                         <div class="consequent__text">
                             Знижується імунітет
                         </div>
                     </div>
                     <div class="swiper-slide consequent">
-                        <div class="consequent__bg"  style="background-image: url(assets/img/img-slide5.jpg);"></div>
+                        <div class="consequent__bg" style="background-image: url(assets/img/img-slide5.jpg);"></div>
                         <div class="consequent__text">
                             Збільшується ризик розвитку серцево - судинних захворювань
                             (інфаркт міокарда, підвищення артеріального тиску, атеросклероз)
@@ -403,42 +403,44 @@
                     </span>
                     </a>
                 </div>
-                <div id="geo_wgt"
-                     style="padding: 2px; margin: 0 auto; width: 100%; zoom: 50%;"
-                     data-proj="milistan">
-                    <style>#tabs::after {
-                        width: 100%
-                    }</style>
-                    <script src="https://geoapteka.ua/geowidget/loader/geowidget.min.js?v=1601386184990"
-                            type="text/javascript"></script>
-                    <script type="text/javascript">window.params = {
-                        mapNodeID: 'parent-map',
-                        storesNodeID: 'stores',
-                        tabsNodeID: 'tabs',
-                        cartNodeID: 'cart',
-                        drugNodeID: 'selected-drug',
-                        initTab: 'map',
-                        pathToGeowidget: 'https://geoapteka.ua/geowidget/dist/',
-                        agent: 'GeoAPT',
-                        lang: "ua",
-                        productId: "363274",
-                        drugId: "678979",
-                        compendiumUrl: "https://compendium.com.ua/dec/266486/",
-                        mainColor: "#A00067"
-                    };
-                    initGeoapteka(window.params).then(function (geowidget) {
-                        window.geowidget = geowidget;
-                    });
+                <div class="wrap-wgt">
+                    <div id="geo_wgt"
+                         style="padding: 2px; margin: 0 auto; width: 100%; zoom: 50%;"
+                         data-proj="milistan">
+                        <style>#tabs::after {
+                            width: 100%
+                        }</style>
+                        <script src="https://geoapteka.ua/geowidget/loader/geowidget.min.js?v=1601386184990"
+                                type="text/javascript"></script>
+                        <script type="text/javascript">window.params = {
+                            mapNodeID: 'parent-map',
+                            storesNodeID: 'stores',
+                            tabsNodeID: 'tabs',
+                            cartNodeID: 'cart',
+                            drugNodeID: 'selected-drug',
+                            initTab: 'map',
+                            pathToGeowidget: 'https://geoapteka.ua/geowidget/dist/',
+                            agent: 'GeoAPT',
+                            lang: "ua",
+                            productId: "363274",
+                            drugId: "678979",
+                            compendiumUrl: "https://compendium.com.ua/dec/266486/",
+                            mainColor: "#A00067"
+                        };
+                        initGeoapteka(window.params).then(function (geowidget) {
+                            window.geowidget = geowidget;
+                        });
 
-                    </script>
-                    <div id="title"></div>
-                    <div id="selected-drug"></div>
-                    <div id="tabs"></div>
-                    <div id="parent-map">
-                        <div id="map"></div>
+                        </script>
+                        <div id="title"></div>
+                        <div id="selected-drug"></div>
+                        <div id="tabs"></div>
+                        <div id="parent-map">
+                            <div id="map"></div>
+                        </div>
+                        <div id="stores"></div>
+                        <div id="cart"></div>
                     </div>
-                    <div id="stores"></div>
-                    <div id="cart"></div>
                 </div>
             </div>
         </section>

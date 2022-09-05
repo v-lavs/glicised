@@ -2078,8 +2078,10 @@ sup {
   margin-bottom: 0;
 }
 
-.section-buy #geo_wgt {
+.section-buy .wrap-wgt {
+  width: 100%;
   height: 450px;
+  overflow: hidden;
 }
 
 .section-composition .section__title {
