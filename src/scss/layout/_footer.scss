@@ -1,0 +1,151 @@
+.footer {
+  font-size: 16px;
+  line-height: 1.5;
+  font-feature-settings: 'salt' on, 'liga' off;
+  color: #3B4040;
+  padding-bottom: 15vh;
+  background-color: $light;
+  //flex: 0 0 auto;
+
+  &__logo {
+    display: inline-block;
+    max-width: 183px;
+    height: auto;
+  }
+
+  &__logo-img {
+    width: 100%;
+  }
+
+  &_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0 20px;
+  }
+
+  &_bottom {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0 67px;
+    border-top: 1px solid rgba(51, 64, 64, .1);
+  }
+
+  &__item {
+    position: relative;
+    padding: 0 20px;
+
+    &:after {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 1px;
+      height: 25px;
+      background-color: #3B4040;
+      opacity: .2;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &:last-child:after {
+      display: none;
+    }
+
+    a:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  .container {
+    position: relative;
+  }
+
+  .phone {
+    background-color: $blue;
+    &:hover,
+    &:focus{
+      background-color: transparent;
+      svg path{
+        fill: $blue;
+      }
+    }
+  }
+}
+
+.disclaimer {
+  position: fixed;
+  display: flex;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 15vh;
+  z-index: 500;
+
+  &:before {
+    position: absolute;
+    content: '';
+    display: block;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    background: rgba(255, 255, 255, .4);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+  }
+}
+
+@include respond-to($sm) {
+  .footer {
+    &__logo {
+      max-width: 129px;
+    }
+  }
+  .disclaimer {
+    height: 14vh;
+  }
+}
+
+@include respond-to($xs) {
+  .footer {
+    &_top {
+      flex-wrap: wrap;
+    }
+
+    &_bottom {
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 5px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &:before {
+        display: none;
+      }
+    }
+
+    .social-bar__item {
+      margin: 0 20px 0 0;
+
+    }
+  }
+}
+
+

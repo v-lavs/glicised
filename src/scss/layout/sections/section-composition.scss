@@ -1,0 +1,34 @@
+.section-composition {
+  .section__title {
+    max-width: 754px;
+    text-align: center;
+    margin: 0 auto 66px;
+  }
+  .links-list{
+    display: flex;
+    justify-content: space-between;
+
+   &__item{
+     width: 49%;
+     padding: 20px 40px;
+     background: #F4FAFE;
+     border-radius: 10px;
+   }
+  }
+}
+
+@include respond-to($md) {
+
+}
+
+@include respond-to($sm) {
+
+}
+
+@include respond-to($xs) {
+
+}
+
+@include respond-to($xxs) {
+
+}

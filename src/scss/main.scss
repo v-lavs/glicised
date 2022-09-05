@@ -1,0 +1,35 @@
+@import 'utils/variables';
+@import 'utils/mixins';
+
+@import '../lib/swiper/swiper-bundle.min';
+
+@import 'base/reset';
+@import 'base/base';
+@import 'base/typography';
+@import 'base/anim';
+
+@import 'components/button';
+@import 'components/nav';
+@import 'components/slider';
+@import 'components/accordion';
+@import 'components/popup';
+
+
+@import 'layout/layout';
+@import 'layout/grid';
+@import 'layout/header';
+@import 'layout/footer';
+
+@import 'layout/sections/section-banner';
+@import 'layout/sections/section-benefits';
+@import 'layout/sections/section-effects';
+@import 'layout/sections/section-application';
+@import 'layout/sections/section-buy';
+@import 'layout/sections/section-composition';
+@import 'layout/sections/section-indication';
+
+
+
+@import 'pages/blog';
+@import 'pages/glicysed';
+@import 'pages/quiz';

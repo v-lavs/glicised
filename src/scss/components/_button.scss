@@ -1,0 +1,47 @@
+.btn {
+  display: inline-flex;
+  cursor: pointer;
+  line-height: 1;
+  transition: .5s;
+  align-items: center;
+  &__icon{
+    display: inline-block;
+    margin-left: 20px;
+    width: 24px;
+    height: 24px;
+  }
+  &_main {
+    text-align: center;
+    font-family: $main-font;
+    font-weight: 700;
+    font-size: 24px;
+    border: 1px solid $blue;
+    padding: 20px 40px;
+    text-transform: uppercase;
+  }
+  &_dark{
+    background-color: $blue;
+    color:  $light;
+    &:hover,
+    &:focus{
+      background-color: #ffffff;
+      color: $blue;
+    }
+  }
+  &_light{
+    background-color: #ffffff;
+    color: $blue;
+    &:hover,
+    &:focus{
+      color: #ffffff;
+      background-color: $blue;
+    }
+  }
+}
+
+
+
+
+
+
+

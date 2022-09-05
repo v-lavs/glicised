@@ -1,0 +1,32 @@
+.section-buy {
+  padding-bottom: 56px;
+  .section__block-btns {
+    margin-bottom: 40px;
+
+    .btn {
+      margin-right: 40px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  #geo_wgt {
+    height: 450px;
+  }
+}
+
+@include respond-to($md) {
+  .section-buy {
+
+  }
+}
+
+@include respond-to($xs) {
+
+}
+
+@include respond-to($xxs) {
+
+}
+

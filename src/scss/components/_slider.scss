@@ -1,0 +1,28 @@
+
+//swiper-pagination
+
+.swiper-pagination-bullets {
+  z-index: 10;
+  bottom: -30px;
+  display: none!important;
+}
+
+.swiper-pagination-bullets .swiper-pagination-bullet{
+  position: relative;
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+  margin: 0 3px!important;
+  border: 1px solid $blue;
+  &.swiper-pagination-bullet-active{
+    background-color: $blue;
+  }
+}
+
+@include respond-to($sm){
+  .swiper-pagination-bullets {
+    display: inline-block!important;
+  }
+}
+
+

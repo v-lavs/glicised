@@ -1,0 +1,22 @@
+
+.container {
+  width: 100%;
+  max-width: 1230px;
+  padding: 0 15px;
+  margin: 0 auto;
+
+  @include respond-to($md) {
+    max-width: 1020px;
+
+  }
+  @include respond-to($sm) {
+    max-width: 760px;
+  }
+  @include respond-to($xs) {
+    max-width: 580px;
+
+  }
+  @include respond-to($xxs) {
+    max-width: 100%;
+  }
+}

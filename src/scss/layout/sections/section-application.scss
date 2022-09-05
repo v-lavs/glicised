@@ -1,0 +1,70 @@
+.section-application {
+  &__thumb {
+    position: absolute;
+    left: 0;
+    width: 50vw;
+    top: 0;
+    height: 100%;
+    //min-height: 633px;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 0 0 0 20px;
+    overflow: hidden;
+  }
+
+  &__content {
+    padding-right: 102px;
+  }
+
+  .section__title {
+    margin-bottom: 40px;
+  }
+
+  .section__text {
+    margin-bottom: 60px;
+  }
+
+  .text_bold{
+    color: $blue;
+  }
+
+  .text_md {
+    font-weight: 700;
+    line-height: 1.2;
+    color: $blue;
+    margin-bottom: 10px;
+  }
+
+  .card {
+    margin-bottom: 20px;
+    padding-left: 20px;
+    border: 1px solid #DCEDFF;
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &__body {
+      padding: 10px 5px 10px 43px;
+    }
+
+    &__icon {
+      width: 79px;
+      height: 79px;
+    }
+  }
+
+  .col_5{
+    position: relative;
+    min-height: 633px;
+  }
+}
+
+@include respond-to($md) {
+
+}
+
+@include respond-to($xs) {
+
+}

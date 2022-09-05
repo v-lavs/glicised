@@ -1,0 +1,102 @@
+.section-banner {
+  padding-top: 0;
+  .col_6 {
+    min-height: 742px;
+  }
+
+  &__slogan {
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 84px;
+    color: #679EE6;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #DCEDFF;
+  }
+  &__content,
+  &__thumb{
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__content {
+    padding-right: 92px;
+    padding-top: 70px;
+    padding-bottom: 50px;
+  }
+
+  &__thumb {
+    position: absolute;
+    left: 20px;
+    width: 50vw;
+    max-width: 960px;
+    top: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    justify-content: flex-end;
+    padding-left: 152px;
+
+    .btn {
+      padding: 28px 108px;
+      border-radius: 10px 0 0 0;
+      margin-left: auto;
+    }
+
+    .btn__icon {
+      width: 88px;
+      height: 32px;
+      margin-left: 22px;
+    }
+  }
+
+  &__img {
+    margin-bottom: 75px;
+  }
+
+  .section__block-btns {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+  }
+
+  .card {
+    margin-bottom: 40px;
+    font-weight: 500;
+    font-size: 28px;
+
+    &__icon {
+      height: 64px;
+      width: 60px;
+    }
+
+    &__body {
+      padding: 5px 10px 5px 32px;
+    }
+  }
+}
+
+
+@include respond-to($lg) {
+
+}
+
+@include respond-to($md) {
+  .section-banner {
+
+  }
+}
+
+@include respond-to($xs) {
+  .section-banner {
+
+
+  }
+}
+
+@include respond-to($xxs) {
+  .section-banner {
+
+  }
+}
