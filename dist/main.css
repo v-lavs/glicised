@@ -868,10 +868,10 @@ body {
 
 .card {
   display: flex;
-  align-items: center;
 }
 
 .card__icon {
+  margin-top: 10px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -1151,6 +1151,18 @@ sup {
 .btn_light:focus {
   color: #ffffff;
   background-color: #61A1F4;
+}
+
+.btn_warm {
+  background-color: #FAB05C;
+  border-color: #FAB05C;
+  color: #F4FAFE;
+}
+
+.btn_warm:hover,
+.btn_warm:focus {
+  background-color: #ffffff;
+  color: #FAB05C;
 }
 
 .menu {
@@ -1631,7 +1643,7 @@ sup {
 
 .header__logo-site {
   display: block;
-  width: 256px;
+  width: 183px;
 }
 
 .header .container {
@@ -1783,46 +1795,12 @@ sup {
   border-bottom: 1px solid #DCEDFF;
 }
 
-.section-banner__content,
-.section-banner__thumb {
+.section-banner__content {
   display: flex;
   flex-direction: column;
-}
-
-.section-banner__content {
   padding-right: 92px;
   padding-top: 70px;
   padding-bottom: 50px;
-}
-
-.section-banner__thumb {
-  position: absolute;
-  left: 20px;
-  width: 50vw;
-  max-width: 960px;
-  top: 0;
-  bottom: 0;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  justify-content: flex-end;
-  padding-left: 152px;
-}
-
-.section-banner__thumb .btn {
-  padding: 28px 108px;
-  border-radius: 10px 0 0 0;
-  margin-left: auto;
-}
-
-.section-banner__thumb .btn__icon {
-  width: 88px;
-  height: 32px;
-  margin-left: 22px;
-}
-
-.section-banner__img {
-  margin-bottom: 75px;
 }
 
 .section-banner .section__block-btns {
@@ -1831,19 +1809,62 @@ sup {
   margin-top: auto;
 }
 
-.section-banner .card {
+.section-banner .wrap-slider {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50vw;
+  max-width: 960px;
+  bottom: 0;
+}
+
+.section-banner .wrap-slider .btn {
+  position: absolute;
+  bottom: 46px;
+  right: 55px;
+  z-index: 1;
+}
+
+.section-banner .wrap-slider .btn__icon {
+  width: 88px;
+  height: 32px;
+  margin-left: 22px;
+}
+
+.card {
   margin-bottom: 40px;
   font-weight: 500;
   font-size: 28px;
 }
 
-.section-banner .card__icon {
+.card__icon {
   height: 64px;
   width: 60px;
 }
 
-.section-banner .card__body {
+.card__body {
   padding: 5px 10px 5px 32px;
+}
+
+.banner-slider {
+  height: 100%;
+}
+
+.banner-slider .swiper-slide-active > .banner-slider__bg {
+  transform: scale(1.2) !important;
+  transition: .5s;
+}
+
+.banner-slider__slide-bg {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(1);
+  height: 100%;
+  width: 100%;
 }
 
 .section-benefits {
@@ -1873,7 +1894,6 @@ sup {
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 0;
   grid-row-gap: 0;
-  border-radius: 0 0 20px 0;
   overflow: hidden;
 }
 
@@ -1940,11 +1960,12 @@ sup {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 274px;
-  height: 270px;
+  max-width: 274px;
+  width: 14%;
+  height: 14vw;
   z-index: 1;
   right: -30px;
-  top: -185px;
+  top: -9.5vw;
 }
 
 .section-effects .section__title {
@@ -1975,12 +1996,12 @@ sup {
 }
 
 .consequent-slider {
+  width: calc(100% + (100vw - 100%) / 2);
   margin-bottom: 60px;
 }
 
 .consequent {
-  display: flex;
-  align-items: flex-end;
+  width: 657px;
   font-weight: 700;
   font-size: 24px;
   line-height: 1.2;
@@ -1991,8 +2012,9 @@ sup {
   background-position: center;
   background-size: cover;
   overflow: hidden;
-  min-height: 325px;
+  min-height: 345px;
   width: 20%;
+  max-width: 120px;
   flex-shrink: 0;
 }
 
@@ -2053,6 +2075,7 @@ sup {
 }
 
 .section-application .card__icon {
+  margin-top: 20px;
   width: 79px;
   height: 79px;
 }
@@ -2084,6 +2107,10 @@ sup {
   overflow: hidden;
 }
 
+.section-buy #geo_wgt {
+  zoom: 60%;
+}
+
 .section-composition .section__title {
   max-width: 754px;
   text-align: center;
@@ -2106,6 +2133,53 @@ sup {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+}
+
+.quiz {
+  border: 1px solid #000;
+  width: 600px;
+  min-height: 100px;
+  margin: 0 auto;
+  padding: 30px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.quiz__questions {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.quiz-question__title {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.quiz-question__answers {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.quiz-question__label {
+  margin-bottom: 10px;
+}
+
+.quiz-question__answers input[type="text"] {
+  width: 200px;
+  height: 40px;
+  padding-left: 10px;
+}
+
+.quiz-question__btn {
+  color: #fff;
+  background-color: #000;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.error {
+  outline: 2px solid #E74C3C !important;
 }
 
 @media only screen and (max-width: 1280px) {

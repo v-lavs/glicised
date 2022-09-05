@@ -4,12 +4,14 @@
   line-height: 1;
   transition: .5s;
   align-items: center;
-  &__icon{
+
+  &__icon {
     display: inline-block;
     margin-left: 20px;
     width: 24px;
     height: 24px;
   }
+
   &_main {
     text-align: center;
     font-family: $main-font;
@@ -19,22 +21,37 @@
     padding: 20px 40px;
     text-transform: uppercase;
   }
-  &_dark{
+
+  &_dark {
     background-color: $blue;
-    color:  $light;
+    color: $light;
+
     &:hover,
-    &:focus{
+    &:focus {
       background-color: #ffffff;
       color: $blue;
     }
   }
-  &_light{
+
+  &_light {
     background-color: #ffffff;
     color: $blue;
+
     &:hover,
-    &:focus{
+    &:focus {
       color: #ffffff;
       background-color: $blue;
+    }
+  }
+
+  &_warm {
+    background-color: #FAB05C;
+    border-color: #FAB05C;
+    color: #F4FAFE;
+    &:hover,
+    &:focus {
+      background-color: #ffffff;
+      color: #FAB05C;
     }
   }
 }

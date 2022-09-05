@@ -72,9 +72,9 @@ body {
 
 .card {
   display: flex;
-  align-items: center;
 
   &__icon {
+    margin-top: 10px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;

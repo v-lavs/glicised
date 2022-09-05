@@ -16,6 +16,9 @@
     height: 450px;
     overflow: hidden;
   }
+  #geo_wgt{
+    zoom: 60%;
+  }
 }
 
 @include respond-to($md) {

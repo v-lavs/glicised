@@ -60,7 +60,8 @@ $(document).ready(function () {
                         } else {
                             $target.attr('tabindex', '-1');
                             $target.focus();
-                        };
+                        }
+                        ;
                     });
                 }
             }
@@ -91,24 +92,46 @@ $(document).ready(function () {
 
 
 //    SLIDERS
+    if ($(".banner-slider").length) {
+        let bannerSlider = new Swiper(".banner-slider", {
+            loop: true,
+            autoplay:true,
+            grabCursor: true,
+            effect: "creative",
+            speed: 4000,
+            creativeEffect: {
+                prev: {
+                    shadow: true,
+                    translate: ["-10%", 0, -1],
+                },
+                next: {
+                    translate: ["100%", 0, 0],
+                },
+            },
+        });
+    }
+
 
     if ($(".consequent-slider").length) {
-       let  consequentSlider = new Swiper(".consequent-slider", {
-            slidesPerView: 1,
-           autoHeight:true,
-            loop: true,
+        let consequentSlider = new Swiper(".consequent-slider", {
+            slidesPerView: 'auto',
+            spaceBetween:20,
+            autoHeight: true,
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
             },
-           breakpoints:{
-               "760": {
-                   slidesPerView: 2,
-               },
-               "920": {
-                   slidesPerView: 4,
-               },
-           }
+            breakpoints: {
+                "760": {
+                    navigation: {
+                        nextEl: ".slider__arrow_next",
+                        prevEl: ".slider__arrow_prev",
+                    },
+                },
+                "920": {
+                    slidesPerView: 4,
+                },
+            }
         });
     }
 });

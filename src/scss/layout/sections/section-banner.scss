@@ -1,5 +1,6 @@
 .section-banner {
   padding-top: 0;
+
   .col_6 {
     min-height: 742px;
   }
@@ -13,46 +14,13 @@
     margin-bottom: 30px;
     border-bottom: 1px solid #DCEDFF;
   }
-  &__content,
-  &__thumb{
-    display: flex;
-    flex-direction: column;
-  }
 
   &__content {
+    display: flex;
+    flex-direction: column;
     padding-right: 92px;
     padding-top: 70px;
     padding-bottom: 50px;
-  }
-
-  &__thumb {
-    position: absolute;
-    left: 20px;
-    width: 50vw;
-    max-width: 960px;
-    top: 0;
-    bottom: 0;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    justify-content: flex-end;
-    padding-left: 152px;
-
-    .btn {
-      padding: 28px 108px;
-      border-radius: 10px 0 0 0;
-      margin-left: auto;
-    }
-
-    .btn__icon {
-      width: 88px;
-      height: 32px;
-      margin-left: 22px;
-    }
-  }
-
-  &__img {
-    margin-bottom: 75px;
   }
 
   .section__block-btns {
@@ -61,22 +29,69 @@
     margin-top: auto;
   }
 
-  .card {
-    margin-bottom: 40px;
-    font-weight: 500;
-    font-size: 28px;
+  .wrap-slider {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50vw;
+    max-width: 960px;
+    bottom: 0;
 
-    &__icon {
-      height: 64px;
-      width: 60px;
-    }
+    .btn {
+      position: absolute;
+      bottom: 46px;
+      right: 55px;
+      z-index: 1;
 
-    &__body {
-      padding: 5px 10px 5px 32px;
+      &__icon {
+        width: 88px;
+        height: 32px;
+        margin-left: 22px;
+      }
     }
+  }
+
+}
+
+.card {
+  margin-bottom: 40px;
+  font-weight: 500;
+  font-size: 28px;
+
+  &__icon {
+    height: 64px;
+    width: 60px;
+  }
+
+  &__body {
+    padding: 5px 10px 5px 32px;
   }
 }
 
+
+.banner-slider {
+  height: 100%;
+
+  .swiper-slide-active {
+  >  .banner-slider__bg {
+      transform: scale(1.2) !important;
+      transition: .5s;
+    }
+  }
+
+  &__slide-bg {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(1);
+    height: 100%;
+    width: 100%;
+  }
+
+}
 
 @include respond-to($lg) {
 
