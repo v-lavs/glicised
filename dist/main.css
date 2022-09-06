@@ -878,6 +878,12 @@ body {
   transform: scale(1);
 }
 
+.card__icon-bg {
+  background-position: center;
+  background-size: 100px 100px;
+  background-repeat: no-repeat;
+}
+
 .card__icon {
   width: 100px;
   height: 100px;
@@ -981,8 +987,6 @@ sup {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #61A1F4;
-  border-radius: 5px;
   background-color: transparent;
   padding: 20px;
   margin-left: 40px;
@@ -2201,7 +2205,7 @@ sup {
   position: relative;
   margin: 0 auto;
   padding: 25px 40px;
-  border: 1px solid #F0F6FA;
+  border-top: 1px solid #F0F6FA;
 }
 
 .consequent__text:before {
@@ -2227,24 +2231,15 @@ sup {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  border-radius: 0 0 0 20px;
   overflow: hidden;
 }
 
 .section-application__content {
-  padding-right: 102px;
+  padding-right: 42px;
 }
 
 .section-application .section__title {
-  margin-bottom: 40px;
-}
-
-.section-application .section__text {
-  margin-bottom: 60px;
-}
-
-.section-application .text_bold {
-  color: #61A1F4;
+  margin-bottom: 56px;
 }
 
 .section-application .text_md {
@@ -2255,7 +2250,7 @@ sup {
 }
 
 .section-application .card {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   padding-left: 20px;
   border: 1px solid #DCEDFF;
 }
@@ -2265,13 +2260,8 @@ sup {
 }
 
 .section-application .card__body {
-  padding: 10px 5px 10px 43px;
-}
-
-.section-application .card__icon {
-  margin-top: 20px;
-  width: 79px;
-  height: 79px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .section-application .col_5 {
