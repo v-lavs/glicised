@@ -73,12 +73,32 @@ body {
 .card {
   display: flex;
   align-items: center;
-
+  &:hover,
+  &:focus{
+    .card__icon  .st2{
+      transition: .5s;
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
   &__icon {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+    width: 100px;
+    height: 100px;
     flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg {
+      display: inline-block;
+      width: 100%;
+      height: auto;
+    }
+    .st2{
+      opacity: 0;
+      transform: scale(0.9);
+      transform-origin: 50% 50%;
+      transition: .5s;
+    }
   }
 }
 
@@ -123,7 +143,7 @@ sup {
     width: 100%;
     font-size: 24px;
     line-height: 1.33;
-
+    padding: 15px 40px 20px;
     &:hover,
     &:focus {
       -webkit-text-stroke-width: 1px;
@@ -147,7 +167,7 @@ sup {
     width: 32px;
     height: 32px;
     display: inline-block;
-    margin-left: 100px;
+    margin-left: 60px;
     flex-shrink: 0;
 
     svg {

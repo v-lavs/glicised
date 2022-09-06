@@ -871,11 +871,33 @@ body {
   align-items: center;
 }
 
+.card:hover .card__icon .st2,
+.card:focus .card__icon .st2 {
+  transition: .5s;
+  opacity: 1;
+  transform: scale(1);
+}
+
 .card__icon {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+  width: 100px;
+  height: 100px;
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__icon svg {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+}
+
+.card__icon .st2 {
+  opacity: 0;
+  transform: scale(0.9);
+  transform-origin: 50% 50%;
+  transition: .5s;
 }
 
 .title-decor {
@@ -914,6 +936,7 @@ sup {
   width: 100%;
   font-size: 24px;
   line-height: 1.33;
+  padding: 15px 40px 20px;
 }
 
 .links-list__item:hover,
@@ -939,7 +962,7 @@ sup {
   width: 32px;
   height: 32px;
   display: inline-block;
-  margin-left: 100px;
+  margin-left: 60px;
   flex-shrink: 0;
 }
 
@@ -1845,12 +1868,24 @@ sup {
 }
 
 .section-banner__content {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding-right: 92px;
   padding-top: 70px;
   padding-bottom: 50px;
+}
+
+.section-banner__content:before {
+  position: absolute;
+  content: '';
+  display: block;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 50vw;
   background-color: #FAFCFF;
+  z-index: -1;
 }
 
 .section-banner .section__block-btns {
@@ -1877,23 +1912,18 @@ sup {
 
 .section-banner .wrap-slider .btn__icon {
   width: 88px;
-  height: 32px;
+  height: 28px;
   margin-left: 22px;
 }
 
 .card {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   font-weight: 500;
   font-size: 28px;
 }
 
-.card__icon {
-  height: 64px;
-  width: 60px;
-}
-
 .card__body {
-  padding: 5px 10px 5px 32px;
+  padding: 10px;
 }
 
 .banner-slider {
@@ -1945,8 +1975,17 @@ sup {
   background: url(../assets/img/bg-section/sec-2-1.svg) left -20px top 16px/169px 160px no-repeat;
 }
 
-.section-benefits .col_6 {
+.section-benefits .part {
   min-height: 850px;
+}
+
+.section-benefits .part_left {
+  position: relative;
+  width: 48%;
+}
+
+.section-benefits .part_right {
+  width: 52%;
 }
 
 .section-benefits__content {
@@ -1965,7 +2004,7 @@ sup {
   width: 50vw;
   max-width: 960px;
   display: grid;
-  grid-template-columns: repeat(11, 1fr);
+  grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 0;
   grid-row-gap: 0;
@@ -1988,22 +2027,22 @@ sup {
 }
 
 .section-benefits__wrap-img_1 {
-  grid-area: 1 / 1 / 2 / 4;
+  grid-area: 1 / 1 / 2 / 5;
 }
 
 .section-benefits__wrap-img_2 {
-  grid-area: 1 / 4 / 3 / 11;
+  grid-area: 1 /5 / 3 / 12;
 }
 
 .section-benefits__wrap-img_3 {
-  grid-area: 2 / 1 / 3 / 5;
+  grid-area: 2 / 1 / 3 / 6;
 }
 
 .section-benefits .links-list__item {
   position: relative;
   width: 100%;
   margin-bottom: 15px;
-  padding: 15px 40px 20px;
+  padding: 5px 40px 10px 55px;
   border: 1px solid #DCEDFF;
   font-size: 28px;
 }
@@ -2275,7 +2314,7 @@ sup {
   position: absolute;
   left: 0;
   right: 0;
-  top: 0;
+  top: 50px;
   bottom: 0;
   z-index: -1;
 }
@@ -2313,31 +2352,6 @@ sup {
 .section-indication .card-list__item {
   width: 50%;
   padding: 0 27px;
-}
-
-.section-indication .card:hover .card__icon .st2,
-.section-indication .card:focus .card__icon .st2 {
-  transition: .5s;
-  opacity: 1;
-  transform: scale(1);
-}
-
-.section-indication .card__icon {
-  width: 100px;
-  height: 100px;
-}
-
-.section-indication .card__icon svg {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-}
-
-.section-indication .card__icon .st2 {
-  opacity: 0;
-  transform: scale(0.7);
-  transform-origin: 50% 50%;
-  transition: .5s;
 }
 
 .quiz {

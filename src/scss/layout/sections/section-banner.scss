@@ -1,6 +1,5 @@
 .section-banner {
   padding-top: 0;
-
   .col_6 {
     min-height: 742px;
   }
@@ -16,12 +15,25 @@
   }
 
   &__content {
+    position: relative;
     display: flex;
     flex-direction: column;
     padding-right: 92px;
     padding-top: 70px;
     padding-bottom: 50px;
-    background-color: #FAFCFF;
+    &:before{
+      position: absolute;
+      content: '';
+      display: block;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: 50vw;
+      background-color: #FAFCFF;
+      z-index: -1;
+    }
+
+
   }
 
   .section__block-btns {
@@ -46,7 +58,7 @@
 
       &__icon {
         width: 88px;
-        height: 32px;
+        height: 28px;
         margin-left: 22px;
       }
     }
@@ -55,17 +67,12 @@
 }
 
 .card {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   font-weight: 500;
   font-size: 28px;
 
-  &__icon {
-    height: 64px;
-    width: 60px;
-  }
-
   &__body {
-    padding: 5px 10px 5px 32px;
+    padding: 10px;
   }
 }
 
@@ -89,7 +96,7 @@
     background-color: transparent;
   }
 
-  &__img{
+  &__img {
     position: absolute;
     left: 0;
     right: 0;
