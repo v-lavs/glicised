@@ -28,6 +28,7 @@
     "braces": "^2.3.2",
     "jquery": "^3.6.0",
     "natives": "^1.1.6",
+    "particles.js": "^2.0.0",
     "swiper": "^7.4.1"
   }
 }

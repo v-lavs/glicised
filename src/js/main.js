@@ -3,6 +3,7 @@
 * */
 
 //= include ../../node_modules/jquery/dist/jquery.js ;
+//= include ../../node_modules/"particles.js/"particles.js
 //= include ../lib/swiper/swiper-bundle.min.js
 
 
@@ -135,5 +136,8 @@ $(document).ready(function () {
 
         });
     }
+    particlesJS.load('particles-js', 'assets/particlesjs-config.json', function() {
+        console.log('callback - particles.js config loaded');
+    });
 });
 
