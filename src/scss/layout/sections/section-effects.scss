@@ -53,10 +53,11 @@
 .consequent {
   width: 657px;
   font-weight: 700;
-
   font-size: 24px;
   line-height: 1.2;
-
+  display: flex;
+  background: linear-gradient(to bottom, #F9FCFE 0 90%, transparent 90% 100%);
+  height: auto;
 
   &__bg {
     background-repeat: no-repeat;
@@ -69,9 +70,60 @@
     flex-shrink: 0;
   }
 
+  &__content {
+    background-repeat: no-repeat;
+    background-position: right 0;
+    background-size: auto;
+    padding: 40px 30px 30px;
+
+    &_1{
+      background-image: url(../assets/img/sl-1.png);
+    }
+    &_2{
+      background-image: url(../assets/img/sl-2.png);
+    }
+    &_3{
+      background-image: url(../assets/img/sl-3.png);
+    }
+    &_4{
+      background-image: url(../assets/img/sl-4.png);
+    }
+    &_5{
+      background-image: url(../assets/img/sl-5.png);
+    }
+    &_6{
+      background-image: url(../assets/img/sl-2.png);
+    }
+  }
+
+  &__icon {
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-bottom: 20px;
+  }
+
+
   &__text {
+    position: relative;
     margin: 0 auto;
     padding: 25px 40px;
+    border: 1px solid #F0F6FA;
+    font-weight: 700;
+    &:before{
+      position: absolute;
+      content: '';
+      display: block;
+      width: 2px;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 65%;
+      left: 0;
+      background-color: $blue;
+      z-index: 1;
+    }
   }
 }
 

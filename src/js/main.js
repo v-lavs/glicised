@@ -92,22 +92,32 @@ $(document).ready(function () {
 
 
 //    SLIDERS
+    const slideSpeed = 300;
     if ($(".banner-slider").length) {
         let bannerSlider = new Swiper(".banner-slider", {
             loop: true,
-            autoplay:true,
-            grabCursor: true,
-            effect: "creative",
-            speed: 4000,
-            creativeEffect: {
-                prev: {
-                    shadow: true,
-                    translate: ["-10%", 0, -1],
-                },
-                next: {
-                    translate: ["100%", 0, 0],
-                },
+            autoplay: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
             },
+            effect: "fade",
+            speed: slideSpeed,
+
+            on: {
+                afterInit: function () {
+                    const currSlide = this.slides[this.activeIndex];
+                    $(currSlide).addClass('animated');
+                },
+                slideChange: function () {
+                    const currSlide = this.slides[this.activeIndex];
+                    $(currSlide).addClass('animated');
+
+                    setTimeout(() => {
+                        $('.banner-slider__slide:not(.swiper-slide-active)').removeClass('animated');
+                    }, slideSpeed);
+                }
+            }
         });
     }
 
@@ -115,8 +125,8 @@ $(document).ready(function () {
     if ($(".consequent-slider").length) {
         let consequentSlider = new Swiper(".consequent-slider", {
             slidesPerView: 'auto',
-            spaceBetween:20,
-            autoHeight: true,
+            slidesOffsetAfter: 100,
+            spaceBetween: 20,
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
@@ -124,12 +134,9 @@ $(document).ready(function () {
             breakpoints: {
                 "760": {
                     navigation: {
-                        nextEl: ".slider__arrow_next",
-                        prevEl: ".slider__arrow_prev",
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
                     },
-                },
-                "920": {
-                    slidesPerView: 4,
                 },
             }
         });

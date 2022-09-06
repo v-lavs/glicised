@@ -126,6 +126,9 @@ sup {
      &:focus {
        -webkit-text-stroke-width: 1px;
        color: $blue;
+       .links-list__icon{
+         transform: translateX(3px);
+       }
      }
 
      a {

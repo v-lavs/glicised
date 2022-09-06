@@ -41,7 +41,7 @@
       position: absolute;
       bottom: 46px;
       right: 55px;
-      z-index: 1;
+      z-index: 100;
 
       &__icon {
         width: 88px;
@@ -72,25 +72,44 @@
 .banner-slider {
   height: 100%;
 
-  .swiper-slide-active {
-  >  .banner-slider__bg {
-      transform: scale(1.2) !important;
-      transition: .5s;
-    }
+  &__slide {
+    position: relative;
+    overflow: hidden;
   }
 
   &__slide-bg {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    top: 0;
+    bottom: 0;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: scale(1);
     height: 100%;
-    width: 100%;
+    //width: 100%;
   }
 
+  .animated {
+    .banner-slider__slide-bg {
+      //transform-origin:  100% 0;
+      animation: zoom 1s;
+    }
+  }
+}
+
+@keyframes zoom {
+  from {
+    //transform: scale(1.15, 1.15);
+    width: 0;
+  }
+  to {
+    //transform: scale(1, 1);
+    width: 100%;
+  }
 }
 
 @include respond-to($lg) {
