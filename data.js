@@ -1,312 +1,42 @@
-const quizData = [
+const QUIZ_QUESTIONS = [
     {
         number: 1,
-        title:'Були засмучені через те, що сталося несподівано?',
-        answers:[
-            {
-                answer_title: 'Ніколи',
-                type: 'radio',
-                value: 0,
-            },
-            {
-                answer_title: 'Майже ніколи',
-                type: 'radio',
-                value: 1,
-            },
-            {
-                answer_title: 'Іноді',
-                type: 'radio',
-                value: 2,
-            },
-            {
-                answer_title: 'Досить часто',
-                type: 'radio',
-                value: 3,
-            },
-            {
-                answer_title: 'Дуже часто',
-                type: 'radio',
-                value: 4,
-            }
-        ]
+        title: 'Були засмучені через те, що сталося несподівано?',
     },
     {
         number: 2,
-        title:'Були засмучені через те, що сталося несподівано?',
-        answers:[
-            {
-                answer_title: 'Ніколи',
-                type: 'radio',
-                value: 0,
-            },
-            {
-                answer_title: 'Майже ніколи',
-                type: 'radio',
-                value: 1,
-            },
-            {
-                answer_title: 'Іноді',
-                type: 'radio',
-                value: 2,
-            },
-            {
-                answer_title: 'Досить часто',
-                type: 'radio',
-                value: 3,
-            },
-            {
-                answer_title: 'Дуже часто',
-                type: 'radio',
-                value: 4,
-            }
-        ]
+        title: 'Proin imperdiet tortor dolor, vel consectetur ex varius at. Mauris ullamcorper m',
     },
     {
         number: 3,
-        title:'Були засмучені через те, що сталося несподівано?',
-        answers:[
-            {
-                answer_title: 'Ніколи',
-                type: 'radio',
-                value: 0,
-            },
-            {
-                answer_title: 'Майже ніколи',
-                type: 'radio',
-                value: 1,
-            },
-            {
-                answer_title: 'Іноді',
-                type: 'radio',
-                value: 2,
-            },
-            {
-                answer_title: 'Досить часто',
-                type: 'radio',
-                value: 3,
-            },
-            {
-                answer_title: 'Дуже часто',
-                type: 'radio',
-                value: 4,
-            }
-        ]
+        title: 'Nam gravida ullamcorper leo, sed blandit eros posuere eu',
     },
     {
         number: 4,
-        title:'Були засмучені через те, що сталося несподівано?',
-        answers:[
-            {
-                answer_title: 'Ніколи',
-                type: 'radio',
-                value: 0,
-            },
-            {
-                answer_title: 'Майже ніколи',
-                type: 'radio',
-                value: 1,
-            },
-            {
-                answer_title: 'Іноді',
-                type: 'radio',
-                value: 2,
-            },
-            {
-                answer_title: 'Досить часто',
-                type: 'radio',
-                value: 3,
-            },
-            {
-                answer_title: 'Дуже часто',
-                type: 'radio',
-                value: 4,
-            }
-        ]
+        title: 'Mauris ullamcorper mi interdum nulla varius eleifend.',
     },
     {
         number: 5,
-        title:'Були засмучені через те, що сталося несподівано?',
-        answers:[
-            {
-                answer_title: 'Ніколи',
-                type: 'radio',
-                value: 0,
-            },
-            {
-                answer_title: 'Майже ніколи',
-                type: 'radio',
-                value: 1,
-            },
-            {
-                answer_title: 'Іноді',
-                type: 'radio',
-                value: 2,
-            },
-            {
-                answer_title: 'Досить часто',
-                type: 'radio',
-                value: 3,
-            },
-            {
-                answer_title: 'Дуже часто',
-                type: 'radio',
-                value: 4,
-            }
-        ]
+        title: 'Quisque mattis libero sed libero finibus, vel tincidunt metus tristique.',
     },
     {
         number: 6,
-        title:'Були засмучені через те, що сталося несподівано?',
-        answers:[
-            {
-                answer_title: 'Ніколи',
-                type: 'radio',
-                value: 0,
-            },
-            {
-                answer_title: 'Майже ніколи',
-                type: 'radio',
-                value: 1,
-            },
-            {
-                answer_title: 'Іноді',
-                type: 'radio',
-                value: 2,
-            },
-            {
-                answer_title: 'Досить часто',
-                type: 'radio',
-                value: 3,
-            },
-            {
-                answer_title: 'Дуже часто',
-                type: 'radio',
-                value: 4,
-            }
-        ]
+        title: ' Nam gravida ullamcorper leo, sed blandit eros posuere eu',
     },
     {
         number: 7,
-        title:'Були засмучені через те, що сталося несподівано?',
-        answers:[
-            {
-                answer_title: 'Ніколи',
-                type: 'radio',
-                value: 0,
-            },
-            {
-                answer_title: 'Майже ніколи',
-                type: 'radio',
-                value: 1,
-            },
-            {
-                answer_title: 'Іноді',
-                type: 'radio',
-                value: 2,
-            },
-            {
-                answer_title: 'Досить часто',
-                type: 'radio',
-                value: 3,
-            },
-            {
-                answer_title: 'Дуже часто',
-                type: 'radio',
-                value: 4,
-            }
-        ]
+        title: 'Cras bibendum sodales nisi ornare iaculis. Nulla facilisis mi a pulvinar tempor.',
     },
     {
         number: 8,
-        title:'Були засмучені через те, що сталося несподівано?',
-        answers:[
-            {
-                answer_title: 'Ніколи',
-                type: 'radio',
-                value: 0,
-            },
-            {
-                answer_title: 'Майже ніколи',
-                type: 'radio',
-                value: 1,
-            },
-            {
-                answer_title: 'Іноді',
-                type: 'radio',
-                value: 2,
-            },
-            {
-                answer_title: 'Досить часто',
-                type: 'radio',
-                value: 3,
-            },
-            {
-                answer_title: 'Дуже часто',
-                type: 'radio',
-                value: 4,
-            }
-        ]
+        title: 'Aenean at aliquet augue. Nulla facilisi. Vestibulum id libero urna.',
     },
     {
         number: 9,
-        title:'Були засмучені через те, що сталося несподівано?',
-        answers:[
-            {
-                answer_title: 'Ніколи',
-                type: 'radio',
-                value: 0,
-            },
-            {
-                answer_title: 'Майже ніколи',
-                type: 'radio',
-                value: 1,
-            },
-            {
-                answer_title: 'Іноді',
-                type: 'radio',
-                value: 2,
-            },
-            {
-                answer_title: 'Досить часто',
-                type: 'radio',
-                value: 3,
-            },
-            {
-                answer_title: 'Дуже часто',
-                type: 'radio',
-                value: 4,
-            }
-        ]
+        title: 'Cras bibendum sodales nisi ornare iaculis. Nulla facilisis mi a pulvina',
     },
     {
         number: 10,
-        title:'Були засмучені через те, що сталося несподівано?',
-        answers:[
-            {
-                answer_title: 'Ніколи',
-                type: 'radio',
-                value: 0,
-            },
-            {
-                answer_title: 'Майже ніколи',
-                type: 'radio',
-                value: 1,
-            },
-            {
-                answer_title: 'Іноді',
-                type: 'radio',
-                value: 2,
-            },
-            {
-                answer_title: 'Досить часто',
-                type: 'radio',
-                value: 3,
-            },
-            {
-                answer_title: 'Дуже часто',
-                type: 'radio',
-                value: 4,
-            }
-        ]
+        title: 'Aenean at aliquet augue. Nulla facilisi. Vestibulum id libero urna.',
     },
 ];

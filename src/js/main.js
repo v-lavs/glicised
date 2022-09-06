@@ -123,7 +123,7 @@ $(document).ready(function () {
         let consequentSlider = new Swiper(".consequent-slider", {
             slidesPerView: 'auto',
             slidesOffsetAfter: 100,
-            loop:false,
+            loop: false,
             spaceBetween: 20,
             pagination: {
                 el: ".swiper-pagination",
@@ -136,8 +136,82 @@ $(document).ready(function () {
 
         });
     }
-    particlesJS.load('particles-js', 'assets/particlesjs-config.json', function() {
+    particlesJS.load('particles-js', 'assets/particlesjs-config.json', function () {
         console.log('callback - particles.js config loaded');
     });
+
+
+    // QUIZ
+    const $quizWrap = $('#quiz');
+
+    if ($quizWrap.length > 0) {
+        const $form = $('.quiz');
+        const $curr_step = $('.quiz__current-step');
+        const $total_step = $('.quiz__total_step');
+        const $question_text = $('.quiz__question-sub-title');
+        const $result = $('#quiz-result');
+        const $options = $($form.find('[name*="quiz-radio"]'));
+        const $start_btn = $('#quiz-start');
+        const $prev_btn = $('#quiz-prev');
+        const $next_btn = $('#quiz-next');
+
+
+        let answers = {};
+        let currStep = 0;
+
+        $options.on('change', function (e) {
+            e.preventDefault();
+            $next_btn.removeAttr('disabled');
+            answers = Object.assign(answers, {[currStep]: Number(e.target.value)});
+        });
+
+        $start_btn.on('click', function (e) {
+            e.preventDefault();
+            currStep = 1;
+            $curr_step.text(currStep);
+            $total_step.text(QUIZ_QUESTIONS.length);
+            showQuestion(currStep);
+        });
+
+        $next_btn.on('click', function (e) {
+            e.preventDefault();
+            if(currStep < QUIZ_QUESTIONS.length) {
+                ++currStep;
+                showQuestion(currStep);
+                $options.val(answers[currStep]);
+            }
+
+            if(currStep === QUIZ_QUESTIONS.length) {
+                $result.text(Object.values(answers).reduce(function (acc, prev) {
+                    return prev + acc
+                }), 0);
+                clearOptionsValue();
+                currStep= 0;
+            }
+        });
+
+        $prev_btn.on('click', function (e) {
+            e.preventDefault();
+            if(currStep > 1) {
+                --currStep;
+                showQuestion(currStep);
+            }
+        });
+
+        function showQuestion(number) {
+           const questionData = QUIZ_QUESTIONS[number - 1];
+           if(questionData) {
+               $question_text.text(questionData.title);
+               $curr_step.text(number);
+               clearOptionsValue();
+           }
+        }
+
+        function clearOptionsValue() {
+            $form.get(0).reset();
+        }
+
+
+    }
 });
 

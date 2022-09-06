@@ -22,13 +22,86 @@
 <body>
 <div class="wrapper">
     <div class="container">
+        <div class="quiz-wrap" id="quiz">
+            <div class="quiz-preview">
+                <img class="quiz-preview__img" src="" alt="">
 
-        <form class="quiz" method="POST"></form>
+                <article>
+                    <p><strong>Тест «Шкала сприйняття стресу» (Perceived Stress Scale)</strong> є класичним інструментом оцінки
+                        стресу1,2. Запитання стосуються ваших почуттів і думок протягом останнього місяця. Необхідно
+                        вказати, як часто ви відчували або думали певним чином. Необхідно відповідати досить швидко: не
+                        намагайтеся підрахувати, скільки разів ви почувалися певним чином, а вкажіть альтернативу, яка
+                        здається розумною оцінкою.</p>
+                        <p>Пройдіть цей простий тест, щоб визначити актуальний рівень стресу в вашому житті</p>
+                </article>
+
+                <footer class="quiz-preview__footer">
+                    <button class="btn btn_main btn_dark" id="quiz-start">Пройти теcт</button>
+                </footer>
+            </div>
+
+            <form class="quiz">
+                <div>
+                    <div class="quiz__step">
+                        Крок <span class="quiz__current-step">0</span> з <span class="quiz__total_step">0</span>
+                    </div>
+                    <h2 class="quiz__question-title">Як часто за останній місяць ви:</h2>
+                    <div class="quiz__content-part">
+                        <div class="quiz__question-sub-title"></div>
+                    </div>
+                    <div class="quiz__content-part">
+                        <div>
+                            <label class="radio">
+                                <input value="0" name="quiz-radio" type="radio">
+
+                                <span class="radio__text">Ніколи</span>
+                            </label>
+                        </div>
+                        <div>
+                            <label class="radio">
+                                <input value="1" name="quiz-radio" type="radio">
+
+                                <span class="radio__text">Майже ніколи </span>
+                            </label>
+                        </div>
+                        <div>
+                            <label class="radio">
+                                <input value="2" name="quiz-radio" type="radio">
+
+                                <span class="radio__text">Іноді</span>
+                            </label>
+                        </div>
+                        <div>
+                            <label class="radio">
+                                <input value="3" name="quiz-radio" type="radio">
+
+                                <span class="radio__text">Досить часто </span>
+                            </label>
+                        </div>
+                        <div>
+                            <label class="radio">
+                                <input value="4" name="quiz-radio" type="radio">
+
+                                <span class="radio__text">Дуже часто </span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="quiz__footer">
+                        <button id="quiz-prev" type="button" class="btn">НАЗАД</button>
+                        <button disabled id="quiz-next" type="button" class="btn btn_main btn_dark">НАСТУПНИЙ КРОК</button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="quiz-result">
+                <h3>Ваш рівень сприйняття стресу*:</h3>
+                <div id="quiz-result"></div>
+            </div>
+        </div>
     </div>
 </div>
 
 <script src="data.js"></script>
-<script src="quiz.js"></script>
 <script src="dist/main.js"></script>
 </body>
 </html>
