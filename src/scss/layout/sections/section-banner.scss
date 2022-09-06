@@ -21,6 +21,7 @@
     padding-right: 92px;
     padding-top: 70px;
     padding-bottom: 50px;
+    background-color: #FAFCFF;
   }
 
   .section__block-btns {
@@ -77,26 +78,34 @@
     overflow: hidden;
   }
 
-  &__slide-bg {
+  &__wrap-img {
     position: absolute;
     right: 0;
     width: 100%;
     top: 0;
     bottom: 0;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100%;
-    //width: 100%;
+
+    background-color: transparent;
+  }
+
+  &__img{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
   }
 
   .animated {
-    .banner-slider__slide-bg {
+    .banner-slider__wrap-img {
+
       //transform-origin:  100% 0;
       animation: zoom 1s;
+      clip-path: inset(0 0 0 0);
     }
   }
 }

@@ -92,15 +92,11 @@ $(document).ready(function () {
 
 
 //    SLIDERS
-    const slideSpeed = 300;
+    const slideSpeed = 2000;
     if ($(".banner-slider").length) {
         let bannerSlider = new Swiper(".banner-slider", {
             loop: true,
             autoplay: true,
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
             effect: "fade",
             speed: slideSpeed,
 
@@ -126,19 +122,17 @@ $(document).ready(function () {
         let consequentSlider = new Swiper(".consequent-slider", {
             slidesPerView: 'auto',
             slidesOffsetAfter: 100,
+            loop:false,
             spaceBetween: 20,
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
             },
-            breakpoints: {
-                "760": {
-                    navigation: {
-                        nextEl: ".swiper-button-next",
-                        prevEl: ".swiper-button-prev",
-                    },
-                },
-            }
+            navigation: {
+                nextEl: "#js_bn",
+                prevEl: "#js_bp",
+            },
+
         });
     }
 });

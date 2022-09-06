@@ -11,17 +11,18 @@
     line-height: 1;
     color: $text-dark;
     margin: 0 20px;
-    transition: .35s;
+    //transition: .35s;
 
     .sub-menu {
       z-index: -1;
+      width: max-content;
       position: absolute;
       visibility: hidden;
       opacity: 0;
       background: #ffffff;
-      margin-top: 0;
+      margin-top: 5px;
       border-radius: 5px;
-      padding: 10px 20px;
+      padding: 20px;
       transition: all 0.35s ease;
       transform: translateY(15px);
       cursor: default;
@@ -88,9 +89,13 @@
       color: $blue;
     }
   }
+  .sub-menu{
+
+  }
 }
 
 .dropdown {
+  padding: 0 37px 0 3px;
   > .menu__link {
     position: relative;
 

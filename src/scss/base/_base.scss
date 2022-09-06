@@ -72,9 +72,9 @@ body {
 
 .card {
   display: flex;
+  align-items: center;
 
   &__icon {
-    margin-top: 10px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -85,6 +85,7 @@ body {
 .title-decor {
   position: relative;
   display: inline-block;
+
   &:before {
     position: absolute;
     content: '';
@@ -118,42 +119,44 @@ sup {
 }
 
 .links-list {
-   &__item {
-     width: 100%;
-     font-size: 24px;
-     line-height: 1.33;
-     &:hover,
-     &:focus {
-       -webkit-text-stroke-width: 1px;
-       color: $blue;
-       .links-list__icon{
-         transform: translateX(3px);
-       }
-     }
+  &__item {
+    width: 100%;
+    font-size: 24px;
+    line-height: 1.33;
 
-     a {
-       position: relative;
-       display: flex;
-       justify-content: space-between;
-       align-items: center;
-       height: 100%;
-     }
-   }
+    &:hover,
+    &:focus {
+      -webkit-text-stroke-width: 1px;
+      color: $blue;
 
-   &__icon {
-     width: 32px;
-     height: 32px;
-     display: inline-block;
-     margin-left: 100px;
-     flex-shrink: 0;
+      .links-list__icon {
+        transform: scale(1.25);
+      }
+    }
 
-     svg {
-       display: inline-block;
-       width: 100%;
-       height: 100%;
-     }
-   }
- }
+    a {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+    }
+  }
+
+  &__icon {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    margin-left: 100px;
+    flex-shrink: 0;
+
+    svg {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
 
 
 .social-bar {
