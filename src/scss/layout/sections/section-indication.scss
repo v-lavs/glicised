@@ -1,15 +1,20 @@
 .section-indication {
   padding-bottom: 60px;
+  background: url(../assets/img/bg-section/sec-5-1.svg) top 45% left 100px/53px 53px no-repeat,
+              url(../assets/img/bg-section/sec-5-2.svg) top 17% right/144px 288px no-repeat;
+
   .section__title {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 54px;
     text-align: center;
   }
-.title{
-  text-align: center;
-  margin-bottom: 35px;
-}
+
+  .title {
+    text-align: center;
+    margin-bottom: 35px;
+  }
+
   .card-list {
     display: flex;
     flex-wrap: wrap;

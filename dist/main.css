@@ -2448,6 +2448,7 @@ sup {
 
 .section-indication {
   padding-bottom: 60px;
+  background: url(../assets/img/bg-section/sec-5-1.svg) top 45% left 100px/53px 53px no-repeat, url(../assets/img/bg-section/sec-5-2.svg) top 17% right/144px 288px no-repeat;
 }
 
 .section-indication .section__title {
