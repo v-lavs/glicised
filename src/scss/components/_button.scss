@@ -48,11 +48,25 @@
     background-color: #FAB05C;
     border-color: #FAB05C;
     color: #F4FAFE;
+    &:before{
+      position: absolute;
+      content: '';
+      display: block;
+      width: 8px;
+      left: -8px;
+      top: 0;
+      bottom: 0;
+      background-color: #F99A31;
+      z-index: 1;
+    }
 
     &:hover,
     &:focus {
-      background-color: #ffffff;
-      color: #FAB05C;
+      background-color: $blue;
+      border-color: $blue;
+     &:before{
+        background-color:  #548CD4;
+      }
     }
   }
 }

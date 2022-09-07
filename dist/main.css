@@ -1197,10 +1197,27 @@ sup {
   color: #F4FAFE;
 }
 
+.btn_warm:before {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 8px;
+  left: -8px;
+  top: 0;
+  bottom: 0;
+  background-color: #F99A31;
+  z-index: 1;
+}
+
 .btn_warm:hover,
 .btn_warm:focus {
-  background-color: #ffffff;
-  color: #FAB05C;
+  background-color: #61A1F4;
+  border-color: #61A1F4;
+}
+
+.btn_warm:hover:before,
+.btn_warm:focus:before {
+  background-color: #548CD4;
 }
 
 .menu {
@@ -1840,7 +1857,9 @@ sup {
 }
 
 .section-banner {
-  padding-top: 0;
+  padding: 0;
+  margin-bottom: 100px;
+  background-image: linear-gradient(to right, #FAFCFF 0% 50%, #ffffff 50% 100%);
 }
 
 .section-banner .col_6 {
@@ -1866,16 +1885,17 @@ sup {
   padding-bottom: 50px;
 }
 
-.section-banner__content:before {
+.section-banner .bg-pattern {
+  width: 260px;
+  height: 522px;
+  background-image: url(../assets/img/bg-section/banner-bg-left.png);
+  background-position: center;
+  background-repeat: no-repeat;
   position: absolute;
-  content: '';
-  display: block;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  width: 50vw;
-  background-color: #FAFCFF;
-  z-index: -1;
+  left: -60%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
 }
 
 .section-banner .section__block-btns {
@@ -1898,25 +1918,6 @@ sup {
   bottom: 46px;
   right: 55px;
   z-index: 100;
-}
-
-.section-banner .wrap-slider .btn:before {
-  position: absolute;
-  content: '';
-  display: block;
-  width: 8px;
-  left: -8px;
-  top: 0;
-  bottom: 0;
-  z-index: 1;
-}
-
-.section-banner .wrap-slider .btn_warm:before {
-  background-color: #F99A31;
-}
-
-.section-banner .wrap-slider .btn_dark:before {
-  background-color: #548CD4;
 }
 
 .section-banner .wrap-slider .btn__icon {
@@ -2033,6 +2034,8 @@ sup {
 
 .section-benefits__wrap-img {
   position: relative;
+  border-right: 3px solid #ffffff;
+  border-top: 3px solid #ffffff;
 }
 
 .section-benefits__wrap-img_1 {
@@ -2226,6 +2229,26 @@ sup {
   z-index: 1;
 }
 
+.section-application {
+  position: relative;
+  padding-bottom: 146px;
+}
+
+.section-application:after {
+  position: absolute;
+  content: '';
+  display: block;
+  background-image: url(../assets/img/bg-section/pattern_02.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 111px;
+  height: 222px;
+  right: 0;
+  bottom: 34px;
+  z-index: 1;
+}
+
 .section-application__thumb {
   position: absolute;
   left: 0;
@@ -2236,7 +2259,6 @@ sup {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  overflow: hidden;
 }
 
 .section-application__content {
@@ -2302,6 +2324,7 @@ sup {
 
 .section-composition {
   position: relative;
+  background: url(../assets/img/bg-section/sec-4-1.svg) top left/201px 294px no-repeat;
   min-height: 1150px;
 }
 

@@ -136,9 +136,11 @@ $(document).ready(function () {
 
         });
     }
-    particlesJS.load('particles-js', 'assets/particlesjs-config.json', function () {
-        console.log('callback - particles.js config loaded');
-    });
+    if ($("#particles-js").length) {
+        particlesJS.load('particles-js', 'assets/particlesjs-config.json', function () {
+            console.log('callback - particles.js config loaded');
+        });
+    }
 
 
     // QUIZ
