@@ -157,7 +157,7 @@ sup {
     &:focus {
       -webkit-text-stroke-width: 1px;
       color: $blue;
-
+      background-color: #F7FBFF;
       .links-list__icon {
         transform: scale(1.25);
       }
@@ -197,10 +197,10 @@ sup {
     justify-content: center;
     align-items: center;
     background-color: transparent;
-    padding: 20px;
-    margin-left: 40px;
+    padding: 19px;
+    margin-left: 58px;
     transition: .35s;
-
+    border: 1px solid #61A1F4;
     &:hover,
     &:focus {
       background-color: $blue;
@@ -348,14 +348,6 @@ sup {
   }
 }
 
-
-@include respond-to($xl) {
-
-}
-
-@include respond-to($lg) {
-
-}
 
 @include respond-to($md) {
 

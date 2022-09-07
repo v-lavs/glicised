@@ -1,44 +1,25 @@
 .section-indication {
+  padding-bottom: 60px;
   .section__title {
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 54px;
     text-align: center;
   }
-
+.title{
+  text-align: center;
+  margin-bottom: 35px;
+}
   .card-list {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -27px;
+    margin: 0 -20px;
 
     &__item {
       width: 50%;
-      padding: 0 27px;
+      padding: 0 20px;
+      margin-bottom: 40px;
     }
-  }
-  .card{
-    //&:hover,&:focus{
-    //.card__icon  .st2{
-    //  transition: .5s;
-    //    opacity: 1;
-    //    transform: scale(1);
-    //  }
-    //}
-  }
-  .card__icon{
-    //width: 100px;
-    //height: 100px;
-
-    //svg{
-    //  display: block;
-    //  width: 100%;
-    //  max-width: 100%;
-    //}
-    //.st2{
-    //  opacity: 0;
-    //  transform: scale(0.7);
-    //  transform-origin: 50% 50%;
-    //  transition: .5s;
-    //}
   }
 }
 

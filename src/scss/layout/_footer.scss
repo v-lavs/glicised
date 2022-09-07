@@ -3,9 +3,8 @@
   line-height: 1.5;
   font-feature-settings: 'salt' on, 'liga' off;
   color: #3B4040;
-  padding-bottom: 15vh;
+  padding-bottom: 50px;
   background-color: $light;
-  //flex: 0 0 auto;
 
   &__logo {
     display: inline-block;
@@ -21,13 +20,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 0 20px;
+    padding: 56px 0 40px;
   }
 
   &_bottom {
     display: flex;
     justify-content: center;
-    padding: 40px 0 67px;
+    padding: 40px 0 0;
     border-top: 1px solid rgba(51, 64, 64, .1);
   }
 
@@ -75,29 +74,8 @@
 }
 
 .disclaimer {
-  position: fixed;
-  display: flex;
-  bottom: 0;
-  left: 0;
-  right: 0;
   width: 100%;
   height: 15vh;
-  z-index: 500;
-
-  &:before {
-    position: absolute;
-    content: '';
-    display: block;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: -1;
-    background: rgba(255, 255, 255, .4);
-    -webkit-backdrop-filter: blur(4px);
-    backdrop-filter: blur(4px);
-  }
-
   img {
     display: block;
     width: 100%;
@@ -108,19 +86,24 @@
 
 @include respond-to($sm) {
   .footer {
-    &__logo {
-      max-width: 129px;
+    .social-bar__item {
+      margin: 0 40px 0 0;
+      padding: 14px;
+
     }
-  }
-  .disclaimer {
-    height: 14vh;
   }
 }
 
 @include respond-to($xs) {
   .footer {
+    &__logo{
+      margin-bottom: 20px;
+      width: 100%;
+
+    }
     &_top {
       flex-wrap: wrap;
+      justify-content: center;
     }
 
     &_bottom {
@@ -142,7 +125,7 @@
     }
 
     .social-bar__item {
-      margin: 0 20px 0 0;
+      margin: 0 10px;
 
     }
   }

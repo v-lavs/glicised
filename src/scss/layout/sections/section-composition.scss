@@ -42,11 +42,15 @@
   margin-bottom: 96px;
 
   &__item {
+    font-size: 28px;
+    font-weight: 700;
+    span{
+      font-weight: 400;
+    }
     &_1 {
-      grid-area: 1 / 6 /8 / 12;
+      grid-area: 1 / 5 /8 / 11;
       position: relative;
       padding: 0 4px;
-      border: 2px solid lightgreen;
 
       &:before {
         position: absolute;
@@ -66,15 +70,26 @@
     }
 
     &_2 {
+      .composition__card{
+        padding-right: 83px;
+        text-align: right;
+        &-body{
+          padding-right: 26px;
+        }
+      }
       grid-area: 5 / 1 /7/7;
-      border: 2px solid mistyrose;
       z-index: 1;
     }
 
     &_3 {
-      grid-area: 2 / 11 /4 / 16;
-      border: 2px solid violet;
+      grid-area: 2 / 9 /4 / 16;
       z-index: 1;
+      .composition__card{
+        padding-left: 50px;
+        &-body{
+          padding-left: 15px;
+        }
+      }
     }
   }
 
@@ -84,21 +99,19 @@
   }
 
   &__card-icon {
-
     background-repeat: no-repeat;
     background-position: center;
     width: 85px;
     height: 85px;
     flex-shrink: 0;
-
-    &__card-icon_left {
+    background-size: contain;
+    &_left {
       background-image: url(../assets/img/i-glicyn.svg);
-      background-size: contain;
     }
 
-    &__card-icon_right {
-      background-image: url(../assets/img/mg-elem.scg);
-      background-size: 64px 64px;
+    &_right {
+      background-image: url(../assets/img/mg-elem.svg);
+      background-size: 64px;
     }
   }
 }

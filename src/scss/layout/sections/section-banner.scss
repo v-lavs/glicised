@@ -55,6 +55,24 @@
       bottom: 46px;
       right: 55px;
       z-index: 100;
+      &:before{
+        position: absolute;
+        content: '';
+        display: block;
+        width: 8px;
+        left: -8px;
+        top: 0;
+        bottom: 0;
+
+        z-index: 1;
+      }
+
+      &_warm:before{
+        background-color: #F99A31;
+      }
+      &_dark:before{
+        background-color:  #548CD4;
+      }
 
       &__icon {
         width: 88px;
