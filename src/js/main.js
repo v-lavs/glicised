@@ -31,7 +31,6 @@ $(document).ready(function () {
     });
 
 
-
 // SMOOTH SCROLL TO ANCHOR
 //     let smoothScroll = location.hash;
     const offsetSize = $("header").innerHeight();
@@ -151,72 +150,96 @@ $(document).ready(function () {
 
     if ($quizWrap.length > 0) {
         const $form = $('.quiz');
+        const $quizPreview = $('.quiz-preview');
         const $curr_step = $('.quiz__current-step');
         const $total_step = $('.quiz__total_step');
         const $question_text = $('.quiz__question-sub-title');
         const $result = $('#quiz-result');
+        const $resultView = $('.quiz-result-view');
         const $options = $($form.find('[name*="quiz-radio"]'));
         const $start_btn = $('#quiz-start');
         const $prev_btn = $('#quiz-prev');
         const $next_btn = $('#quiz-next');
-
+        const $pointer = $('.scale-pointer');
 
         let answers = {};
         let currStep = 0;
 
         $options.on('change', function (e) {
-            e.preventDefault();
-            $next_btn.removeAttr('disabled');
+            $next_btn.attr('disabled', false);
             answers = Object.assign(answers, {[currStep]: Number(e.target.value)});
         });
 
         $start_btn.on('click', function (e) {
             e.preventDefault();
             currStep = 1;
+
+            $quizPreview.addClass('hidden');
+            $form.removeClass('hidden');
+
             $curr_step.text(currStep);
             $total_step.text(QUIZ_QUESTIONS.length);
+
             showQuestion(currStep);
         });
 
         $next_btn.on('click', function (e) {
             e.preventDefault();
-            if(currStep < QUIZ_QUESTIONS.length) {
+            if (currStep < QUIZ_QUESTIONS.length) {
                 ++currStep;
                 showQuestion(currStep);
-                $options.val(answers[currStep]);
-            }
-
-            if(currStep === QUIZ_QUESTIONS.length) {
-                $result.text(Object.values(answers).reduce(function (acc, prev) {
-                    return prev + acc
-                }), 0);
-                clearOptionsValue();
-                currStep= 0;
+            } else {
+                showResult();
             }
         });
 
         $prev_btn.on('click', function (e) {
             e.preventDefault();
-            if(currStep > 1) {
+            if (currStep > 1) {
                 --currStep;
                 showQuestion(currStep);
+                $('[name="quiz-radio"][value=' + answers[currStep] + ']').prop('checked', true);
             }
         });
 
         function showQuestion(number) {
-           const questionData = QUIZ_QUESTIONS[number - 1];
-           if(questionData) {
-               $question_text.text(questionData.title);
-               $curr_step.text(number);
-               clearOptionsValue();
-           }
+            const questionIndex = number - 1;
+            const questionData = QUIZ_QUESTIONS[questionIndex];
+            if (questionData) {
+                $question_text.text(questionData.title);
+                $curr_step.text(number);
+                clearOptionsValue();
+            }
+            if (number === 1) {
+                $prev_btn.attr('disabled', 'disabled');
+            } else {
+                $prev_btn.attr('disabled', false)
+            }
+            if (!answers[questionIndex]) {
+                $next_btn.attr('disabled', 'disabled');
+            }
+        }
+
+        function showResult() {
+            const finalScore = Object.values(answers).reduce(function (acc, prev) {
+                return prev + acc
+            }, 0);
+
+            const offset = finalScore * 100 / (QUIZ_QUESTIONS.length * 4) || 0;
+            $result.html(`${finalScore}`);
+
+            $form.addClass('hidden');
+            $resultView.removeClass('hidden');
+
+            clearOptionsValue();
+            currStep = 0;
+
+            $pointer.animate({left:  Math.max(offset, offset + 2)  + "%"}, 1000).animate({left:  Math.max(0, offset -4)  + "%"}, 300).animate({left: offset + "%"}, 400);
         }
 
         function clearOptionsValue() {
-            $form.get(0).reset();
+            $options.prop('checked', false);
         }
-
-
     }
 });
 

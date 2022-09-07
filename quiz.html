@@ -27,12 +27,13 @@
                 <img class="quiz-preview__img" src="" alt="">
 
                 <article>
-                    <p><strong>Тест «Шкала сприйняття стресу» (Perceived Stress Scale)</strong> є класичним інструментом оцінки
+                    <p><strong>Тест «Шкала сприйняття стресу» (Perceived Stress Scale)</strong> є класичним інструментом
+                        оцінки
                         стресу1,2. Запитання стосуються ваших почуттів і думок протягом останнього місяця. Необхідно
                         вказати, як часто ви відчували або думали певним чином. Необхідно відповідати досить швидко: не
                         намагайтеся підрахувати, скільки разів ви почувалися певним чином, а вкажіть альтернативу, яка
                         здається розумною оцінкою.</p>
-                        <p>Пройдіть цей простий тест, щоб визначити актуальний рівень стресу в вашому житті</p>
+                    <p>Пройдіть цей простий тест, щоб визначити актуальний рівень стресу в вашому житті</p>
                 </article>
 
                 <footer class="quiz-preview__footer">
@@ -40,7 +41,7 @@
                 </footer>
             </div>
 
-            <form class="quiz">
+            <form class="quiz hidden">
                 <div>
                     <div class="quiz__step">
                         Крок <span class="quiz__current-step">0</span> з <span class="quiz__total_step">0</span>
@@ -88,14 +89,40 @@
                     </div>
                     <div class="quiz__footer">
                         <button id="quiz-prev" type="button" class="btn">НАЗАД</button>
-                        <button disabled id="quiz-next" type="button" class="btn btn_main btn_dark">НАСТУПНИЙ КРОК</button>
+                        <button disabled id="quiz-next" type="button" class="btn btn_main btn_dark">НАСТУПНИЙ КРОК
+                        </button>
                     </div>
                 </div>
             </form>
 
-            <div class="quiz-result">
+            <div class="quiz-result-view hidden">
                 <h3>Ваш рівень сприйняття стресу*:</h3>
-                <div id="quiz-result"></div>
+
+                <div class="quiz-scale-wrap">
+                    <div class="scale-numbers">
+                        <span class="scale-number__item">0</span>
+                        <span class="scale-number__item">5</span>
+                        <span class="scale-number__item">10</span>
+                        <span class="scale-number__item">15</span>
+                        <span class="scale-number__item">20</span>
+                        <span class="scale-number__item">25</span>
+                        <span class="scale-number__item">30</span>
+                        <span class="scale-number__item">35</span>
+                        <span class="scale-number__item">40</span>
+                    </div>
+
+                    <div class="scale-pointer">
+                        <div class="triangle-top"></div>
+                        <div class="quiz-result-square" id="quiz-result">0</div>
+                    </div>
+                </div>
+
+                <div class="quiz-result__note">
+                    <p>*Бали за наведеною самооцінкою не відображають жодного конкретного діагнозу чи курсу лікування.
+                        Вони призначені як інструмент, який допоможе оцінити ваш рівень стресу. Якщо у вас є ще якісь
+                        занепокоєння щодо вашого поточного здоров’я необхідно звернутися до лікаря.
+                    </p>
+                </div>
             </div>
         </div>
     </div>
