@@ -1,4 +1,5 @@
 .section-banner {
+  position: relative;
   padding: 0;
   margin-bottom: 100px;
   background-image: linear-gradient(to right, #FAFCFF 0% 50%, #ffffff 50% 100%);
@@ -17,7 +18,6 @@
   }
 
   &__content {
-    position: relative;
     display: flex;
     flex-direction: column;
     padding-right: 92px;
@@ -31,7 +31,7 @@
   background-position: center;
   background-repeat: no-repeat;
   position: absolute;
-  left: -60%;
+  left: 0;
   top: 50%;
   transform: translateY(-50%);
   z-index: 1;

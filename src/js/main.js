@@ -25,9 +25,12 @@ $(document).ready(function () {
         $('.btn_close').hide();
     });
 
-    $('.sub-menu__toggle').click(function (e) {
-        $(this).toggleClass('sub-menu__toggle_active')
+    $('.dropdown').click(function (e) {
+        $(this).find($('.sub-menu')).toggleClass('show');
+        $('.menu__link').toggleClass('active');
     });
+
+
 
 // SMOOTH SCROLL TO ANCHOR
 //     let smoothScroll = location.hash;
