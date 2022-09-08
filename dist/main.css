@@ -1027,8 +1027,8 @@ body {
   font-size: 16px;
   line-height: 1.5;
   background-color: #F4FAFE;
-  padding-top: 50px;
-  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-bottom: 40px;
 }
 
 .literature-sources p {
@@ -1039,23 +1039,15 @@ body {
   margin-bottom: 0;
 }
 
-.literature-sources ol p,
 .dynamic-content p {
   font-size: 24px;
   margin-bottom: .65em;
 }
 
-.literature-sources ol p:last-child,
 .dynamic-content p:last-child {
   margin-bottom: 0;
 }
 
-.literature-sources ol h1,
-.literature-sources ol h2,
-.literature-sources ol h3,
-.literature-sources ol h4,
-.literature-sources ol h5,
-.literature-sources ol h6,
 .dynamic-content h1,
 .dynamic-content h2,
 .dynamic-content h3,
@@ -1065,40 +1057,31 @@ body {
   margin-bottom: 1.5em;
 }
 
-.literature-sources ol h1,
-.literature-sources ol h2,
 .dynamic-content h1,
 .dynamic-content h2 {
   font-size: 72px;
 }
 
-.literature-sources ol h3,
-.literature-sources ol h4,
 .dynamic-content h3,
 .dynamic-content h4 {
   font-size: 28px;
 }
 
-.literature-sources ol a:hover,
-.literature-sources ol a:focus,
 .dynamic-content a:hover,
 .dynamic-content a:focus {
   text-decoration: underline;
 }
 
-.literature-sources ol ul,
 .dynamic-content ul {
   padding-left: 15px;
   margin-bottom: 20px;
 }
 
-.literature-sources ol ul > li,
 .dynamic-content ul > li {
   position: relative;
   padding-left: 25px;
 }
 
-.literature-sources ol ul > li:before,
 .dynamic-content ul > li:before {
   position: absolute;
   content: '';
@@ -1111,7 +1094,6 @@ body {
   top: 17px;
 }
 
-.literature-sources ol ol,
 .dynamic-content ol {
   position: relative;
   padding-left: 32px;
@@ -1120,7 +1102,6 @@ body {
   counter-reset: list;
 }
 
-.literature-sources ol ol li:before,
 .dynamic-content ol li:before {
   position: absolute;
   left: 8px;
@@ -2476,6 +2457,86 @@ body {
   white-space: nowrap;
 }
 
+.posts-list {
+  padding-top: 92px;
+  padding-bottom: 60px;
+}
+
+.blog .section__block-btns {
+  margin-bottom: 60px;
+}
+
+.article {
+  padding: 0 40px 40px;
+  border-bottom: 1px solid #DCEDFF;
+  margin-bottom: 80px;
+}
+
+.article:last-child {
+  margin-bottom: 0;
+}
+
+.article__title {
+  position: relative;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.14;
+  color: #61A1F4;
+  margin-bottom: 40px;
+}
+
+.article__title:before {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: #61A1F4;
+  border-radius: 50%;
+  left: -40px;
+  top: 13px;
+}
+
+.article__thumb-wrap {
+  position: relative;
+  width: 100%;
+  padding-top: 39.5%;
+}
+
+.article__img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.article .dynamic-content {
+  padding-top: 40px;
+}
+
+.article-slider .swiper-pagination {
+  display: block !important;
+}
+
+.article-slider .swiper-pagination-bullets .swiper-pagination-bullet {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  margin: 0 5px !important;
+  border: 1px solid #ffffff;
+  opacity: 1;
+}
+
+.article-slider .swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #ffffff;
+}
+
 .glicysed .literature-sources {
   padding-bottom: 40px;
 }
@@ -2602,7 +2663,6 @@ body {
 }
 
 @media only screen and (max-width: 1280px) {
-  .literature-sources ol p:last-child,
   .dynamic-content p:last-child {
     margin-bottom: 0;
   }
@@ -2714,12 +2774,10 @@ body {
 }
 
 @media only screen and (max-width: 767px) {
-  .literature-sources ol p,
   .dynamic-content p {
     font-size: 16px;
   }
 
-  .literature-sources ol p:last-child,
   .dynamic-content p:last-child {
     margin-bottom: 0;
   }

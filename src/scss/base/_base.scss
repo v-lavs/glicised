@@ -222,8 +222,8 @@ body {
   font-size: 16px;
   line-height: 1.5;
   background-color: $light;
-  padding-top: 50px;
-  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-bottom: 40px;
   p{
     margin-bottom: 25px;
     &:last-child{
@@ -231,22 +231,6 @@ body {
     }
   }
 }
-
-.literature-sources ol,
-//.dynamic-content ol {
-//  position: relative;
-//  padding-left: 32px;
-//  line-height: 1.5;
-//  color: #3B4040;
-//  counter-reset: list;
-//
-//  li:before {
-//    position: absolute;
-//    left: 8px;
-//    counter-increment: list;
-//    content: counters(list, '. ') '.';
-//  }
-//}
 
 .dynamic-content {
   p {

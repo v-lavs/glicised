@@ -115,6 +115,19 @@ $(document).ready(function () {
 
         });
     }
+
+
+    if ($(".article-slider").length) {
+        let articleSlider = new Swiper(".article-slider", {
+            spaceBetween: 20,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    }
+
+
     if ($("#particles-js").length) {
         particlesJS.load('particles-js', 'assets/particlesjs-config.json', function () {
             console.log('callback - particles.js config loaded');
