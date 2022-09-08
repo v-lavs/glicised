@@ -233,20 +233,20 @@ body {
 }
 
 .literature-sources ol,
-.dynamic-content ol {
-  position: relative;
-  padding-left: 32px;
-  line-height: 1.5;
-  color: #3B4040;
-  counter-reset: list;
-
-  li:before {
-    position: absolute;
-    left: 8px;
-    counter-increment: list;
-    content: counters(list, '. ') '.';
-  }
-}
+//.dynamic-content ol {
+//  position: relative;
+//  padding-left: 32px;
+//  line-height: 1.5;
+//  color: #3B4040;
+//  counter-reset: list;
+//
+//  li:before {
+//    position: absolute;
+//    left: 8px;
+//    counter-increment: list;
+//    content: counters(list, '. ') '.';
+//  }
+//}
 
 .dynamic-content {
   p {
@@ -294,8 +294,8 @@ body {
         height: 6px;
         border-radius: 50%;
         background-color: #3B4040;
-        left: 8px;
-        top: 10px;
+        left: 2px;
+        top: 17px;
       }
     }
   }
