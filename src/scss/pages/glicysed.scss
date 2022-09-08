@@ -1,7 +1,4 @@
 .glicysed {
-  .literature-sources {
-    padding-bottom: 40px;
-  }
 
   .consequent {
     width: 858px;
@@ -57,6 +54,7 @@
       }
     }
   }
+
   .section-application {
     padding-bottom: 216px;
 
@@ -95,6 +93,8 @@
   }
 
   .section-composition {
+    min-height: 0;
+
     .section__title {
       max-width: 996px;
     }
@@ -108,18 +108,73 @@
     .section__title {
       max-width: 996px;
     }
-    .card-list{
+
+    .card-list {
       margin: 0 -10px;
-      &__item{
+
+      &__item {
         width: 25%;
         padding: 0 10px;
       }
-      .card{
+
+      .card {
         display: block;
         font-size: 24px;
         text-align: center;
-        &__icon{
+
+        &__icon {
           margin: 0 auto;
+        }
+      }
+    }
+  }
+
+  .composition {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    margin-bottom: 50px;
+
+    &__item {
+      &_1 {
+        grid-area: 2 / 1 / 4 / 2;
+        text-align: right;
+        padding-right: 68px;
+
+        img {
+          width: 294px;
+          height: 263px;
+        }
+
+        &:before {
+          display: none;
+        }
+      }
+
+      &_2 {
+        grid-area: 2 / 2 / 3 / 3;
+
+        .composition__card {
+          padding-left: 0;
+          padding-right: 0;
+          margin-bottom: 50px;
+
+          &-body {
+            padding-left: 34px;
+            text-align: left;
+          }
+        }
+      }
+
+      &_3 {
+        grid-area: 3 / 2 / 4 / 3;
+
+        .links-list {
+          display: block;
+        }
+
+        .links-list__item {
+          width: 100%;
         }
       }
     }

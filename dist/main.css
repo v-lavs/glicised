@@ -942,7 +942,7 @@ body {
   width: 100%;
   font-size: 24px;
   line-height: 1.33;
-  padding: 15px 40px 20px;
+  padding: 20px 40px;
 }
 
 .links-list__item:hover,
@@ -2537,10 +2537,6 @@ body {
   background-color: #ffffff;
 }
 
-.glicysed .literature-sources {
-  padding-bottom: 40px;
-}
-
 .glicysed .consequent {
   width: 858px;
   background: linear-gradient(to bottom, #F9FCFE 0 95%, transparent 95% 100%);
@@ -2631,6 +2627,10 @@ body {
   padding-right: 20px;
 }
 
+.glicysed .section-composition {
+  min-height: 0;
+}
+
 .glicysed .section-composition .section__title {
   max-width: 996px;
 }
@@ -2660,6 +2660,55 @@ body {
 
 .glicysed .section-indication .card-list .card__icon {
   margin: 0 auto;
+}
+
+.glicysed .composition {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  margin-bottom: 50px;
+}
+
+.glicysed .composition__item_1 {
+  grid-area: 2 / 1 / 4 / 2;
+  text-align: right;
+  padding-right: 68px;
+}
+
+.glicysed .composition__item_1 img {
+  width: 294px;
+  height: 263px;
+}
+
+.glicysed .composition__item_1:before {
+  display: none;
+}
+
+.glicysed .composition__item_2 {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.glicysed .composition__item_2 .composition__card {
+  padding-left: 0;
+  padding-right: 0;
+  margin-bottom: 50px;
+}
+
+.glicysed .composition__item_2 .composition__card-body {
+  padding-left: 34px;
+  text-align: left;
+}
+
+.glicysed .composition__item_3 {
+  grid-area: 3 / 2 / 4 / 3;
+}
+
+.glicysed .composition__item_3 .links-list {
+  display: block;
+}
+
+.glicysed .composition__item_3 .links-list__item {
+  width: 100%;
 }
 
 @media only screen and (max-width: 1280px) {
