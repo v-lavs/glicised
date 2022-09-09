@@ -873,6 +873,13 @@ body {
 .card {
   display: flex;
   align-items: center;
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 28px;
+}
+
+.card__body {
+  padding: 10px;
 }
 
 .card:hover .card__icon .st2,
@@ -1392,6 +1399,78 @@ body {
   transform: translate(-50%, -50%) rotate(180deg) scale(1.5);
 }
 
+.slider-ctr {
+  width: 100%;
+  height: 100%;
+}
+
+.slider-control {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  width: 80px;
+  overflow: hidden;
+  border-radius: 3px;
+  box-shadow: 0 3px 3px 3px rgba(0, 0, 0, 0.15);
+  z-index: 99;
+}
+
+.slider-control .control {
+  width: 50%;
+  height: 40px;
+  display: block;
+  float: left;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  transition: .3s all ease;
+  background: white;
+}
+
+.slider-control .control .icon {
+  pointer-events: none;
+  transition: .3s all ease;
+}
+
+.slider-control .control.disabled {
+  pointer-events: none;
+  background: #ddd;
+}
+
+.slider-control .control.disabled .icon {
+  opacity: .5;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: 0.45s all cubic-bezier(0.65, 0.05, 0.36, 1);
+  clip-path: inset(0 0 0 0);
+}
+
+.slide:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.125);
+}
+
+.slide .slide-on {
+  clip-path: inset(0 100% 0 0);
+}
+
+.slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .col_5 {
   width: 40%;
 }
@@ -1596,7 +1675,7 @@ body {
 .section-banner__slogan {
   font-weight: 700;
   font-size: 70px;
-  line-height: 84px;
+  line-height: 1.14;
   color: #679EE6;
   padding-top: 70px;
   padding-right: 20px;
@@ -1620,7 +1699,7 @@ body {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 1;
+  z-index: 0;
 }
 
 .section-banner .section__block-btns {
@@ -1651,16 +1730,6 @@ body {
   margin-left: 22px;
 }
 
-.card {
-  margin-bottom: 20px;
-  font-weight: 500;
-  font-size: 28px;
-}
-
-.card__body {
-  padding: 10px;
-}
-
 .banner-slider {
   height: 100%;
 }
@@ -1673,37 +1742,22 @@ body {
 .banner-slider__wrap-img {
   position: absolute;
   right: 0;
-  width: 100%;
   top: 0;
   bottom: 0;
-  height: 100%;
-  background-color: transparent;
-}
-
-.banner-slider__img {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  height: 100%;
   width: 100%;
-  object-fit: cover;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0 40px 158px;
 }
 
 .banner-slider .animated .banner-slider__wrap-img {
   animation: zoom 1s;
   clip-path: inset(0 0 0 0);
-}
-
-@keyframes zoom {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 100%;
-  }
 }
 
 .section-benefits {
@@ -2015,6 +2069,10 @@ body {
 .section-application .card__body {
   padding-left: 40px;
   padding-right: 40px;
+}
+
+.section-application .card .card__icon {
+  margin-bottom: auto;
 }
 
 .section-application .card ul {
@@ -2619,10 +2677,6 @@ body {
   font-size: 24px;
 }
 
-.glicysed .section-application .card__icon {
-  margin-bottom: auto;
-}
-
 .glicysed .section-application .card__body {
   padding-right: 20px;
 }
@@ -2711,9 +2765,85 @@ body {
   width: 100%;
 }
 
+@media screen and (max-width: 1660px) {
+  .bg-pattern {
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 1280px) {
+  .dynamic-content p {
+    font-size: 20px;
+  }
+
   .dynamic-content p:last-child {
     margin-bottom: 0;
+  }
+
+  .dynamic-content h1,
+  .dynamic-content h2 {
+    font-size: 60px;
+  }
+
+  body {
+    font-size: 18px;
+  }
+
+  .section__title {
+    font-size: 56px;
+  }
+
+  .card {
+    font-size: 24px;
+  }
+
+  .links-list__item {
+    padding-right: 24px;
+  }
+
+  .text_md {
+    font-size: 24px;
+  }
+
+  .text_sm {
+    font-size: 20px;
+  }
+
+  .title_md {
+    font-size: 38px;
+  }
+
+  .title_sm {
+    font-size: 24px;
+  }
+
+  .container {
+    max-width: 1080px;
+  }
+
+  .section-banner .col_6 {
+    min-height: 578px;
+  }
+
+  .section-banner__slogan {
+    font-size: 56px;
+  }
+
+  .section-banner__content {
+    padding-right: 20px;
+  }
+
+  .section-benefits .part {
+    min-height: 620px;
+  }
+
+  .section-benefits .links-list__item {
+    padding-right: 24px;
+    padding-left: 40px;
+  }
+
+  .section-effects:before {
+    top: -4.5vw;
   }
 }
 
@@ -2736,7 +2866,7 @@ body {
   }
 
   .container {
-    max-width: 1080px;
+    max-width: 920px;
   }
 
   .header {

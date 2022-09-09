@@ -97,6 +97,20 @@
   }
 }
 
+@include respond-to($lg) {
+  .section-benefits {
+    .part {
+      min-height: 620px;
+    }
+
+    .links-list {
+      &__item {
+        padding-right: 24px;
+        padding-left: 40px;
+      }
+    }
+  }
+}
 
 @include respond-to($md) {
   .section-benefits {

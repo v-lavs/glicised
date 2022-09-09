@@ -4,9 +4,11 @@
   max-width: 1230px;
   padding: 0 15px;
   margin: 0 auto;
-
-  @include respond-to($md) {
+  @include respond-to($lg) {
     max-width: 1080px;
+  }
+  @include respond-to($md) {
+    max-width: 920px;
   }
   @include respond-to($sm) {
     max-width: 760px;

@@ -60,6 +60,10 @@
       padding-right: 40px;
     }
 
+    .card__icon {
+      margin-bottom: auto;
+    }
+
     ul {
       padding-left: 15px;
       margin-bottom: 20px;
@@ -68,6 +72,7 @@
         position: relative;
         padding-left: 25px;
         margin-bottom: 8px;
+
         &:before {
           position: absolute;
           content: '';
@@ -88,7 +93,7 @@
     min-height: 633px;
   }
 
-  .note{
+  .note {
     position: absolute;
     background-color: #F4FAFE;
     padding: 27px 100px 33px 40px;
@@ -96,7 +101,8 @@
     bottom: 0;
     line-height: 1.14;
     transform: translateY(-120%);
-    .text_md{
+
+    .text_md {
       color: $text-dark;
     }
   }

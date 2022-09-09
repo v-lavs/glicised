@@ -26,5 +26,27 @@
   font-weight: 700;
 }
 
+@include respond-to($lg) {
+  .text {
+    &_md {
+      font-size: 24px;
+    }
+
+    &_sm {
+      font-size: 20px;
+    }
+  }
+
+  .title {
+    &_md {
+      font-size: 38px;
+    }
+
+    &_sm {
+      font-size: 24px;
+    }
+  }
+}
+
 
 

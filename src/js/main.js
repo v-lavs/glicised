@@ -35,10 +35,10 @@ $(document).ready(function () {
     let smoothScroll = location.hash;
     const offsetSize = $("header").innerHeight();
     location.hash = '';
-    if (smoothScroll[1] != undefined) {
+    if ($(smoothScroll).length > 0) {
         $('html, body').animate({scrollTop: $(smoothScroll).offset().top - offsetSize}, 1500);
     }
-    ;
+
 
     $('a[href*="#"]')
         .not('[href="#"]')
@@ -64,7 +64,7 @@ $(document).ready(function () {
                             $target.attr('tabindex', '-1');
                             $target.focus();
                         }
-                        ;
+
                     });
                 }
             }
@@ -72,29 +72,19 @@ $(document).ready(function () {
 
 
 //    SLIDERS
-    const slideSpeed = 2000;
+//     const slideSpeed = 2000;
     if ($(".banner-slider").length) {
         let bannerSlider = new Swiper(".banner-slider", {
             loop: true,
             autoplay: true,
-            effect: "fade",
-            speed: slideSpeed,
-
-            on: {
-                afterInit: function () {
-                    const currSlide = this.slides[this.activeIndex];
-                    $(currSlide).addClass('animated');
-                },
-                slideChange: function () {
-                    const currSlide = this.slides[this.activeIndex];
-                    $(currSlide).addClass('animated');
-
-                    setTimeout(() => {
-                        $('.banner-slider__slide:not(.swiper-slide-active)').removeClass('animated');
-                    }, slideSpeed);
-                }
-            }
+            effect: 'fade',
+            // slideChange: function () {
+            //     const currSlide = this.slides[this.activeIndex];
+            //     $(currSlide).addClass('slide-on');
+            //     $('.swiper-slide').removeClass('slide-on');
+            // }
         });
+
     }
 
 
@@ -224,7 +214,7 @@ $(document).ready(function () {
             clearOptionsValue();
             currStep = 0;
 
-            $pointer.animate({left:  Math.max(offset, offset + 2)  + "%"}, 1000).animate({left:  Math.max(0, offset -4)  + "%"}, 300).animate({left: offset + "%"}, 400);
+            $pointer.animate({left: Math.max(offset, offset + 2) + "%"}, 1000).animate({left: Math.max(0, offset - 4) + "%"}, 300).animate({left: offset + "%"}, 400);
         }
 
         function clearOptionsValue() {

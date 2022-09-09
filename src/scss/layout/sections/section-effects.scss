@@ -23,7 +23,7 @@
     margin: 0 auto 20px;
   }
 
-  .section__block-btns{
+  .section__block-btns {
     padding-top: 40px;
   }
 
@@ -51,7 +51,8 @@
   .slider-nav {
     position: relative;
     padding-top: 88px;
-    &:before{
+
+    &:before {
       position: absolute;
       content: '';
       display: block;
@@ -154,8 +155,12 @@
 
 }
 
-@include respond-to($md) {
-
+@include respond-to($lg) {
+  .section-effects {
+    &:before {
+      top: -4.5vw;
+    }
+  }
 }
 
 @include respond-to($sm) {

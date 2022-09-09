@@ -28,7 +28,7 @@ body {
   text-transform: uppercase;
 }
 
-.text_blue{
+.text_blue {
   color: $blue;
 }
 
@@ -68,19 +68,29 @@ body {
 .card {
   display: flex;
   align-items: center;
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 28px;
+
+  &__body {
+    padding: 10px;
+  }
+
   &:hover,
-  &:focus{
-    .card__icon  .st2{
+  &:focus {
+    .card__icon .st2 {
       transition: .5s;
       opacity: 1;
       transform: scale(1);
     }
   }
-  &__icon-bg{
+
+  &__icon-bg {
     background-position: center;
     background-size: 100px 100px;
     background-repeat: no-repeat;
   }
+
   &__icon {
     width: 100px;
     height: 100px;
@@ -88,12 +98,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+
     svg {
       display: inline-block;
       width: 100%;
       height: auto;
     }
-    .st2{
+
+    .st2 {
       opacity: 0;
       transform: scale(0.9);
       transform-origin: 50% 50%;
@@ -141,11 +153,13 @@ body {
     font-size: 24px;
     line-height: 1.33;
     padding: 20px 40px;
+
     &:hover,
     &:focus {
       -webkit-text-stroke-width: 1px;
       color: $blue;
       background-color: #F7FBFF;
+
       .links-list__icon {
         transform: scale(1.25);
       }
@@ -189,6 +203,7 @@ body {
     margin-left: 58px;
     transition: .35s;
     border: 1px solid #61A1F4;
+
     &:hover,
     &:focus {
       background-color: $blue;
@@ -224,9 +239,11 @@ body {
   background-color: $light;
   padding-top: 20px;
   padding-bottom: 40px;
-  p{
+
+  p {
     margin-bottom: 25px;
-    &:last-child{
+
+    &:last-child {
       margin-bottom: 0;
     }
   }
@@ -301,13 +318,14 @@ body {
 
   @include respond-to($lg) {
     p {
+      font-size: 20px;
 
       &:last-child {
         margin-bottom: 0;
       }
     }
     h1, h2 {
-
+      font-size: 60px;
     }
   }
 
@@ -326,6 +344,24 @@ body {
   }
 }
 
+@include respond-to($lg) {
+  body {
+    font-size: 18px;
+  }
+  .section {
+    &__title {
+      font-size: 56px;
+    }
+  }
+  .card {
+    font-size: 24px;
+  }
+  .links-list {
+    &__item {
+      padding-right: 24px;
+    }
+  }
+}
 
 @include respond-to($md) {
 

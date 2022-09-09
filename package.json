@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "bootstrap-4-grid": "^2.4.1",
+    "bourbon": "^7.2.0",
     "braces": "^2.3.2",
     "jquery": "^3.6.0",
     "natives": "^1.1.6",
