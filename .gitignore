@@ -3,3 +3,7 @@
 node_modules
 out
 gen
+
+test-slider.html
+test-slider.js
+test-slider.scss
