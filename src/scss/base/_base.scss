@@ -264,11 +264,11 @@ body {
   }
 
   h1, h2 {
-    font-size: 72px;
+    font-size: 28px;
   }
 
   h3, h4 {
-    font-size: 28px;
+    font-size: 26px;
   }
 
   a {
@@ -315,33 +315,6 @@ body {
       content: counters(list, '. ') '.';
     }
   }
-
-  @include respond-to($lg) {
-    p {
-      font-size: 20px;
-
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-    h1, h2 {
-      font-size: 60px;
-    }
-  }
-
-  @include respond-to($xs) {
-    p {
-
-      font-size: 16px;
-
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-    h1, h2 {
-
-    }
-  }
 }
 
 @include respond-to($lg) {
@@ -360,6 +333,16 @@ body {
     &__item {
       padding-right: 24px;
     }
+  }
+  .dynamic-content{
+    p {
+      font-size: 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
   }
 }
 

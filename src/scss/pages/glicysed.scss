@@ -59,14 +59,18 @@
     padding-bottom: 216px;
 
     &:after {
-      bottom: 0;
-      line-height: 1.14;
-      transform: translateY(-120%);
+      bottom: auto;
+      top: -10px;
     }
 
     .col_5 {
       min-height: 930px;
       padding-bottom: 90px;
+    }
+
+    &__img {
+      width: 100%;
+      transform: translate(45px, 40%) rotate(0);
     }
 
     .section__title {
@@ -176,4 +180,35 @@
       }
     }
   }
+
+  @include respond-to($lg) {
+    .consequent {
+      width: 758px;
+
+      &__icon {
+        width: 120px;
+        height: 120px;
+      }
+
+      &__bg {
+        min-height: 490px;
+      }
+    }
+    .section-application {
+      .note {
+        padding-right: 40px;
+      }
+
+      &__img {
+        width: 80%;
+        transform: translate(130px, 40%) rotate(0);
+      }
+
+      .col_5 {
+        min-height: 840px;
+      }
+    }
+  }
+
 }
+
