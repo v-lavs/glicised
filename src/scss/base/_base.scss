@@ -334,7 +334,7 @@ body {
       padding-right: 24px;
     }
   }
-  .dynamic-content{
+  .dynamic-content {
     p {
       font-size: 20px;
 
@@ -347,7 +347,23 @@ body {
 }
 
 @include respond-to($md) {
-
+  //.section {
+  //  &__title {
+  //    font-size: 50px;
+  //  }
+  //
+  //  &__block-btns {
+  //    .btn_light {
+  //      .btn__icon {
+  //        margin: 0;
+  //      }
+  //    }
+  //
+  //    .mob-hide {
+  //      display: none;
+  //    }
+  //  }
+  //}
 }
 
 @include respond-to($xs) {

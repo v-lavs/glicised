@@ -114,7 +114,9 @@
 
 @include respond-to($md) {
   .section-benefits {
-
+    .part {
+      //width: 100%;
+    }
   }
 }
 

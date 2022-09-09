@@ -73,8 +73,19 @@
   height: 100%;
 
   &__slide {
-    position: relative;
-    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  .slide-on {
+    z-index: 4;
+    .banner-slider__wrap-img {
+      clip-path: inset(0 0 0 0);
+    }
   }
 
   &__wrap-img {
@@ -91,6 +102,9 @@
     align-items: flex-end;
     justify-content: center;
     padding: 0 40px 158px;
+    transition: 1s clip-path cubic-bezier(0.65, 0.05, 0.36, 1);
+
+    clip-path: inset(0 0 0 100%);
   }
 
   &__img {
@@ -132,7 +146,9 @@
 
 @include respond-to($md) {
   .section-banner {
-
+    //&__slogan {
+    //  font-size: 50px;
+    //}
   }
 }
 

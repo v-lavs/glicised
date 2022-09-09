@@ -72,19 +72,50 @@ $(document).ready(function () {
 
 
 //    SLIDERS
-//     const slideSpeed = 2000;
     if ($(".banner-slider").length) {
-        let bannerSlider = new Swiper(".banner-slider", {
-            loop: true,
-            autoplay: true,
-            effect: 'fade',
-            // slideChange: function () {
-            //     const currSlide = this.slides[this.activeIndex];
-            //     $(currSlide).addClass('slide-on');
-            //     $('.swiper-slide').removeClass('slide-on');
-            // }
-        });
+              // let bannerSlider = new Swiper(".banner-slider", {
+        //     autoplay: {
+        //         delay: 5000,
+        //     },
+        //     loop: true,
+        //     effect: 'fade',
+        // });
 
+        // slides informations
+        const slides = document.querySelectorAll(".banner-slider .banner-slider__slide"),
+            slidesLength = slides.length;
+
+        // slides array
+        const slidesArr = [].slice.call(slides);
+
+
+        // slide current
+        let slideCurrent = -1;
+
+        function moveSlide(e) {
+            // get next button
+
+            prevSlide = slidesArr[slideCurrent - 1];
+            slide = slidesArr[slideCurrent];
+
+            if (prevSlide) {
+                setTimeout(() => {
+                    // prevSlide.classList.remove('slide-on');
+                }, 0);
+            }
+
+            slide.classList.add("slide-on");
+
+
+            if (slideCurrent === slidesLength - 1) {
+
+            }
+        }
+
+        setInterval(() => {
+            slideCurrent++;
+            moveSlide();
+        }, 3000);
     }
 
 

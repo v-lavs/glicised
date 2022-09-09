@@ -8,7 +8,7 @@
     max-width: 1080px;
   }
   @include respond-to($md) {
-    max-width: 920px;
+    max-width: 980px;
   }
   @include respond-to($sm) {
     max-width: 760px;
