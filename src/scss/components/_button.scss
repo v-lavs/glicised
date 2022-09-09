@@ -68,6 +68,13 @@
       }
     }
   }
+  @include respond-to($md){
+    &_main{
+      font-size: 20px;
+      padding-left: 35px;
+      padding-right: 35px;
+    }
+  }
 }
 
 

@@ -2,7 +2,6 @@
 @import 'utils/mixins';
 
 @import '../lib/swiper/swiper-bundle.min';
-@import "../../node_modules/bourbon/core/bourbon";
 
 @import 'base/reset';
 @import 'base/base';
@@ -12,7 +11,7 @@
 @import 'components/button';
 @import 'components/nav';
 @import 'components/slider';
-@import 'components/test-slider';
+
 
 @import 'layout/layout';
 @import 'layout/grid';

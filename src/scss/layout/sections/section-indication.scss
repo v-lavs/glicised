@@ -1,7 +1,7 @@
 .section-indication {
   padding-bottom: 60px;
   background: url(../assets/img/bg-section/sec-5-1.svg) top 45% left 100px/53px 53px no-repeat,
-              url(../assets/img/bg-section/sec-5-2.svg) top 17% right/144px 288px no-repeat;
+  url(../assets/img/bg-section/sec-5-2.svg) top 17% right/144px 288px no-repeat;
 
   .section__title {
     margin-left: auto;
@@ -29,8 +29,10 @@
 }
 
 
-@include respond-to($xs) {
-
+@include respond-to($md) {
+  .section-indication {
+    background-image: none;
+  }
 }
 
 @media screen and (max-width: 560px) {

@@ -4,11 +4,15 @@
   margin-bottom: 100px;
   background-image: linear-gradient(to right, #FAFCFF 0% 50%, #ffffff 50% 100%);
 
-  .col_6 {
+  &__inner {
+    position: relative;
     min-height: 742px;
+    width: 100%;
+    padding-right: 50%;
   }
 
   &__slogan {
+    position: relative;
     font-weight: 700;
     font-size: 70px;
     line-height: 1.14;
@@ -17,7 +21,18 @@
     padding-right: 20px;
     padding-bottom: 30px;
     margin-bottom: 30px;
-    border-bottom: 1px solid #DCEDFF;
+
+    &:before{
+      position: absolute;
+      content: '';
+      display: block;
+      background-color:#DCEDFF;
+      height: 1px;
+      width: 90%;
+      left: 0;
+      bottom: 0;
+      z-index: 1;
+    }
   }
 
   &__content {
@@ -40,13 +55,16 @@
 
   .section__block-btns {
     display: flex;
-    justify-content: space-between;
-    margin-top: auto;
+
+    .btn {
+      display: flex;
+      margin-right: 40px;
+    }
   }
 
   .wrap-slider {
     position: absolute;
-    left: 0;
+    left: 50%;
     top: 0;
     width: 50vw;
     max-width: 960px;
@@ -83,6 +101,7 @@
 
   .slide-on {
     z-index: 4;
+
     .banner-slider__wrap-img {
       clip-path: inset(0 0 0 0);
     }
@@ -107,19 +126,6 @@
     clip-path: inset(0 0 0 100%);
   }
 
-  &__img {
-
-
-  }
-
-  .animated {
-    .banner-slider__wrap-img {
-
-      //transform-origin:  100% 0;
-      animation: zoom 1s;
-      clip-path: inset(0 0 0 0);
-    }
-  }
 }
 
 @media screen and (max-width: 1660px) {
@@ -130,7 +136,7 @@
 
 @include respond-to($lg) {
   .section-banner {
-    .col_6 {
+    &__inner {
       min-height: 578px;
     }
 
