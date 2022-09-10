@@ -21,7 +21,11 @@
       }
 
     }
-
+    &.active {
+      .sub-menu__toggle {
+        color: $blue;
+      }
+    }
     .sub-menu {
       width: max-content;
       position: absolute;
@@ -90,6 +94,8 @@
     }
   }
 
+
+
   &__link {
     display: block;
     padding: 10px 0;
@@ -148,4 +154,3 @@
     padding-right: 15px;
   }
 }
-

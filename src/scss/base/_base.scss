@@ -347,23 +347,19 @@ body {
 }
 
 @include respond-to($md) {
-  //.section {
-  //  &__title {
-  //    font-size: 50px;
-  //  }
-  //
-  //  &__block-btns {
-  //    .btn_light {
-  //      .btn__icon {
-  //        margin: 0;
-  //      }
-  //    }
-  //
-  //    .mob-hide {
-  //      display: none;
-  //    }
-  //  }
-  //}
+  .section {
+    &__title {
+      font-size: 40px;
+    }
+  }
+
+  .card{
+    font-size: 20px;
+    &__icon{
+      width: 75px;
+      height: 75px;
+    }
+  }
 }
 
 @include respond-to($xs) {

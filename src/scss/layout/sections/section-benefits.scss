@@ -114,8 +114,12 @@
 
 @include respond-to($md) {
   .section-benefits {
-    .part {
-      //width: 100%;
+    .links-list {
+      &__item {
+        padding-right: 24px;
+        padding-left: 40px;
+        font-size: 20px;
+      }
     }
   }
 }

@@ -25,11 +25,10 @@ $(document).ready(function () {
         $('.btn_close').hide();
     });
 
-    $('.dropdown').click(function (e) {
+    $('.dropdown, .sub-menu__toggle').click(function (e) {
         $(this).find($('.sub-menu')).toggleClass('show');
         $('.menu__link').toggleClass('active');
     });
-
 
 // SMOOTH SCROLL TO ANCHOR
     let smoothScroll = location.hash;
@@ -72,52 +71,6 @@ $(document).ready(function () {
 
 
 //    SLIDERS
-    if ($(".banner-slider").length) {
-              // let bannerSlider = new Swiper(".banner-slider", {
-        //     autoplay: {
-        //         delay: 5000,
-        //     },
-        //     loop: true,
-        //     effect: 'fade',
-        // });
-
-        // slides informations
-        const slides = document.querySelectorAll(".banner-slider .banner-slider__slide"),
-            slidesLength = slides.length;
-
-        // slides array
-        const slidesArr = [].slice.call(slides);
-
-
-        // slide current
-        let slideCurrent = -1;
-
-        function moveSlide(e) {
-            // get next button
-
-            prevSlide = slidesArr[slideCurrent - 1];
-            slide = slidesArr[slideCurrent];
-
-            if (prevSlide) {
-                setTimeout(() => {
-                    // prevSlide.classList.remove('slide-on');
-                }, 0);
-            }
-
-            slide.classList.add("slide-on");
-
-
-            if (slideCurrent === slidesLength - 1) {
-
-            }
-        }
-
-        setInterval(() => {
-            slideCurrent++;
-            moveSlide();
-        }, 3000);
-    }
-
 
     if ($(".consequent-slider").length) {
         let consequentSlider = new Swiper(".consequent-slider", {
@@ -252,5 +205,51 @@ $(document).ready(function () {
             $options.prop('checked', false);
         }
     }
+
+// SLider with mask
+    const slider = document.querySelector('.banner-slider');
+    if (slider) {
+        // slides informations
+        const slidesDefault = document.querySelectorAll(".banner-slider .banner-slider__slide");
+
+        slidesDefault.forEach(item => {
+            const clonedItem = item.cloneNode(true);
+            slider.appendChild(clonedItem);
+        });
+
+        let slides = document.querySelectorAll(".banner-slider .banner-slider__slide");
+
+        function moveSlide(e) {
+            const currSlideIndex = [].slice.call(slides).findIndex(s => s.classList.contains('active-slide'));
+            const slide = slides[currSlideIndex + 1];
+            const prevSlide = slides[currSlideIndex - 1];
+
+            if (prevSlide) {
+                const cloned = prevSlide.cloneNode(true);
+                cloned.classList.remove('slide-on');
+                prevSlide.remove();
+                slider.appendChild(cloned);
+                slides = document.querySelectorAll(".banner-slider .banner-slider__slide")
+                console.log(slides)
+            }
+
+            $(slides).removeClass('active-slide');
+
+            slide.classList.add("slide-on");
+            slide.classList.add("active-slide");
+        }
+
+        function startSlider() {
+            slides[0].classList.add('active-slide');
+            slides[0].classList.add("slide-on");
+
+            setInterval(() => {
+                moveSlide();
+            }, 3000);
+        }
+
+        startSlider();
+    }
+
 });
 

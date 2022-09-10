@@ -1234,6 +1234,10 @@ body {
   color: #61A1F4;
 }
 
+.menu__item.active .sub-menu__toggle {
+  color: #61A1F4;
+}
+
 .menu__item .sub-menu {
   width: max-content;
   position: absolute;
@@ -2847,10 +2851,31 @@ body {
 }
 
 @media only screen and (max-width: 1160px) {
+  .section__title {
+    font-size: 40px;
+  }
+
+  .card {
+    font-size: 20px;
+  }
+
+  .card__icon {
+    width: 75px;
+    height: 75px;
+  }
+
   .btn_main {
     font-size: 20px;
     padding-left: 35px;
     padding-right: 35px;
+  }
+
+  .btn .mob-hide {
+    display: none;
+  }
+
+  .btn_light .btn__icon {
+    margin-left: 0;
   }
 
   .menu__item .sub-menu__item {
@@ -2939,6 +2964,20 @@ body {
     top: 0;
     transform: translateX(50%);
     z-index: 1000;
+  }
+
+  .section-banner__slogan {
+    font-size: 40px;
+  }
+
+  .section-banner .section__block-btns .btn {
+    margin-right: 20px;
+  }
+
+  .section-benefits .links-list__item {
+    padding-right: 24px;
+    padding-left: 40px;
+    font-size: 20px;
   }
 
   .section-indication {
