@@ -3162,15 +3162,6 @@ body {
     height: 60px;
   }
 
-  .section {
-    padding-bottom: 40px;
-    padding-top: 40px;
-  }
-
-  .section__titlle {
-    font-size: 42px;
-  }
-
   .btn_main {
     font-size: 16px;
     padding: 18px 48px;
@@ -3234,6 +3225,10 @@ body {
     padding-top: 20px;
   }
 
+  .section-banner .card {
+    max-width: 420px;
+  }
+
   .section-banner__inner {
     padding-right: 0;
   }
@@ -3282,6 +3277,10 @@ body {
 }
 
 @media only screen and (max-width: 580px) {
+  body {
+    font-size: 16px;
+  }
+
   .main {
     padding-top: 92px;
   }
@@ -3290,8 +3289,20 @@ body {
     background: mistyrose;
   }
 
+  .section {
+    padding: 40px 0;
+  }
+
+  .text_md {
+    font-size: 16px;
+  }
+
+  .text_sm {
+    font-size: 16px;
+  }
+
   .container {
-    max-width: 100%;
+    max-width: 420px;
   }
 
   .header {
@@ -3320,6 +3331,20 @@ body {
     padding-top: 0;
   }
 
+  .section-banner__content {
+    padding-right: 0;
+  }
+
+  .section-banner .card {
+    margin-bottom: 0;
+    font-size: 16px;
+  }
+
+  .section-banner .card__body {
+    padding-right: 0;
+    padding-left: 13px;
+  }
+
   .section-banner .section__block-btns {
     justify-content: space-between;
   }
@@ -3329,7 +3354,15 @@ body {
   }
 
   .section-banner .wrap-slider {
-    left: -15px;
     width: 100vw;
+    margin-top: 20px;
+    padding-top: 120px;
+    left: calc((100% - 100vw) / 2);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .section-banner .wrap-slider {
+    padding-top: 85%;
   }
 }
