@@ -188,7 +188,7 @@ $(document).ready(function () {
             const finalScore = Object.values(answers).reduce(function (acc, prev) {
                 return prev + acc
             }, 0);
-            const level = QUIZ_RESULT_THRESHOLD.find(el=> el.maxScore >= finalScore) || QUIZ_RESULT_THRESHOLD[0];
+            const level = QUIZ_RESULT_THRESHOLD.find(el => el.maxScore >= finalScore) || QUIZ_RESULT_THRESHOLD[0];
 
             const offset = finalScore * 100 / (QUIZ_QUESTIONS.length * 4) || 0;
             const res = $('<div></div>');
@@ -215,6 +215,8 @@ $(document).ready(function () {
 // Slider with mask
     const slider = document.querySelector('.banner-slider');
     if (slider) {
+        const sliderTimeout = 5000;
+
         // slides informations
         const slidesDefault = document.querySelectorAll(".banner-slider .banner-slider__slide");
 
@@ -251,11 +253,18 @@ $(document).ready(function () {
 
             setInterval(() => {
                 moveSlide();
-            }, 3000);
+            }, sliderTimeout);
         }
 
         startSlider();
     }
 
+    // banner anim
+    $('.section-banner .anim-up').addClass('anim-active');
+    $('.section-banner .anim-right').addClass('anim-active');
+
+    setTimeout(() => {
+        $('.section-banner .slider-btn').addClass('anim-active');
+    }, 600);
 });
 

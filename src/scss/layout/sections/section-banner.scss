@@ -4,6 +4,27 @@
   margin-bottom: 100px;
   background-image: linear-gradient(to right, #FAFCFF 0% 50%, #ffffff 50% 100%);
 
+  .slider-btn,
+  .anim-up {
+    position: relative;
+    opacity: 0;
+    transform: translateY(100px);
+    transition:  1.5s;
+    &.anim-active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .anim-right {
+    opacity: 0;
+    transition: 1s;
+    transform: translate(-100%, -50%) !important;
+    &.anim-active {
+      opacity: 1;
+      transform: translate(0%, -50%) !important;
+    }
+  }
+
   &__inner {
     position: relative;
     min-height: 742px;
@@ -194,5 +215,26 @@
     &__inner {
       padding-right: 0;
     }
+    &__slogan {
+      padding-top: 30px;
+      padding-bottom: 20px;
+      max-width: 500px;
+      margin-bottom: 0;
+    }
+    .wrap-slider{
+      position: relative;
+      padding-top: 85%;
+      right: 0;
+      left: 0;
+      width: 100%;
+    }
+
+  }
+  .banner-slider{
+    &__wrap-img{
+      align-content: center;
+      padding-bottom: 40px;
+    }
+
   }
 }

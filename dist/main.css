@@ -1603,6 +1603,31 @@ body {
   background-image: linear-gradient(to right, #FAFCFF 0% 50%, #ffffff 50% 100%);
 }
 
+.section-banner .slider-btn,
+.section-banner .anim-up {
+  position: relative;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: 1.5s;
+}
+
+.section-banner .slider-btn.anim-active,
+.section-banner .anim-up.anim-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-banner .anim-right {
+  opacity: 0;
+  transition: 1s;
+  transform: translate(-100%, -50%) !important;
+}
+
+.section-banner .anim-right.anim-active {
+  opacity: 1;
+  transform: translate(0%, -50%) !important;
+}
+
 .section-banner__inner {
   position: relative;
   min-height: 742px;
@@ -3124,6 +3149,11 @@ body {
     display: none;
   }
 
+  .card__icon {
+    width: 60px;
+    height: 60px;
+  }
+
   .container {
     max-width: 580px;
   }
@@ -3170,6 +3200,26 @@ body {
 
   .section-banner__inner {
     padding-right: 0;
+  }
+
+  .section-banner__slogan {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    max-width: 500px;
+    margin-bottom: 0;
+  }
+
+  .section-banner .wrap-slider {
+    position: relative;
+    padding-top: 85%;
+    right: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .banner-slider__wrap-img {
+    align-content: center;
+    padding-bottom: 40px;
   }
 }
 
