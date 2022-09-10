@@ -379,6 +379,13 @@ body {
       height: 60px;
     }
   }
+  .section {
+    padding: 60px 0;
+
+    &__title {
+      margin-bottom: 40px;
+    }
+  }
 }
 
 @include respond-to($xxs) {
@@ -391,9 +398,20 @@ body {
   .container {
     background: mistyrose;
   }
-  .section{
+  .section {
     padding: 40px 0;
 
+    &__title {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .links-list {
+    &__item {
+      font-size: 16px;
+    }
   }
 }
 

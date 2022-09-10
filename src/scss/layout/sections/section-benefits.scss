@@ -132,8 +132,61 @@
   }
 }
 
-@include respond-to($sm) {
+@include respond-to($xs) {
   .section-benefits {
+    background-image: none;
 
+    .d-flex {
+      flex-wrap: wrap;
+    }
+
+    .part {
+      width: 100%;
+      min-height: 0;
+
+      &_left {
+        padding-top: 85%;
+      }
+    }
+
+    &__thumbs {
+      grid-template-columns: repeat(11, 1fr);
+      width: 100%;
+    }
+  }
+}
+
+@include respond-to($xxs) {
+  .section-benefits {
+    .part_left {
+      padding-top: 120%;
+    }
+
+    &__thumbs {
+      width: 100vw;
+      right: calc((100% - 100vw) / 2);
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .section-benefits {
+    .links-list {
+      &__icon {
+        margin-left: 10px;
+      }
+
+      &__item {
+        font-size: 16px;
+
+        &:before {
+          top: 14px;
+        }
+      }
+    }
+
+    .part_left {
+      padding-top: 106.75%;
+    }
   }
 }

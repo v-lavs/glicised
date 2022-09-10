@@ -225,6 +225,8 @@
 
 @include respond-to($xs) {
   .section-banner {
+    padding-top: 0;
+    background-image: linear-gradient(to bottom, #FAFCFF 0% 50%, #ffffff 50% 100%);
     margin-bottom: 0;
 
     .section__block-btns {
@@ -304,10 +306,6 @@
       }
     }
 
-    .wrap-slider {
-
-    }
-
     .section__block-btns {
       justify-content: space-between;
 
@@ -319,7 +317,7 @@
     .wrap-slider {
       width: 100vw;
       margin-top: 20px;
-      padding-top: 120px;
+      padding-top: 120%;
       left: calc((100% - 100vw) / 2);
     }
   }
