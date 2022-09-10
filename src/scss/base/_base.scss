@@ -373,11 +373,28 @@ body {
   .title-decor:before {
     display: none;
   }
-  .card{
-    &__icon{
-        width: 60px;
-        height: 60px;
+  .card {
+    &__icon {
+      width: 60px;
+      height: 60px;
     }
+  }
+  .section {
+    padding-bottom: 40px;
+    padding-top: 40px;
+
+    &__titlle {
+      font-size: 42px;
+    }
+  }
+}
+
+@include respond-to($xxs) {
+  .main {
+    padding-top: 92px;
+  }
+  .container {
+    background: mistyrose;
   }
 }
 

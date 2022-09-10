@@ -47,7 +47,8 @@
     background-color: #FAB05C;
     border-color: #FAB05C;
     color: #F4FAFE;
-    &:before{
+
+    &:before {
       position: absolute;
       content: '';
       display: block;
@@ -63,16 +64,28 @@
     &:focus {
       background-color: $blue;
       border-color: $blue;
-     &:before{
-        background-color:  #548CD4;
+
+      &:before {
+        background-color: #548CD4;
       }
     }
   }
-  @include respond-to($md){
-    &_main{
+
+  @include respond-to($md) {
+    &_main {
       font-size: 20px;
       padding-left: 35px;
       padding-right: 35px;
+    }
+  }
+  @include respond-to($xs) {
+    &_main {
+      font-size: 16px;
+      padding: 18px 48px;
+    }
+    &_light{
+      padding-left: 30px;
+      padding-right: 30px;
     }
   }
 }

@@ -1695,6 +1695,10 @@ body {
   bottom: 0;
 }
 
+.section-banner .wrap-slider .slider-btn .desk-hide {
+  display: none;
+}
+
 .section-banner .wrap-slider .btn {
   position: absolute;
   bottom: 46px;
@@ -1710,6 +1714,10 @@ body {
 
 .banner-slider {
   height: 100%;
+}
+
+.banner-slider .icon-mob-show {
+  display: none;
 }
 
 .banner-slider__slide {
@@ -3154,6 +3162,25 @@ body {
     height: 60px;
   }
 
+  .section {
+    padding-bottom: 40px;
+    padding-top: 40px;
+  }
+
+  .section__titlle {
+    font-size: 42px;
+  }
+
+  .btn_main {
+    font-size: 16px;
+    padding: 18px 48px;
+  }
+
+  .btn_light {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
   .container {
     max-width: 580px;
   }
@@ -3198,6 +3225,15 @@ body {
     margin: 0 10px;
   }
 
+  .section-banner {
+    margin-bottom: 0;
+  }
+
+  .section-banner .section__block-btns {
+    padding-bottom: 0;
+    padding-top: 20px;
+  }
+
   .section-banner__inner {
     padding-right: 0;
   }
@@ -3221,11 +3257,45 @@ body {
     align-content: center;
     padding-bottom: 40px;
   }
+
+  .banner-slider .slider-btn {
+    padding: 20px;
+    top: calc(50% - 31px);
+    bottom: auto;
+    height: 62px;
+  }
+
+  .banner-slider .slider-btn .btn__icon {
+    width: 28px;
+    height: 18px;
+    margin-left: 0;
+  }
+
+  .banner-slider .slider-btn .icon-mob-show {
+    display: block !important;
+  }
+
+  .banner-slider .slider-btn .mob-hide,
+  .banner-slider .slider-btn .icon-mob-hide {
+    display: none;
+  }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 580px) {
+  .main {
+    padding-top: 92px;
+  }
+
+  .container {
+    background: mistyrose;
+  }
+
   .container {
     max-width: 100%;
+  }
+
+  .header {
+    padding: 22px 0;
   }
 
   .header .container {
@@ -3244,5 +3314,22 @@ body {
     padding: 20px 0;
     margin-bottom: 10px;
     border-bottom: none;
+  }
+
+  .section-banner {
+    padding-top: 0;
+  }
+
+  .section-banner .section__block-btns {
+    justify-content: space-between;
+  }
+
+  .section-banner .section__block-btns .btn {
+    margin: 0;
+  }
+
+  .section-banner .wrap-slider {
+    left: -15px;
+    width: 100vw;
   }
 }
