@@ -126,7 +126,9 @@
 
 @include respond-to($sm) {
   .section-benefits {
-
+    .part {
+      min-height: 500px;
+    }
   }
 }
 

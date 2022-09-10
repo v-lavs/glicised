@@ -2,7 +2,6 @@
 
   .consequent {
     width: 858px;
-    background: linear-gradient(to bottom, #F9FCFE 0 95%, transparent 95% 100%);
 
     &__bg {
       min-height: 520px;
@@ -69,7 +68,7 @@
     }
 
     &__img {
-      width: 100%;
+      width: 58.75%;
       transform: translate(45px, 40%) rotate(0);
     }
 
@@ -200,7 +199,6 @@
       }
 
       &__img {
-        width: 80%;
         transform: translate(130px, 40%) rotate(0);
       }
 
@@ -209,6 +207,38 @@
       }
     }
   }
+  @include respond-to($md) {
+    .section-application {
+      &__img {
+        transform: translate(80px, 40%) rotate(0);
+      }
+    }
+  }
+  @include respond-to($sm) {
+    .consequent {
+      width: 680px;
 
+      &__bg {
+        min-height: 300px;
+      }
+    }
+    .section-application {
+      &__content {
+        padding-right: 25px;
+      }
+
+      &__img {
+        transform: translate(80px, 40%) rotate(0);
+      }
+
+      .note {
+        position: static;
+        margin-top: 20px;
+        transform: none;
+      }
+    }
+  }
 }
+
+
 

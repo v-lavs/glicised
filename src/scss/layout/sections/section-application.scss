@@ -34,9 +34,10 @@
     position: absolute;
     z-index: 1;
     bottom: 0;
-    width: 85%;
+    width: 40.75%;
     transform: translateY(50%) rotate(5deg);
   }
+
   &__content {
     padding-right: 42px;
   }
@@ -130,9 +131,23 @@
 }
 
 @include respond-to($md) {
-
+  .section-application {
+    .card__body {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    .note {
+      font-size: 20px;
+    }
+  }
 }
 
-@include respond-to($xs) {
+@include respond-to($sm) {
+  .section-application{
+    .card__body {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
 
 }

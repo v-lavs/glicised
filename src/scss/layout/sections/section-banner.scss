@@ -22,11 +22,11 @@
     padding-bottom: 30px;
     margin-bottom: 30px;
 
-    &:before{
+    &:before {
       position: absolute;
       content: '';
       display: block;
-      background-color:#DCEDFF;
+      background-color: #DCEDFF;
       height: 1px;
       width: 90%;
       left: 0;
@@ -152,27 +152,47 @@
 
 @include respond-to($md) {
   .section-banner {
+
     &__slogan {
       font-size: 40px;
     }
+
     .section__block-btns {
       .btn {
         margin-right: 20px;
       }
 
+      .mob-hide {
+        display: none;
+      }
+
+      .btn_light .btn__icon {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+@include respond-to($sm) {
+  .section-banner {
+    .section__block-btns {
+      padding-bottom: 46px;
+    }
+
+    &__content {
+      padding-bottom: 0;
+    }
+
+    .wrap-slider .btn {
+      right: 15px;
     }
   }
 }
 
 @include respond-to($xs) {
   .section-banner {
-
-
-  }
-}
-
-@include respond-to($xxs) {
-  .section-banner {
-
+    &__inner {
+      padding-right: 0;
+    }
   }
 }

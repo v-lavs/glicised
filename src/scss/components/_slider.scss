@@ -57,10 +57,10 @@
   transform: translate(-50%, -50%) rotate(180deg) scale(1.5);
 }
 
-@include respond-to($sm) {
-  .swiper-pagination-bullets {
-    display: inline-block !important;
-  }
-}
+//@include respond-to($xs) {
+//  .swiper-pagination-bullets {
+//    display: inline-block !important;
+//  }
+//}
 
 
