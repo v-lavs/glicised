@@ -1,3 +1,23 @@
+const QUIZ_RESULT_THRESHOLD = [
+    {
+        label: 'Низький',
+        maxScore: 12
+    },
+    {
+        label: 'Середній',
+        maxScore: 25
+    },
+    {
+        label: 'Високий',
+        maxScore: 37
+    },
+    {
+        label: 'Екстримальний',
+        maxScore: 40
+    }
+];
+
+
 const QUIZ_QUESTIONS = [
     {
         number: 1,

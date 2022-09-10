@@ -188,9 +188,15 @@ $(document).ready(function () {
             const finalScore = Object.values(answers).reduce(function (acc, prev) {
                 return prev + acc
             }, 0);
+            const level = QUIZ_RESULT_THRESHOLD.find(el=> el.maxScore >= finalScore) || QUIZ_RESULT_THRESHOLD[0];
 
             const offset = finalScore * 100 / (QUIZ_QUESTIONS.length * 4) || 0;
-            $result.html(`${finalScore}`);
+            const res = $('<div></div>');
+            const score = $('<div></div>').text(finalScore);
+            const label = $('<div class="quiz-result-text"></div>').text(level.label);
+
+            res.append(score).append(label);
+            $result.html(res);
 
             $form.addClass('hidden');
             $resultView.removeClass('hidden');
@@ -206,7 +212,7 @@ $(document).ready(function () {
         }
     }
 
-// SLider with mask
+// Slider with mask
     const slider = document.querySelector('.banner-slider');
     if (slider) {
         // slides informations
