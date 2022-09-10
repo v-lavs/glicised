@@ -74,9 +74,9 @@ $(document).ready(function () {
 
     if ($(".consequent-slider").length) {
         let consequentSlider = new Swiper(".consequent-slider", {
-            slidesPerView: 'auto',
-            slidesOffsetAfter: 100,
+            slidesPerView: 1,
             loop: false,
+            speed: 1500,
             spaceBetween: 20,
             pagination: {
                 el: ".swiper-pagination",
@@ -86,6 +86,12 @@ $(document).ready(function () {
                 nextEl: "#js_bn",
                 prevEl: "#js_bp",
             },
+            breakpoints:{
+                768:{
+                    slidesPerView: 'auto',
+                    slidesOffsetAfter: 100,
+                }
+            }
 
         });
     }

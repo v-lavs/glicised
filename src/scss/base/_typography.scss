@@ -57,7 +57,7 @@
   }
 }
 
-@include respond-to($xxs){
+@include respond-to($xxs) {
   .text {
     &_md {
       font-size: 16px;
@@ -66,6 +66,9 @@
     &_sm {
       font-size: 16px;
     }
+  }
+  .title_sm {
+    font-size: 18px;
   }
 }
 

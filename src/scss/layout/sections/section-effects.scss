@@ -67,7 +67,7 @@
 
 .consequent-slider {
   width: calc(100% + (100vw - 100%) / 2);
-  margin-bottom: 60px;
+  padding-bottom: 60px;
   overflow: visible;
 }
 
@@ -98,6 +98,7 @@
     padding: 40px 30px 30px;
     margin-bottom: 30px;
     background-color: #F9FCFE;
+
     &_1 {
       background-image: url(../assets/img/sl-1.png);
     }
@@ -179,7 +180,7 @@
 @include respond-to($sm) {
   .section-effects {
 
-    .section__block-btns .btn {
+    .btn {
       margin-right: 6px;
     }
   }
@@ -192,5 +193,92 @@
 }
 
 @include respond-to($xs) {
+  .section-effects {
+    .section__title {
+      font-size: 32px;
+      padding-bottom: 10px;
+      margin-bottom: 0;
+    }
+    .slider-nav {
+      display: none;
+    }
 
+    .btn {
+      margin-bottom: 20px;
+      margin-right: 0;
+      min-width: 364px;
+      justify-content: center;
+    }
+
+    .sub-title {
+      padding-bottom: 20px;
+      margin-bottom: 40px;
+    }
+  }
+  .consequent-slider {
+    width: 100%;
+    overflow: hidden;
+
+    .swiper-pagination {
+      bottom: 30px;
+    }
+  }
+  .consequent {
+    &__content {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@include respond-to($xxs) {
+  .section-effects {
+
+
+    .section__block-btns {
+      padding-top: 0;
+    }
+  }
+  .consequent-slider {
+
+  }
+
+  .consequent {
+    font-size: 16px;
+
+    &__content {
+      background-size: 50%;
+      padding: 30px 20px 20px;
+    }
+
+    &__bg {
+      min-height: 280px;
+      width: 73px;
+    }
+
+    &__text {
+      padding: 20px;
+    }
+
+    &__icon {
+      width: 31px;
+      height: 31px;
+    }
+  }
+}
+
+
+@media screen and (max-width: 420px) {
+  .section-effects {
+    .section__block-btns {
+      .btn {
+        min-width: 0;
+        width: 100%;
+      }
+
+      .btn_dark {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+    }
+  }
 }
