@@ -378,6 +378,7 @@ body {
     padding: 60px 0;
 
     &__title {
+      font-size: 32px;
       margin-bottom: 40px;
     }
   }
@@ -398,6 +399,12 @@ body {
 
     &__title {
       margin-bottom: 20px;
+    }
+  }
+
+  .links-list {
+    &__icon {
+      margin-left: 35px;
     }
   }
 }

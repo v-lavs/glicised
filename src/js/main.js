@@ -97,7 +97,7 @@ $(document).ready(function () {
     }
 
 
-    if ($(".article-slider").length) {
+    if ($(".article-slider").length ) {
         let articleSlider = new Swiper(".article-slider", {
             spaceBetween: 20,
             pagination: {
@@ -108,7 +108,7 @@ $(document).ready(function () {
     }
 
 
-    if ($("#particles-js").length) {
+    if (($(window).outerWidth() >= 768) && $("#particles-js").length) {
         particlesJS.load('particles-js', 'assets/particlesjs-config.json', function () {
             console.log('callback - particles.js config loaded');
         });

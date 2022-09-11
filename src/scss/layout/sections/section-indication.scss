@@ -32,8 +32,41 @@
 @include respond-to($md) {
   .section-indication {
     background-image: none;
-    .card-list__item{
+
+    .card-list__item {
       margin-bottom: 0;
+    }
+  }
+}
+
+@include respond-to($xs) {
+  .section-indication {
+    .section__title {
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@include respond-to($xxs) {
+  .section-indication {
+    padding-bottom: 20px;
+
+    .title_sm {
+      margin-bottom: 10px;
+    }
+
+    .card {
+      margin-bottom: 0;
+      font-size: 16px;
+      &__icon {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    .card-list__item {
+      width: 100%;
     }
   }
 }

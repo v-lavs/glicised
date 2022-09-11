@@ -19,6 +19,7 @@
     margin: 0 auto 66px;
   }
 
+
   .section__text {
     text-align: center;
     margin-bottom: 50px;
@@ -90,6 +91,7 @@
     &_3 {
       grid-area: 2 / 9 /4 / 16;
       z-index: 1;
+      font-weight: 400;
 
       .composition__card {
         padding-left: 50px;
@@ -138,6 +140,8 @@
 
 @include respond-to($sm) {
   .section-composition {
+    background-image: none;
+
     .links-list {
       flex-wrap: wrap;
 
@@ -155,17 +159,48 @@
 
 @include respond-to($xs) {
   .section-composition {
-    .section__title {
-      font-size: 32px;
+
+    .section__text {
+      margin-bottom: 20px;
     }
 
     .title_md {
       font-size: 24px;
+      margin-bottom: 0;
     }
   }
+  .composition {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
 
+    &__card-icon_right {
+      order: -1;
+    }
+
+    &__item_2 {
+      order: 1;
+    }
+
+    .composition__card-body {
+      padding-left: 20px;
+      padding-right: 0;
+    }
+
+    .composition__card {
+      align-items: center;
+      text-align: left;
+      padding: 0;
+    }
+
+    &__item_1 {
+      display: none;
+    }
+  }
 }
 
 @include respond-to($xxs) {
-
+  .composition__item {
+    font-size: 16px;
+  }
 }

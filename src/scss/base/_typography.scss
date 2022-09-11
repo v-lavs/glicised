@@ -60,13 +60,14 @@
 @include respond-to($xxs) {
   .text {
     &_md {
-      font-size: 16px;
+      font-size: 18px;
     }
 
     &_sm {
       font-size: 16px;
     }
   }
+  .title_md,
   .title_sm {
     font-size: 18px;
   }
