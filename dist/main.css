@@ -3136,6 +3136,15 @@ body {
     min-height: 300px;
   }
 
+  .glicysed .section-application {
+    padding-bottom: 88px;
+  }
+
+  .glicysed .section-application .col_5 {
+    min-height: 0;
+    padding-top: 92%;
+  }
+
   .glicysed .section-application__content {
     padding-right: 25px;
   }
@@ -3406,6 +3415,27 @@ body {
     margin-bottom: 5px;
   }
 
+  .section-composition .section__title {
+    font-size: 32px;
+  }
+
+  .section-composition .title_md {
+    font-size: 24px;
+  }
+
+  .glicysed .section-application .col_5 {
+    padding-top: 83%;
+  }
+
+  .glicysed .section-application__content {
+    padding-right: 0;
+  }
+
+  .glicysed .section-application .note {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
   .glicysed .consequent__content {
     padding: 20px 30px 30px;
   }
@@ -3617,6 +3647,27 @@ body {
     width: 31px;
     height: 31px;
   }
+
+  .glicysed .section-application .col_5 {
+    padding-top: 130%;
+  }
+
+  .glicysed .section-application .card {
+    font-size: 16px;
+  }
+
+  .glicysed .section-application .card ul > li {
+    font-size: 16px;
+  }
+
+  .glicysed .section-application .card .text_md {
+    font-size: 20px;
+  }
+
+  .glicysed .section-application .note {
+    padding: 20px 16px;
+    font-size: 16px;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -3646,6 +3697,10 @@ body {
 
   .section-application .col_5 {
     padding-top: 82%;
+  }
+
+  .glicysed .section-application .col_5 {
+    padding-top: 93%;
   }
 }
 

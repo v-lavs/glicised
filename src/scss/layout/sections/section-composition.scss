@@ -154,6 +154,15 @@
 }
 
 @include respond-to($xs) {
+  .section-composition {
+    .section__title {
+      font-size: 32px;
+    }
+
+    .title_md {
+      font-size: 24px;
+    }
+  }
 
 }
 
