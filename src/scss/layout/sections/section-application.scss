@@ -136,6 +136,7 @@
       padding-left: 30px;
       padding-right: 30px;
     }
+
     .note {
       font-size: 20px;
     }
@@ -143,11 +144,99 @@
 }
 
 @include respond-to($sm) {
-  .section-application{
+  .section-application {
     .card__body {
       padding-left: 20px;
       padding-right: 20px;
     }
   }
+}
 
+@include respond-to($xs) {
+  .section-application {
+    .section__title {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .title_md {
+      font-size: 24px;
+
+    }
+
+    &__thumb {
+      width: 100%;
+    }
+
+    .card__icon {
+      background-size: 100%;
+    }
+
+    &:after {
+      display: none;
+    }
+
+    .d-flex {
+      flex-wrap: wrap;
+    }
+
+    .col_7, .col_5 {
+      width: 100%;
+    }
+
+    &__content {
+      padding-bottom: 20px;
+      padding-right: 0;
+    }
+
+    .col_5 {
+      min-height: 0;
+      padding-top: 80%;
+    }
+
+    .card {
+      font-size: 16px;
+
+      .text_md {
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
+@include respond-to($xxs) {
+  .section-application {
+    .card {
+      padding: 10px 0 10px 20px;
+
+      &__icon {
+        width: 67px;
+        height: 67px;
+      }
+      .card__body{
+        padding-right: 8px;
+      }
+    }
+
+    .text_md {
+      font-size: 20px;
+    }
+
+    .col_5 {
+      padding-top: 120%;
+    }
+
+    &__thumb {
+      width: 100vw;
+
+      left: calc((100% - 100vw) / 2);
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .section-application .col_5 {
+    padding-top: 82%;
+  }
 }

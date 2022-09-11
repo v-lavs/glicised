@@ -199,6 +199,7 @@
       padding-bottom: 10px;
       margin-bottom: 0;
     }
+
     .slider-nav {
       display: none;
     }
@@ -208,6 +209,14 @@
       margin-right: 0;
       min-width: 364px;
       justify-content: center;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .text_md {
+      font-size: 20px;
     }
 
     .sub-title {
@@ -224,6 +233,8 @@
     }
   }
   .consequent {
+    font-size: 16px;
+
     &__content {
       margin-bottom: 10px;
     }

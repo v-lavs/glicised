@@ -2907,7 +2907,7 @@ body {
     font-size: 32px;
   }
 
-  .text_md {
+  .text_sm {
     font-size: 20px;
   }
 
@@ -3156,11 +3156,6 @@ body {
     display: none;
   }
 
-  .card__icon {
-    width: 60px;
-    height: 60px;
-  }
-
   .section {
     padding: 60px 0;
   }
@@ -3236,6 +3231,11 @@ body {
   .section-banner .section__block-btns {
     padding-bottom: 0;
     padding-top: 20px;
+  }
+
+  .section-banner .card__icon {
+    width: 60px;
+    height: 60px;
   }
 
   .section-banner .card {
@@ -3327,6 +3327,14 @@ body {
     justify-content: center;
   }
 
+  .section-effects .btn:last-child {
+    margin-bottom: 0;
+  }
+
+  .section-effects .text_md {
+    font-size: 20px;
+  }
+
   .section-effects .sub-title {
     padding-bottom: 20px;
     margin-bottom: 40px;
@@ -3341,8 +3349,61 @@ body {
     bottom: 30px;
   }
 
+  .consequent {
+    font-size: 16px;
+  }
+
   .consequent__content {
     margin-bottom: 10px;
+  }
+
+  .section-application .section__title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  .section-application .title_md {
+    font-size: 24px;
+  }
+
+  .section-application__thumb {
+    width: 100%;
+  }
+
+  .section-application .card__icon {
+    background-size: 100%;
+  }
+
+  .section-application:after {
+    display: none;
+  }
+
+  .section-application .d-flex {
+    flex-wrap: wrap;
+  }
+
+  .section-application .col_7,
+  .section-application .col_5 {
+    width: 100%;
+  }
+
+  .section-application__content {
+    padding-bottom: 20px;
+    padding-right: 0;
+  }
+
+  .section-application .col_5 {
+    min-height: 0;
+    padding-top: 80%;
+  }
+
+  .section-application .card {
+    font-size: 16px;
+  }
+
+  .section-application .card .text_md {
+    margin-bottom: 5px;
   }
 
   .glicysed .consequent__content {
@@ -3484,6 +3545,32 @@ body {
     height: 31px;
   }
 
+  .section-application .card {
+    padding: 10px 0 10px 20px;
+  }
+
+  .section-application .card__icon {
+    width: 67px;
+    height: 67px;
+  }
+
+  .section-application .card .card__body {
+    padding-right: 8px;
+  }
+
+  .section-application .text_md {
+    font-size: 20px;
+  }
+
+  .section-application .col_5 {
+    padding-top: 120%;
+  }
+
+  .section-application__thumb {
+    width: 100vw;
+    left: calc((100% - 100vw) / 2);
+  }
+
   .glicysed .section-effects .sub-title {
     margin-bottom: 0;
   }
@@ -3555,6 +3642,10 @@ body {
 
   .section-benefits .part_left {
     padding-top: 106.75%;
+  }
+
+  .section-application .col_5 {
+    padding-top: 82%;
   }
 }
 
