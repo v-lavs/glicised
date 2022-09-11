@@ -1236,8 +1236,12 @@ body {
   color: #61A1F4;
 }
 
-.menu__item.active .sub-menu__toggle {
+.menu__item.active .color_toggle {
   color: #61A1F4;
+}
+
+.menu__item.active .sub-menu__toggle {
+  transform: rotate(270deg);
 }
 
 .menu__item .sub-menu {
@@ -1299,7 +1303,7 @@ body {
 }
 
 .menu__item .sub-menu__toggle_active {
-  transform: rotate(180deg);
+  transform: rotate(270deg);
 }
 
 .menu__item .show {
@@ -2938,17 +2942,25 @@ body {
 
   .menu__item .sub-menu__item {
     margin: 0 0 10px;
+    display: flex;
+    align-items: center;
   }
 
   .menu__item .sub-menu {
     border: none;
-    margin-top: 20px;
-    width: auto;
-    box-shadow: none;
+    padding: 20px 30px;
+    margin-top: 15px;
   }
 
-  .menu__item .sub-menu__item {
-    font-size: 22px;
+  .menu__item .sub-menu li:before {
+    position: static;
+    width: 36px;
+    height: 36px;
+    margin-right: 10px;
+    background: #F2FAFA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .sub-menu__toggle_active + .sub-menu {
@@ -4047,6 +4059,13 @@ body {
 
   .quiz-preview__footer {
     padding-bottom: 40px;
+  }
+
+  .blog .btn_dark {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    justify-content: center;
   }
 
   .glicysed .section-application .col_5 {

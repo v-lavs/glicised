@@ -26,8 +26,9 @@ $(document).ready(function () {
     });
 
     $('.dropdown, .sub-menu__toggle').click(function (e) {
+
         $(this).find($('.sub-menu')).toggleClass('show');
-        $('.menu__link').toggleClass('active');
+        $(this).toggleClass('active');
     });
 
 // SMOOTH SCROLL TO ANCHOR
@@ -108,7 +109,7 @@ $(document).ready(function () {
     }
 
 
-    if (($(window).outerWidth() >= 768) && $("#particles-js").length) {
+    if (($(window).outerWidth() > 768) && $("#particles-js").length) {
         particlesJS.load('particles-js', 'assets/particlesjs-config.json', function () {
             console.log('callback - particles.js config loaded');
         });

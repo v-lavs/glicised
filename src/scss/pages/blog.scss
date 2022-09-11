@@ -83,7 +83,7 @@
 }
 
 @include respond-to($xs) {
-  .posts-list{
+  .posts-list {
     padding-top: 50px;
   }
   .article {
@@ -111,9 +111,11 @@
   .article {
     padding: 0 0 20px;
     margin-bottom: 40px;
+
     .dynamic-content {
       padding-top: 20px;
-      ul{
+
+      ul {
         margin-bottom: 0;
       }
     }
@@ -127,6 +129,17 @@
         left: 0;
         top: 8px;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .blog {
+    .btn_dark {
+      width: 100%;
+      padding-left: 15px;
+      padding-right: 15px;
+      justify-content: center;
     }
   }
 }
