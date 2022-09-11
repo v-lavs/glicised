@@ -12,7 +12,7 @@ const QUIZ_RESULT_THRESHOLD = [
         maxScore: 37
     },
     {
-        label: 'Екстримальний',
+        label: 'Дуже високий',
         maxScore: 40
     }
 ];

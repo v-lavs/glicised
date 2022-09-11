@@ -83,6 +83,9 @@
 }
 
 @include respond-to($xs) {
+  .posts-list{
+    padding-top: 50px;
+  }
   .article {
     &__thumb-wrap {
       padding-top: 100%;
