@@ -1,13 +1,11 @@
 .section-buy {
   padding-bottom: 56px;
+
   .section__block-btns {
     margin-bottom: 40px;
 
-    .btn {
+    .btn_light {
       margin-right: 40px;
-      &:last-child{
-        margin-bottom: 0;
-      }
     }
   }
 
@@ -16,22 +14,55 @@
     height: 450px;
     overflow: hidden;
   }
-  #geo_wgt{
+
+  #geo_wgt {
     zoom: 60%;
   }
 }
 
-@include respond-to($md) {
+@include respond-to($xs) {
   .section-buy {
+    padding-top: 20px;
+    padding-bottom: 40px;
 
+    .mob-hide {
+      display: none;
+    }
+
+    .section__block-btns {
+      margin-bottom: 20px;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+
+      .btn_light {
+        margin-right: 20px;
+
+        .btn__icon {
+          margin: 0;
+        }
+      }
+    }
   }
 }
 
-@include respond-to($xs) {
-
-}
-
 @include respond-to($xxs) {
+  .section-buy {
+    padding-top: 0;
+
+    .section__block-btns {
+      justify-content: space-between;
+
+      .btn_light {
+        margin: 0;
+      }
+
+      .btn_dark {
+        padding-left: 17px;
+        padding-right: 17px;
+      }
+    }
+  }
 
 }
 

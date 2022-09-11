@@ -194,6 +194,10 @@
     .section__block-btns {
       .btn {
         margin-right: 20px;
+
+        &:last-child {
+          margin-right: 0;
+        }
       }
 
       .mob-hide {
@@ -326,6 +330,12 @@
       margin-top: 20px;
       padding-top: 120%;
       left: calc((100% - 100vw) / 2);
+    }
+  }
+  .banner-slider{
+    .slider-btn{
+      padding: 9px;
+      height: 48px;
     }
   }
 }

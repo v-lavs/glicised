@@ -63,10 +63,12 @@
 
   .phone {
     background-color: $blue;
+
     &:hover,
-    &:focus{
+    &:focus {
       background-color: transparent;
-      svg path{
+
+      svg path {
         fill: $blue;
       }
     }
@@ -76,6 +78,7 @@
 .disclaimer {
   width: 100%;
   height: 15vh;
+
   img {
     display: block;
     width: 100%;
@@ -96,18 +99,24 @@
 
 @include respond-to($xs) {
   .footer {
-    &__logo{
+    padding-bottom: 20px;
+
+    &__logo {
       margin-bottom: 20px;
       width: 100%;
 
     }
+
     &_top {
       flex-wrap: wrap;
       justify-content: center;
+      padding-top: 40px;
+      padding-bottom: 20px;
     }
 
     &_bottom {
       flex-wrap: wrap;
+      padding-top: 20px;
     }
 
     &__item {
@@ -119,14 +128,18 @@
         margin-bottom: 0;
       }
 
-      &:before {
+      &:after {
         display: none;
       }
     }
 
-    .social-bar__item {
-      margin: 0 10px;
+    .social-bar {
+      width: 100%;
 
+      &__item {
+        margin: 0 20px;
+        padding: 7px;
+      }
     }
   }
 }

@@ -196,6 +196,14 @@
     .card {
       font-size: 16px;
 
+      ul {
+        padding-left: 11px;
+
+        > li {
+          padding-left: 23px;
+        }
+      }
+
       .text_md {
         margin-bottom: 5px;
       }
@@ -212,7 +220,8 @@
         width: 67px;
         height: 67px;
       }
-      .card__body{
+
+      .card__body {
         padding-right: 8px;
       }
     }
