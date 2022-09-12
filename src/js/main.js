@@ -24,7 +24,7 @@ $(document).ready(function () {
         $('.btn_close').show();
     });
 
-    $('.btn_close, .menu__link:not(.js-default-prevented), .backdrop').click(function (e) {
+    $('.btn_close, .sub-menu__item a, .menu__link:not(.js-default-prevented), .backdrop').click(function (e) {
         nav.removeClass('open');
         $('.dropdown').removeClass('active');
         jQuery('.backdrop').fadeOut();
