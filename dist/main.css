@@ -2102,7 +2102,6 @@ button[disabled] {
 }
 
 .consequent {
-  width: 657px;
   font-size: 24px;
   line-height: 1.2;
   display: flex;
@@ -2780,10 +2779,6 @@ button[disabled] {
   background-color: #ffffff;
 }
 
-.glicysed .consequent {
-  width: 858px;
-}
-
 .glicysed .consequent__bg {
   min-height: 520px;
   max-width: 200px;
@@ -3055,10 +3050,6 @@ button[disabled] {
     margin-bottom: 2px;
   }
 
-  .glicysed .consequent {
-    width: 758px;
-  }
-
   .glicysed .consequent__icon {
     width: 120px;
     height: 120px;
@@ -3236,7 +3227,6 @@ button[disabled] {
   }
 
   .consequent {
-    width: 560px;
     font-size: 20px;
   }
 

@@ -93,8 +93,39 @@ $(document).ready(function () {
             },
             breakpoints: {
                 768: {
-                    slidesPerView: 'auto',
-                    slidesOffsetAfter: 100,
+                    slidesPerView: 1.20,
+                    slidesOffsetAfter: 250,
+                }
+            }
+
+        });
+    }
+    if ($(".consequent-slider_max").length) {
+        let consequentSliderMax = new Swiper(".consequent-slider_max", {
+            slidesPerView: 1,
+            loop: false,
+            speed: 1500,
+            spaceBetween: 20,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: "#js_bn",
+                prevEl: "#js_bp",
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 1.2,
+                    slidesOffsetAfter: 250,
+                },
+                991: {
+                    slidesPerView: 1.8,
+                    slidesOffsetAfter: 550,
+                },
+                1660: {
+                    slidesPerView: 2.35,
+                    slidesOffsetAfter: 650,
                 }
             }
 

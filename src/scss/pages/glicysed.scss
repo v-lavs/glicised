@@ -1,7 +1,6 @@
 .glicysed {
 
   .consequent {
-    width: 858px;
 
     &__bg {
       min-height: 520px;
@@ -200,7 +199,6 @@
 
   @include respond-to($lg) {
     .consequent {
-      width: 758px;
 
       &__icon {
         width: 120px;
