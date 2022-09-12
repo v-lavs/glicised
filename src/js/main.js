@@ -10,6 +10,10 @@
 // CUSTOM SCRIPTS
 
 $(document).ready(function () {
+    $('.js-default-prevented').click(function (e) {
+        e.preventDefault();
+    });
+
     //MOBILE MENU
     const nav = $('nav');
     $('.btn_burger').click(function (e) {
@@ -26,10 +30,8 @@ $(document).ready(function () {
         $('.btn_close').hide();
     });
 
-    $('.dropdown, .sub-menu__toggle, .btn_close').click(function (e) {
-
-        $(this).find($('.sub-menu')).toggleClass('show');
-        $(this).toggleClass('active');
+    $('.header .dropdown').click(function (e) {
+        $(e.currentTarget).toggleClass('active');
     });
 
 // SMOOTH SCROLL TO ANCHOR
@@ -88,8 +90,8 @@ $(document).ready(function () {
                 nextEl: "#js_bn",
                 prevEl: "#js_bp",
             },
-            breakpoints:{
-                768:{
+            breakpoints: {
+                768: {
                     slidesPerView: 'auto',
                     slidesOffsetAfter: 100,
                 }
@@ -99,7 +101,7 @@ $(document).ready(function () {
     }
 
 
-    if ($(".article-slider").length ) {
+    if ($(".article-slider").length) {
         let articleSlider = new Swiper(".article-slider", {
             spaceBetween: 20,
             pagination: {
@@ -137,7 +139,7 @@ $(document).ready(function () {
         let answers = {};
         let currStep = 0;
 
-        $options.on('change', function (e) {
+        $(document).on('change', $options, function (e) {
             $next_btn.attr('disabled', false);
             answers = Object.assign(answers, {[currStep]: Number(e.target.value)});
         });
@@ -160,6 +162,9 @@ $(document).ready(function () {
             if (currStep < QUIZ_QUESTIONS.length) {
                 ++currStep;
                 showQuestion(currStep);
+                if (typeof answers[currStep] === 'number') {
+                    $('[name="quiz-radio"][value=' + answers[currStep] + ']').prop('checked', true);
+                }
             } else {
                 showResult();
             }
@@ -172,6 +177,7 @@ $(document).ready(function () {
                 showQuestion(currStep);
                 $('[name="quiz-radio"][value=' + answers[currStep] + ']').prop('checked', true);
             }
+            $next_btn.attr('disabled', false);
         });
 
         function showQuestion(number) {
@@ -180,14 +186,30 @@ $(document).ready(function () {
             if (questionData) {
                 $question_text.text(questionData.title);
                 $curr_step.text(number);
-                clearOptionsValue();
+
+                const answers = $('<div></div>');
+
+                questionData.answers.forEach(item => {
+                    const el = $('<div></div>');
+                    const optionHtml = `
+                        <label class="radio">
+                            <input value="${item.value}" name="quiz-radio" type="radio">
+
+                            <span class="radio__text">${item.label}</span>
+                        </label>
+                    `;
+                    el.html(optionHtml);
+                    $(answers).append(el);
+                });
+                $('#quiz-options').html(answers);
             }
             if (number === 1) {
                 $prev_btn.attr('disabled', 'disabled');
             } else {
                 $prev_btn.attr('disabled', false)
             }
-            if (!answers[questionIndex]) {
+
+            if (typeof answers[number] !== 'number') {
                 $next_btn.attr('disabled', 'disabled');
             }
         }
@@ -246,7 +268,6 @@ $(document).ready(function () {
                 prevSlide.remove();
                 slider.appendChild(cloned);
                 slides = document.querySelectorAll(".banner-slider .banner-slider__slide")
-                console.log(slides)
             }
 
             $(slides).removeClass('active-slide');

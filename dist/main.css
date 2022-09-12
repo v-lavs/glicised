@@ -1218,6 +1218,10 @@ body.modal_open {
   background-color: #548CD4;
 }
 
+button[disabled] {
+  cursor: none;
+}
+
 .menu {
   display: flex;
   align-items: center;
@@ -1245,6 +1249,12 @@ body.modal_open {
 
 .menu__item.active .sub-menu__toggle {
   transform: rotate(270deg);
+}
+
+.menu__item.active .sub-menu {
+  z-index: 1;
+  opacity: 1;
+  visibility: visible;
 }
 
 .menu__item .sub-menu {
@@ -1307,12 +1317,6 @@ body.modal_open {
 
 .menu__item .sub-menu__toggle_active {
   transform: rotate(270deg);
-}
-
-.menu__item .show {
-  z-index: 1;
-  opacity: 1;
-  visibility: visible;
 }
 
 .menu__link {

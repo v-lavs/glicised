@@ -29,8 +29,12 @@
       .sub-menu__toggle{
         transform: rotate(270deg);
       }
+      .sub-menu {
+        z-index: 1;
+        opacity: 1;
+        visibility: visible;
+      }
     }
-
     .sub-menu {
       width: max-content;
       position: absolute;
@@ -92,14 +96,7 @@
         }
       }
     }
-
-    .show {
-      z-index: 1;
-      opacity: 1;
-      visibility: visible;
-    }
   }
-
 
   &__link {
     display: block;

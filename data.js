@@ -9,12 +9,12 @@ const QUIZ_RESULT_THRESHOLD = [
     },
     {
         label: 'Високий',
-        maxScore: 37
-    },
-    {
-        label: 'Дуже високий',
         maxScore: 40
-    }
+    },
+    // {
+    //     label: 'Дуже високий',
+    //     maxScore: 40
+    // }
 ];
 
 
@@ -22,41 +22,304 @@ const QUIZ_QUESTIONS = [
     {
         number: 1,
         title: 'Були засмучені через те, що сталося несподівано?',
+        answers: [
+            {
+                value: '0',
+                label: 'ніколи',
+                type: 'radio'
+            },
+            {
+                value: '1',
+                type: 'radio',
+                label: 'майже ніколи',
+            },
+            {
+
+                value: '2',
+                label: 'іноді',
+                type: 'radio'
+            },
+            {
+
+                value: '3',
+                label: 'досить часто',
+                type: 'radio'
+            },
+            {
+
+                value: '4',
+                label: 'дуже часто',
+                type: 'radio'
+            }
+        ]
     },
     {
         number: 2,
-        title: 'Proin imperdiet tortor dolor, vel consectetur ex varius at. Mauris ullamcorper m',
+        title: 'Відчували, що не можете контролювати важливі речі у своєму житті?',
+        answers: [
+            {
+                label: 'ніколи',
+                value: '0',
+                type: 'radio'
+            },
+            {
+                label: 'майже ніколи',
+                value: '1',
+                type: 'radio'
+            },
+            {
+                label: 'іноді',
+                value: '2',
+                type: 'radio'
+            },
+            {
+                label: 'досить часто',
+                value: '3',
+                type: 'radio'
+            },
+            {
+                label: 'дуже часто',
+                value: '4',
+                type: 'radio'
+            }
+        ]
     },
     {
         number: 3,
-        title: 'Nam gravida ullamcorper leo, sed blandit eros posuere eu',
+        title: 'Відчували нервозність і стрес?',
+        answers: [
+            {
+                label: 'ніколи',
+                value: '0',
+                type: 'radio'
+            },
+            {
+                label: 'майже ніколи',
+                value: '1',
+                type: 'radio'
+            },
+            {
+                label: 'іноді',
+                value: '2',
+                type: 'radio'
+            },
+            {
+                label: 'досить часто',
+                value: '3',
+                type: 'radio'
+            },
+            {
+                label: 'дуже часто',
+                value: '4',
+                type: 'radio'
+            }
+        ]
     },
     {
         number: 4,
-        title: 'Mauris ullamcorper mi interdum nulla varius eleifend.',
+        title: 'Відчували впевненість у своїй здатності впоратися зі своїми особистими проблемами?',
+        answers: [
+            {
+                label: 'ніколи',
+                value: '4',
+                type: 'radio'
+            },
+            {
+                label: 'майже ніколи',
+                value: '3',
+                type: 'radio'
+            },
+            {
+                label: 'іноді',
+                value: '2',
+                type: 'radio'
+            },
+            {
+                label: 'досить часто',
+                value: '1',
+                type: 'radio'
+            },
+            {
+                label: 'дуже часто',
+                value: '0',
+                type: 'radio'
+            }
+        ]
     },
     {
         number: 5,
-        title: 'Quisque mattis libero sed libero finibus, vel tincidunt metus tristique.',
+        title: 'Відчували, що все йде по плану?',
+        answers: [
+            {
+                label: 'ніколи',
+                value: '4',
+                type: 'radio'
+            },
+            {
+                label: 'майже ніколи',
+                value: '3',
+                type: 'radio'
+            },
+            {
+                label: 'іноді',
+                value: '2',
+                type: 'radio'
+            },
+            {
+                label: 'досить часто',
+                value: '1',
+                type: 'radio'
+            },
+            {
+                label: 'дуже часто',
+                value: '0',
+                type: 'radio'
+            }
+        ]
     },
     {
         number: 6,
-        title: ' Nam gravida ullamcorper leo, sed blandit eros posuere eu',
+        title: 'Помічали, що не можете впоратися з усіма справами, які ви повинні були зробити?',
+        answers: [
+            {
+                value: '0',
+                type: 'radio'
+            },
+            {
+                value: '1',
+                type: 'radio'
+            },
+            {
+
+                value: '2',
+                type: 'radio'
+            },
+            {
+
+                value: '3',
+                type: 'radio'
+            },
+            {
+
+                value: '4',
+                type: 'radio'
+            }
+        ]
     },
     {
         number: 7,
-        title: 'Cras bibendum sodales nisi ornare iaculis. Nulla facilisis mi a pulvinar tempor.',
+        title: 'Могли контролювати роздратування у своєму житті?',
+        answers: [
+            {
+                value: '4',
+                type: 'radio'
+            },
+            {
+                value: '3',
+                type: 'radio'
+            },
+            {
+
+                value: '2',
+                type: 'radio'
+            },
+            {
+
+                value: '1',
+                type: 'radio'
+            },
+            {
+
+                value: '0',
+                type: 'radio'
+            }
+        ]
     },
     {
         number: 8,
-        title: 'Aenean at aliquet augue. Nulla facilisi. Vestibulum id libero urna.',
+        title: 'Відчували, що перебуваєте на висоті?',
+        answers: [
+            {
+                value: '4',
+                type: 'radio'
+            },
+            {
+                value: '3',
+                type: 'radio'
+            },
+            {
+
+                value: '2',
+                type: 'radio'
+            },
+            {
+
+                value: '1',
+                type: 'radio'
+            },
+            {
+
+                value: '0',
+                type: 'radio'
+            }
+        ]
     },
     {
         number: 9,
-        title: 'Cras bibendum sodales nisi ornare iaculis. Nulla facilisis mi a pulvina',
+        title: 'Злилися через те, що сталося поза вашим контролем?',
+        answers: [
+            {
+                value: '0',
+                type: 'radio'
+            },
+            {
+                value: '1',
+                type: 'radio'
+            },
+            {
+
+                value: '2',
+                type: 'radio'
+            },
+            {
+
+                value: '3',
+                type: 'radio'
+            },
+            {
+
+                value: '4',
+                type: 'radio'
+            }
+        ]
     },
     {
         number: 10,
-        title: 'Aenean at aliquet augue. Nulla facilisi. Vestibulum id libero urna.',
+        title: 'Відчували, що труднощі накопичуються настільки, що ви не можете їх подолати?',
+        answers: [
+            {
+                value: '0',
+                type: 'radio'
+            },
+            {
+                value: '1',
+                type: 'radio'
+            },
+            {
+
+                value: '2',
+                type: 'radio'
+            },
+            {
+
+                value: '3',
+                type: 'radio'
+            },
+            {
+
+                value: '4',
+                type: 'radio'
+            }
+        ]
     },
 ];
