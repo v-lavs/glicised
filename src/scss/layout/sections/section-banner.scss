@@ -71,7 +71,8 @@
       height: 1px;
       bottom: 0;
       z-index: 1;
-      transform-origin: 100% 0;
+      right: calc(100% - 90%);
+      transform-origin: 0 100%;
       width: 0;
       transition: 1s;
       transition-delay: .25s;
@@ -135,7 +136,8 @@
         width: 88px;
         height: 28px;
         margin-left: 22px;
-        img{
+
+        img {
           max-width: 100%;
         }
       }
@@ -282,6 +284,14 @@
       padding-bottom: 20px;
       max-width: 500px;
       margin-bottom: 0;
+
+      .line {
+        right: 0;
+
+        &.anim-active {
+          width: 100%;
+        }
+      }
     }
 
     .wrap-slider {

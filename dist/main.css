@@ -1673,7 +1673,8 @@ body {
   height: 1px;
   bottom: 0;
   z-index: 1;
-  transform-origin: 100% 0;
+  right: calc(100% - 90%);
+  transform-origin: 0 100%;
   width: 0;
   transition: 1s;
   transition-delay: .25s;
@@ -3359,6 +3360,14 @@ body {
     padding-bottom: 20px;
     max-width: 500px;
     margin-bottom: 0;
+  }
+
+  .section-banner__slogan .line {
+    right: 0;
+  }
+
+  .section-banner__slogan .line.anim-active {
+    width: 100%;
   }
 
   .section-banner .wrap-slider {
