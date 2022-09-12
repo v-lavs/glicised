@@ -21,11 +21,12 @@ $(document).ready(function () {
 
     $('.btn_close, .menu__link, .backdrop').click(function (e) {
         nav.removeClass('open');
+        $('.sub-menu').removeClass('show');
         jQuery('.backdrop').fadeOut();
         $('.btn_close').hide();
     });
 
-    $('.dropdown, .sub-menu__toggle').click(function (e) {
+    $('.dropdown, .sub-menu__toggle, .btn_close').click(function (e) {
 
         $(this).find($('.sub-menu')).toggleClass('show');
         $(this).toggleClass('active');
@@ -269,7 +270,8 @@ $(document).ready(function () {
     // banner anim
     $('.section-banner .anim-up').addClass('anim-active');
     $('.section-banner .anim-right').addClass('anim-active');
-
+    $('.section-banner .card__icon').addClass('anim-active');
+    $('.section-banner .section-banner__slogan .line').addClass('anim-active');
     setTimeout(() => {
         $('.section-banner .slider-btn').addClass('anim-active');
     }, 600);

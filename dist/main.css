@@ -1636,6 +1636,18 @@ body {
   transform: translate(0%, -50%) !important;
 }
 
+.section-banner .card__icon .st3 {
+  opacity: 0;
+  transform: scale(0.5);
+  transition: 1.5s;
+}
+
+.section-banner .card__icon.anim-active .st3 {
+  opacity: 1 !important;
+  transform: scale(1) !important;
+  transition-delay: .5s;
+}
+
 .section-banner__inner {
   position: relative;
   min-height: 742px;
@@ -1655,16 +1667,22 @@ body {
   margin-bottom: 30px;
 }
 
-.section-banner__slogan:before {
+.section-banner__slogan .line {
   position: absolute;
-  content: '';
-  display: block;
   background-color: #DCEDFF;
   height: 1px;
-  width: 90%;
-  left: 0;
   bottom: 0;
   z-index: 1;
+  transform-origin: 100% 0;
+  width: 0;
+  transition: 1s;
+  transition-delay: .25s;
+  opacity: 0;
+}
+
+.section-banner__slogan .line.anim-active {
+  width: 90%;
+  opacity: 1;
 }
 
 .section-banner__content {
