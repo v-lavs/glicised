@@ -1877,6 +1877,10 @@ body {
 
 .section-effects {
   position: relative;
+  background-image: url(../assets/img/bg-section/m-svg.svg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 28% 45vw;
 }
 
 .section-effects:before {
@@ -2674,6 +2678,12 @@ body {
   left: 0;
   background-color: #61A1F4;
   z-index: 1;
+}
+
+.glicysed .section-effects {
+  background-image: url(../assets/img/bg-section/pattern_02a.svg);
+  background-position: left 48px bottom 30%;
+  background-size: 146px 138px;
 }
 
 .glicysed .section-application {
