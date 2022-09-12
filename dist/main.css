@@ -1773,7 +1773,7 @@ button[disabled] {
 
 .section-banner .anim-right {
   opacity: 0;
-  transition: 1.5s;
+  transition: 2s;
   transform: translate(-100%, -50%) !important;
 }
 
@@ -1791,7 +1791,7 @@ button[disabled] {
 .section-banner .card__icon.anim-active .st3 {
   opacity: 1 !important;
   transform: scale(1) !important;
-  transition-delay: .9s;
+  transition-delay: 1.25s;
 }
 
 .section-banner__inner {
@@ -1823,7 +1823,7 @@ button[disabled] {
   transform-origin: 0 100%;
   width: 0;
   transition: 2s;
-  transition-delay: .7s;
+  transition-delay: 1.25s;
   opacity: 0;
 }
 
@@ -1846,7 +1846,6 @@ button[disabled] {
   position: absolute;
   left: 0;
   top: 50%;
-  transform: translateY(-50%);
   z-index: 0;
 }
 
