@@ -104,7 +104,7 @@
       height: 100%;
 
       background-color: #ffffff;
-      padding: 80px 15px 20px;
+      padding: 100px 15px 20px;
       transition: transform .5s;
       transform: translateX(-100%);
       z-index: 999;
@@ -129,13 +129,4 @@
     display: none;
 
   }
-
-}
-
-@include respond-to($xs) {
-
-}
-
-@include respond-to($xxs) {
-
 }
