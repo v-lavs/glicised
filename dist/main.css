@@ -952,6 +952,10 @@ body.modal_open {
   background-image: url(../assets/img/bg-section/bg-title-right.svg);
 }
 
+.trademark {
+  vertical-align: text-top;
+}
+
 .links-list__item {
   width: 100%;
   font-size: 24px;
