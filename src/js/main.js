@@ -315,7 +315,7 @@ $(document).ready(function () {
         setTimeout(() => {
             $('.section-banner .slider-btn').addClass('anim-active');
         }, 600);
-    }, 1000);
+    }, 300);
 
 });
 
