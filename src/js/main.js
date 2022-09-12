@@ -95,7 +95,11 @@ $(document).ready(function () {
                 768: {
                     slidesPerView: 1.20,
                     slidesOffsetAfter: 250,
-                }
+                },
+                991: {
+                    slidesPerView: 1.8,
+                    slidesOffsetAfter: 550,
+                },
             }
 
         });
