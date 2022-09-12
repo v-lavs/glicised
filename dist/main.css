@@ -1762,7 +1762,7 @@ button[disabled] {
 }
 
 .disclaimer-height {
-  height: 15vh;
+  height: calc(15vh + 60px);
 }
 
 .section-banner {
@@ -1877,6 +1877,7 @@ button[disabled] {
 
 .section-banner .section__block-btns {
   display: flex;
+  padding-bottom: 49px;
 }
 
 .section-banner .section__block-btns .btn {
@@ -3492,7 +3493,7 @@ button[disabled] {
     flex-wrap: wrap;
     justify-content: center;
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
   }
 
   .footer_bottom {
@@ -3941,7 +3942,6 @@ button[disabled] {
   }
 
   .literature-sources {
-    padding-bottom: 20px;
     font-size: 12px;
   }
 
@@ -3998,6 +3998,14 @@ button[disabled] {
 
   .container {
     max-width: 420px;
+  }
+
+  .disclaimer {
+    margin: 20px 0 0 0;
+  }
+
+  .disclaimer-height {
+    height: calc(15vh + 20px);
   }
 
   .section-banner {
