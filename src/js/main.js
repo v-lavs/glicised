@@ -267,6 +267,20 @@ $(document).ready(function () {
         startSlider();
     }
 
+    // POPUP-CONTACTS
+    $('.popup-trigger').click(function (e) {
+        e.preventDefault();
+        $('#popupContacts').fadeIn();
+        $('.backdrop').fadeIn();
+        $('body').addClass('modal_open');
+    })
+
+    $('#closePopup,  .backdrop').click(function () {
+        $('#popupContacts').fadeOut();
+        $('.backdrop').fadeOut();
+        $('body').removeClass('modal_open');
+    });
+
     // banner anim
     setTimeout(() => {
         $('.section-banner .anim-up').addClass('anim-active');

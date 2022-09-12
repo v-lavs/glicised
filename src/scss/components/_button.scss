@@ -33,13 +33,12 @@
   }
 
   &_light {
-    background-color: #ffffff;
+    background-color: transparent;
     color: $blue;
 
     &:hover,
     &:focus {
-      color: #ffffff;
-      background-color: #548CD4;
+      background-color: #ffffff;
     }
   }
 
@@ -83,7 +82,7 @@
       font-size: 16px;
       padding: 18px 48px;
     }
-    &_light{
+    &_light {
       padding-left: 30px;
       padding-right: 30px;
     }

@@ -7,6 +7,10 @@ body {
   height: 100%;
   color: $text-dark;
   background-color: #ffffff;
+  &.modal_open {
+    overflow: hidden;
+    height: 100%;
+  }
 }
 
 .wrapper {
