@@ -65,6 +65,7 @@
 .article-slider {
   .swiper-pagination {
     display: block !important;
+    bottom: 40px;
   }
 
   .swiper-pagination-bullets .swiper-pagination-bullet {
@@ -93,8 +94,6 @@
 
     &-slider {
       .swiper-pagination-bullets {
-        bottom: 40px;
-
         .swiper-pagination-bullet {
           width: 10px;
           height: 10px;

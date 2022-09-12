@@ -999,7 +999,7 @@ body {
   align-items: center;
   background-color: transparent;
   padding: 19px;
-  margin-left: 58px;
+  margin-left: 56px;
   transition: .35s;
   border: 1px solid #61A1F4;
 }
@@ -2094,6 +2094,7 @@ body {
   margin-bottom: 15px;
   padding-left: 20px;
   border: 1px solid #DCEDFF;
+  font-size: 24px;
 }
 
 .section-application .card:last-child {
@@ -2610,6 +2611,7 @@ body {
 
 .article-slider .swiper-pagination {
   display: block !important;
+  bottom: 40px;
 }
 
 .article-slider .swiper-pagination-bullets .swiper-pagination-bullet {
@@ -2698,6 +2700,10 @@ body {
 .glicysed .section-application .col_5 {
   min-height: 930px;
   padding-bottom: 90px;
+}
+
+.glicysed .section-application .col_7 {
+  padding-bottom: 48px;
 }
 
 .glicysed .section-application__img {
@@ -3653,10 +3659,6 @@ body {
     padding-top: 100%;
   }
 
-  .article-slider .swiper-pagination-bullets {
-    bottom: 40px;
-  }
-
   .article-slider .swiper-pagination-bullets .swiper-pagination-bullet {
     width: 10px;
     height: 10px;
@@ -3664,6 +3666,10 @@ body {
 
   .glicysed .section-application .col_5 {
     padding-top: 83%;
+  }
+
+  .glicysed .section-application .col_7 {
+    padding-bottom: 0;
   }
 
   .glicysed .section-application__content {

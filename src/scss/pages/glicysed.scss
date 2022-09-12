@@ -73,6 +73,10 @@
       padding-bottom: 90px;
     }
 
+    .col_7 {
+      padding-bottom: 48px;
+    }
+
     &__img {
       width: 58.75%;
       transform: translate(45px, 40%) rotate(0);
@@ -270,6 +274,10 @@
     .section-application {
       .col_5 {
         padding-top: 83%;
+      }
+
+      .col_7 {
+        padding-bottom: 0;
       }
 
       &__content {
