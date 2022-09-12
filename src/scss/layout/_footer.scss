@@ -77,7 +77,7 @@
 
 .disclaimer {
   width: 100%;
-  padding:40px 0 20px;
+  padding: 40px 0 20px;
 
   img {
     display: block;
@@ -85,6 +85,10 @@
     height: 100%;
     max-width: 100%;
   }
+}
+
+.disclaimer-height {
+  height: 15vh;
 }
 
 @include respond-to($sm) {

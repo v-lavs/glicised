@@ -203,6 +203,9 @@
 
 @include respond-to($lg) {
   .section-banner {
+    .section__block-btns .btn {
+      margin-right: 10px;
+    }
     &__inner {
       min-height: 578px;
     }

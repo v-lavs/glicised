@@ -183,25 +183,30 @@ const QUIZ_QUESTIONS = [
         answers: [
             {
                 value: '0',
+                label: 'ніколи',
                 type: 'radio'
             },
             {
                 value: '1',
-                type: 'radio'
+                type: 'radio',
+                label: 'майже ніколи',
             },
             {
 
                 value: '2',
+                label: 'іноді',
                 type: 'radio'
             },
             {
 
                 value: '3',
+                label: 'досить часто',
                 type: 'radio'
             },
             {
 
                 value: '4',
+                label: 'дуже часто',
                 type: 'radio'
             }
         ]
@@ -211,25 +216,27 @@ const QUIZ_QUESTIONS = [
         title: 'Могли контролювати роздратування у своєму житті?',
         answers: [
             {
+                label: 'ніколи',
                 value: '4',
                 type: 'radio'
             },
             {
+                label: 'майже ніколи',
                 value: '3',
                 type: 'radio'
             },
             {
-
+                label: 'іноді',
                 value: '2',
                 type: 'radio'
             },
             {
-
+                label: 'досить часто',
                 value: '1',
                 type: 'radio'
             },
             {
-
+                label: 'дуже часто',
                 value: '0',
                 type: 'radio'
             }
@@ -240,25 +247,27 @@ const QUIZ_QUESTIONS = [
         title: 'Відчували, що перебуваєте на висоті?',
         answers: [
             {
+                label: 'ніколи',
                 value: '4',
                 type: 'radio'
             },
             {
+                label: 'майже ніколи',
                 value: '3',
                 type: 'radio'
             },
             {
-
+                label: 'іноді',
                 value: '2',
                 type: 'radio'
             },
             {
-
+                label: 'досить часто',
                 value: '1',
                 type: 'radio'
             },
             {
-
+                label: 'дуже часто',
                 value: '0',
                 type: 'radio'
             }
@@ -270,25 +279,30 @@ const QUIZ_QUESTIONS = [
         answers: [
             {
                 value: '0',
+                label: 'ніколи',
                 type: 'radio'
             },
             {
                 value: '1',
-                type: 'radio'
+                type: 'radio',
+                label: 'майже ніколи',
             },
             {
 
                 value: '2',
+                label: 'іноді',
                 type: 'radio'
             },
             {
 
                 value: '3',
+                label: 'досить часто',
                 type: 'radio'
             },
             {
 
                 value: '4',
+                label: 'дуже часто',
                 type: 'radio'
             }
         ]
@@ -299,25 +313,30 @@ const QUIZ_QUESTIONS = [
         answers: [
             {
                 value: '0',
+                label: 'ніколи',
                 type: 'radio'
             },
             {
                 value: '1',
-                type: 'radio'
+                type: 'radio',
+                label: 'майже ніколи',
             },
             {
 
                 value: '2',
+                label: 'іноді',
                 type: 'radio'
             },
             {
 
                 value: '3',
+                label: 'досить часто',
                 type: 'radio'
             },
             {
 
                 value: '4',
+                label: 'дуже часто',
                 type: 'radio'
             }
         ]

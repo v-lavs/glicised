@@ -159,6 +159,17 @@ body {
     font-size: 24px;
     line-height: 1.33;
     padding: 20px 40px;
+    &.disabled{
+      &:hover,
+      &:focus {
+        background-color: #ffffff;
+        -webkit-text-stroke-width: initial;
+        color: inherit;
+        .links-list__icon {
+          transform: scale(1);
+        }
+      }
+    }
 
     &:hover,
     &:focus {

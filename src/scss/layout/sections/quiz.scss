@@ -33,6 +33,12 @@
   &__footer {
     display: flex;
     width: 100%;
+    .btn:disabled,
+    .btn_dark:disabled{
+      background-color: #EEF3F7;
+      color: #A5A8AB;
+      border-color: #A5A8AB;
+    }
   }
 
   &__content-part {
@@ -218,6 +224,9 @@
   font-size: 14px;
   margin-top: 10px;
 }
+
+
+
 
 @include respond-to($lg) {
   .quiz-scale-wrap .triangle-top {
