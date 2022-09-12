@@ -313,7 +313,7 @@ $(document).ready(function () {
         $('.section-banner .card__icon').addClass('anim-active');
         $('.section-banner .section-banner__slogan .line').addClass('anim-active');
         setTimeout(() => {
-            $('.section-banner .slider-btn').addClass('anim-active');
+            $('.section-banner .wrap-anim').addClass('anim-active');
         }, 600);
     }, 300);
 

@@ -1756,16 +1756,26 @@ button[disabled] {
   background-image: linear-gradient(to right, #FAFCFF 0% 50%, #ffffff 50% 100%);
 }
 
-.section-banner .slider-btn,
+.section-banner .wrap-anim {
+  position: absolute;
+  bottom: 46px;
+  right: 55px;
+  z-index: 100;
+}
+
 .section-banner .anim-up {
   position: relative;
+}
+
+.section-banner .wrap-anim,
+.section-banner .anim-up {
   opacity: 0;
   transform: translateY(100px);
   transition: 2s;
   transition-delay: .5s;
 }
 
-.section-banner .slider-btn.anim-active,
+.section-banner .wrap-anim.anim-active,
 .section-banner .anim-up.anim-active {
   opacity: 1;
   transform: translateY(0);
@@ -1867,15 +1877,8 @@ button[disabled] {
   bottom: 0;
 }
 
-.section-banner .wrap-slider .slider-btn .desk-hide {
+.section-banner .wrap-slider .btn_warm .desk-hide {
   display: none;
-}
-
-.section-banner .wrap-slider .btn {
-  position: absolute;
-  bottom: 46px;
-  right: 55px;
-  z-index: 100;
 }
 
 .section-banner .wrap-slider .btn__icon {

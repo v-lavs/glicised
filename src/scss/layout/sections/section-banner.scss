@@ -4,9 +4,19 @@
   margin-bottom: 100px;
   background-image: linear-gradient(to right, #FAFCFF 0% 50%, #ffffff 50% 100%);
 
-  .slider-btn,
+  .wrap-anim {
+    position: absolute;
+    bottom: 46px;
+    right: 55px;
+    z-index: 100;
+  }
+
   .anim-up {
     position: relative;
+  }
+
+  .wrap-anim,
+  .anim-up {
     opacity: 0;
     transform: translateY(100px);
     transition: 2s;
@@ -120,17 +130,13 @@
     max-width: 960px;
     bottom: 0;
 
-    .slider-btn {
+    .btn_warm {
       .desk-hide {
         display: none;
       }
     }
 
     .btn {
-      position: absolute;
-      bottom: 46px;
-      right: 55px;
-      z-index: 100;
 
       &__icon {
         width: 88px;
