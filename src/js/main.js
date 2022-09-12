@@ -24,9 +24,9 @@ $(document).ready(function () {
         $('.btn_close').show();
     });
 
-    $('.btn_close, .sub-menu__item a, .menu__link:not(.js-default-prevented), .backdrop').click(function (e) {
+    $('.btn_close, .menu__link:not(.js-default-prevented), .backdrop').click(function (e) {
         nav.removeClass('open');
-        $('.dropdown').removeClass('active');
+        $('.sub-menu').removeClass('active');
         jQuery('.backdrop').fadeOut();
         $('.btn_close').hide();
     });
@@ -77,7 +77,6 @@ $(document).ready(function () {
 
 
 //    SLIDERS
-
     if ($(".consequent-slider").length) {
         let consequentSlider = new Swiper(".consequent-slider", {
             slidesPerView: 1,
@@ -113,7 +112,54 @@ $(document).ready(function () {
         });
     }
 
+    // SLIDER WITH MASK
+    const slider = document.querySelector('.banner-slider');
 
+    if (slider) {
+        const sliderTimeout = 5000;
+
+        // slides informations
+        const slidesDefault = document.querySelectorAll(".banner-slider .banner-slider__slide");
+
+        slidesDefault.forEach(item => {
+            const clonedItem = item.cloneNode(true);
+            slider.appendChild(clonedItem);
+        });
+
+        let slides = document.querySelectorAll(".banner-slider .banner-slider__slide");
+
+        function moveSlide(e) {
+            const currSlideIndex = [].slice.call(slides).findIndex(s => s.classList.contains('active-slide'));
+            const slide = slides[currSlideIndex + 1];
+            const prevSlide = slides[currSlideIndex - 1];
+
+            if (prevSlide) {
+                const cloned = prevSlide.cloneNode(true);
+                cloned.classList.remove('slide-on');
+                prevSlide.remove();
+                slider.appendChild(cloned);
+                slides = document.querySelectorAll(".banner-slider .banner-slider__slide")
+            }
+
+            $(slides).removeClass('active-slide');
+
+            slide.classList.add("slide-on");
+            slide.classList.add("active-slide");
+        }
+
+        function startSlider() {
+            slides[0].classList.add('active-slide');
+            slides[0].classList.add("slide-on");
+
+            setInterval(() => {
+                moveSlide();
+            }, sliderTimeout);
+        }
+
+        startSlider();
+    }
+
+    //PARTICLE BG
     if (($(window).outerWidth() > 768) && $("#particles-js").length) {
         particlesJS.load('particles-js', 'assets/particlesjs-config.json', function () {
             console.log('callback - particles.js config loaded');
@@ -244,52 +290,7 @@ $(document).ready(function () {
         }
     }
 
-// Slider with mask
-    const slider = document.querySelector('.banner-slider');
 
-        if (slider) {
-            const sliderTimeout = 5000;
-
-            // slides informations
-            const slidesDefault = document.querySelectorAll(".banner-slider .banner-slider__slide");
-
-            slidesDefault.forEach(item => {
-                const clonedItem = item.cloneNode(true);
-                slider.appendChild(clonedItem);
-            });
-
-            let slides = document.querySelectorAll(".banner-slider .banner-slider__slide");
-
-            function moveSlide(e) {
-                const currSlideIndex = [].slice.call(slides).findIndex(s => s.classList.contains('active-slide'));
-                const slide = slides[currSlideIndex + 1];
-                const prevSlide = slides[currSlideIndex - 1];
-
-                if (prevSlide) {
-                    const cloned = prevSlide.cloneNode(true);
-                    cloned.classList.remove('slide-on');
-                    prevSlide.remove();
-                    slider.appendChild(cloned);
-                    slides = document.querySelectorAll(".banner-slider .banner-slider__slide")
-                }
-
-                $(slides).removeClass('active-slide');
-
-                slide.classList.add("slide-on");
-                slide.classList.add("active-slide");
-            }
-
-            function startSlider() {
-                slides[0].classList.add('active-slide');
-                slides[0].classList.add("slide-on");
-
-                setInterval(() => {
-                    moveSlide();
-                }, sliderTimeout);
-            }
-
-            startSlider();
-        }
 
     // POPUP-CONTACTS
     $('.popup-trigger').click(function (e) {
