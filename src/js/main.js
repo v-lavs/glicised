@@ -116,7 +116,7 @@ $(document).ready(function () {
     const slider = document.querySelector('.banner-slider');
 
     if (slider) {
-        const sliderTimeout = 5000;
+        const sliderTimeout = 5500;
 
         // slides informations
         const slidesDefault = document.querySelectorAll(".banner-slider .banner-slider__slide");
