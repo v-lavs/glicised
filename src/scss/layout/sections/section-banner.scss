@@ -20,7 +20,7 @@
 
   .anim-right {
     opacity: 0;
-    transition: 1.7s;
+    transition: 1.75s;
     transform: translate(-100%, -50%) !important;
 
     &.anim-active {
@@ -33,7 +33,7 @@
   .card__icon {
     .st3 {
       opacity: 0;
-      transform: scale(.5);
+      transform: scale(.7);
       transition: 2s;
     }
 
