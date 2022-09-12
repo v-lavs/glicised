@@ -703,27 +703,7 @@
                         <style>#tabs::after {
                             width: 100%
                         }</style>
-                        <script src="https://geoapteka.ua/geowidget/loader/geowidget.min.js?v=1601386184990"
-                                type="text/javascript"></script>
-                        <script type="text/javascript">window.params = {
-                            mapNodeID: 'parent-map',
-                            storesNodeID: 'stores',
-                            tabsNodeID: 'tabs',
-                            cartNodeID: 'cart',
-                            drugNodeID: 'selected-drug',
-                            initTab: 'map',
-                            pathToGeowidget: 'https://geoapteka.ua/geowidget/dist/',
-                            agent: 'GeoAPT',
-                            lang: "ua",
-                            productId: "363274",
-                            drugId: "678979",
-                            compendiumUrl: "https://compendium.com.ua/uk/result/?term=%D0%93%D0%9B%D0%86%D0%A6%D0%98%D0%A1%D0%95%D0%94",
-                        };
-                        initGeoapteka(window.params).then(function (geowidget) {
-                            window.geowidget = geowidget;
-                        });
 
-                        </script>
                         <div id="title"></div>
                         <div id="selected-drug"></div>
                         <div id="tabs"></div>
@@ -883,8 +863,29 @@
 </div>
 
 
-<script src="https://geoapteka.ua/geowidget/dist/gwapp.umd.min.js?v=3.8.86" defer=""></script>
 <script src="dist/main.js"></script>
+
+<script src="https://geoapteka.ua/geowidget/loader/geowidget.min.js?v=1601386184990"
+        type="text/javascript"></script>
+<script type="text/javascript">window.params = {
+    mapNodeID: 'parent-map',
+    storesNodeID: 'stores',
+    tabsNodeID: 'tabs',
+    cartNodeID: 'cart',
+    drugNodeID: 'selected-drug',
+    initTab: 'map',
+    pathToGeowidget: 'https://geoapteka.ua/geowidget/dist/',
+    agent: 'GeoAPT',
+    lang: "ua",
+    productId: "363274",
+    drugId: "678979",
+    compendiumUrl: "https://compendium.com.ua/uk/result/?term=%D0%93%D0%9B%D0%86%D0%A6%D0%98%D0%A1%D0%95%D0%94",
+};
+initGeoapteka(window.params).then(function (geowidget) {
+    window.geowidget = geowidget;
+});
+
+</script>
 
 </body>
 </html>
