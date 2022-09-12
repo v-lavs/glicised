@@ -316,11 +316,25 @@
       padding-bottom: 40px;
     }
 
-    .slider-btn {
-      padding: 20px;
+    .wrap-anim {
       top: calc(50% - 31px);
       bottom: auto;
       height: 62px;
+      right: 17px;
+    }
+
+    .slider-btn {
+      padding: 20px;
+
+      &:before {
+        left: -8px;
+        top: 0;
+        bottom: 2px;
+      }
+
+      .mob-hide {
+        display: none;
+      }
 
       .btn__icon {
         width: 28px;
@@ -368,6 +382,9 @@
     .slider-btn {
       padding: 9px;
       height: 48px;
+      &:before{
+        bottom: 14px;
+      }
     }
   }
 }

@@ -3558,11 +3558,25 @@ button[disabled] {
     padding-bottom: 40px;
   }
 
-  .banner-slider .slider-btn {
-    padding: 20px;
+  .banner-slider .wrap-anim {
     top: calc(50% - 31px);
     bottom: auto;
     height: 62px;
+    right: 17px;
+  }
+
+  .banner-slider .slider-btn {
+    padding: 20px;
+  }
+
+  .banner-slider .slider-btn:before {
+    left: -8px;
+    top: 0;
+    bottom: 2px;
+  }
+
+  .banner-slider .slider-btn .mob-hide {
+    display: none;
   }
 
   .banner-slider .slider-btn .btn__icon {
@@ -4005,6 +4019,10 @@ button[disabled] {
   .banner-slider .slider-btn {
     padding: 9px;
     height: 48px;
+  }
+
+  .banner-slider .slider-btn:before {
+    bottom: 14px;
   }
 
   .section-benefits .part_left {
