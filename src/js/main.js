@@ -19,13 +19,14 @@ $(document).ready(function () {
     $('.btn_burger').click(function (e) {
         e.preventDefault();
         nav.addClass('open');
+        $('.dropdown').removeClass('active');
         jQuery('.backdrop').fadeIn();
         $('.btn_close').show();
     });
 
-    $('.btn_close, .menu__link, .backdrop').click(function (e) {
+    $('.btn_close, .menu__link:not(.js-default-prevented), .backdrop').click(function (e) {
         nav.removeClass('open');
-        $('.sub-menu').removeClass('show');
+        $('.dropdown').removeClass('active');
         jQuery('.backdrop').fadeOut();
         $('.btn_close').hide();
     });
@@ -33,6 +34,8 @@ $(document).ready(function () {
     $('.header .dropdown').click(function (e) {
         $(e.currentTarget).toggleClass('active');
     });
+
+
 
 // SMOOTH SCROLL TO ANCHOR
     let smoothScroll = location.hash;
