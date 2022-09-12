@@ -26,15 +26,19 @@
       .color_toggle {
         color: $blue;
       }
-      .sub-menu__toggle{
+
+      .sub-menu__toggle {
         transform: rotate(270deg);
       }
+
       .sub-menu {
         z-index: 1;
         opacity: 1;
         visibility: visible;
+
       }
     }
+
     .sub-menu {
       width: max-content;
       position: absolute;
@@ -146,8 +150,11 @@
       margin: 10px 0;
       font-size: 25px;
 
-      .show {
-        position: static;
+      &.active {
+        .sub-menu {
+          position: static;
+
+        }
       }
     }
   }
@@ -174,7 +181,7 @@
   }
   .sub-menu__toggle_active + .sub-menu {
     display: block !important;
-    position: static;
+    position: static !important;
     visibility: visible;
     opacity: 1;
     transform: none;

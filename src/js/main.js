@@ -36,7 +36,6 @@ $(document).ready(function () {
     });
 
 
-
 // SMOOTH SCROLL TO ANCHOR
     let smoothScroll = location.hash;
     const offsetSize = $("header").innerHeight();
@@ -247,49 +246,50 @@ $(document).ready(function () {
 
 // Slider with mask
     const slider = document.querySelector('.banner-slider');
-    if (slider) {
-        const sliderTimeout = 5000;
 
-        // slides informations
-        const slidesDefault = document.querySelectorAll(".banner-slider .banner-slider__slide");
+        if (slider) {
+            const sliderTimeout = 4000;
 
-        slidesDefault.forEach(item => {
-            const clonedItem = item.cloneNode(true);
-            slider.appendChild(clonedItem);
-        });
+            // slides informations
+            const slidesDefault = document.querySelectorAll(".banner-slider .banner-slider__slide");
 
-        let slides = document.querySelectorAll(".banner-slider .banner-slider__slide");
+            slidesDefault.forEach(item => {
+                const clonedItem = item.cloneNode(true);
+                slider.appendChild(clonedItem);
+            });
 
-        function moveSlide(e) {
-            const currSlideIndex = [].slice.call(slides).findIndex(s => s.classList.contains('active-slide'));
-            const slide = slides[currSlideIndex + 1];
-            const prevSlide = slides[currSlideIndex - 1];
+            let slides = document.querySelectorAll(".banner-slider .banner-slider__slide");
 
-            if (prevSlide) {
-                const cloned = prevSlide.cloneNode(true);
-                cloned.classList.remove('slide-on');
-                prevSlide.remove();
-                slider.appendChild(cloned);
-                slides = document.querySelectorAll(".banner-slider .banner-slider__slide")
+            function moveSlide(e) {
+                const currSlideIndex = [].slice.call(slides).findIndex(s => s.classList.contains('active-slide'));
+                const slide = slides[currSlideIndex + 1];
+                const prevSlide = slides[currSlideIndex - 1];
+
+                if (prevSlide) {
+                    const cloned = prevSlide.cloneNode(true);
+                    cloned.classList.remove('slide-on');
+                    prevSlide.remove();
+                    slider.appendChild(cloned);
+                    slides = document.querySelectorAll(".banner-slider .banner-slider__slide")
+                }
+
+                $(slides).removeClass('active-slide');
+
+                slide.classList.add("slide-on");
+                slide.classList.add("active-slide");
             }
 
-            $(slides).removeClass('active-slide');
+            function startSlider() {
+                slides[0].classList.add('active-slide');
+                slides[0].classList.add("slide-on");
 
-            slide.classList.add("slide-on");
-            slide.classList.add("active-slide");
+                setInterval(() => {
+                    moveSlide();
+                }, sliderTimeout);
+            }
+
+            startSlider();
         }
-
-        function startSlider() {
-            slides[0].classList.add('active-slide');
-            slides[0].classList.add("slide-on");
-
-            setInterval(() => {
-                moveSlide();
-            }, sliderTimeout);
-        }
-
-        startSlider();
-    }
 
     // POPUP-CONTACTS
     $('.popup-trigger').click(function (e) {
@@ -314,7 +314,7 @@ $(document).ready(function () {
         setTimeout(() => {
             $('.section-banner .slider-btn').addClass('anim-active');
         }, 600);
-    }, 300);
+    }, 1000);
 
 });
 

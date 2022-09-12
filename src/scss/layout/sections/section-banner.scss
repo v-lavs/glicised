@@ -9,7 +9,8 @@
     position: relative;
     opacity: 0;
     transform: translateY(100px);
-    transition: 1.5s;
+    transition: 2s;
+    transition-delay: .5s;
 
     &.anim-active {
       opacity: 1;
@@ -19,7 +20,7 @@
 
   .anim-right {
     opacity: 0;
-    transition: 1s;
+    transition: 1.7s;
     transform: translate(-100%, -50%) !important;
 
     &.anim-active {
@@ -33,14 +34,14 @@
     .st3 {
       opacity: 0;
       transform: scale(.5);
-      transition: 1.5s;
+      transition: 2s;
     }
 
     &.anim-active {
       .st3 {
         opacity: 1 !important;
         transform: scale(1) !important;
-        transition-delay: .5s;
+        transition-delay: .9s;
 
       }
     }
@@ -74,8 +75,8 @@
       right: calc(100% - 90%);
       transform-origin: 0 100%;
       width: 0;
-      transition: 1s;
-      transition-delay: .25s;
+      transition: 2s;
+      transition-delay: .7s;
       opacity: 0;
 
       &.anim-active {
@@ -164,6 +165,7 @@
 
     .banner-slider__wrap-img {
       clip-path: inset(0 0 0 0);
+
     }
   }
 
@@ -181,7 +183,7 @@
     align-items: flex-end;
     justify-content: center;
     padding: 0 40px 158px;
-    transition: 1s clip-path cubic-bezier(0.65, 0.05, 0.36, 1);
+    transition: 3s clip-path cubic-bezier(0.65, 0.05, 0.36, 1);
 
     clip-path: inset(0 0 0 100%);
   }
