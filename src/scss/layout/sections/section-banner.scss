@@ -194,6 +194,12 @@
     clip-path: inset(0 0 0 100%);
   }
 
+  &__img {
+    max-width: 586px;
+    height: auto;
+    width: 100%;
+  }
+
 }
 
 @media screen and (max-width: 1660px) {

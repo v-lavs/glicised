@@ -1955,6 +1955,12 @@ button[disabled] {
   clip-path: inset(0 0 0 100%);
 }
 
+.banner-slider__img {
+  max-width: 586px;
+  height: auto;
+  width: 100%;
+}
+
 .section-benefits {
   background: url(../assets/img/bg-section/sec-2-1.svg) left -20px top 16px/169px 160px no-repeat;
 }
