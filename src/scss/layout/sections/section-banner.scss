@@ -415,5 +415,9 @@
 @media screen and (max-width: 480px) {
   .section-banner .wrap-slider {
     padding-top: 85%;
+    .btn__icon{
+      width: 60px;
+      height: 23px;
+    }
   }
 }

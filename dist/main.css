@@ -4318,6 +4318,11 @@ button[disabled] {
     padding-top: 85%;
   }
 
+  .section-banner .wrap-slider .btn__icon {
+    width: 60px;
+    height: 23px;
+  }
+
   .section-benefits .links-list__icon {
     margin-left: 10px;
   }
