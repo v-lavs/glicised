@@ -390,6 +390,9 @@
         padding: 20px 16px;
         font-size: 16px;
       }
+      &__img{
+        transform: translate(-50%, 40%) rotate(0);
+      }
     }
     .section-indication {
       .section__title {
