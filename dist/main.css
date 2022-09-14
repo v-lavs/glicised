@@ -1787,6 +1787,10 @@ button[disabled] {
   z-index: 100;
 }
 
+.section-banner .helper-div {
+  position: relative;
+}
+
 .section-banner .anim-up {
   position: relative;
 }
@@ -2479,7 +2483,6 @@ button[disabled] {
 
 .composition__card-icon_right {
   background-image: url(../assets/img/mg-elem.svg);
-  background-size: 64px;
 }
 
 .section-indication {
@@ -3589,6 +3592,10 @@ button[disabled] {
     width: 100%;
   }
 
+  .section-banner__content {
+    padding-bottom: 90px;
+  }
+
   .section-banner .wrap-slider {
     position: relative;
     padding-top: 85%;
@@ -3597,36 +3604,21 @@ button[disabled] {
     width: 100%;
   }
 
+  .section-banner .wrap-slider .wrap-anim.anim-active {
+    transform: translate(-50%, 0);
+  }
+
   .banner-slider__wrap-img {
     align-content: center;
     padding-bottom: 40px;
   }
 
   .banner-slider .wrap-anim {
-    top: calc(50% - 31px);
+    top: -82px;
     bottom: auto;
-    height: 62px;
-    right: 17px;
-  }
-
-  .banner-slider .slider-btn {
-    padding: 20px;
-  }
-
-  .banner-slider .slider-btn:before {
-    left: -8px;
-    top: 0;
-    bottom: 2px;
-  }
-
-  .banner-slider .slider-btn .mob-hide {
-    display: none;
-  }
-
-  .banner-slider .slider-btn .btn__icon {
-    width: 28px;
-    height: 18px;
-    margin-left: 0;
+    right: auto;
+    left: 50%;
+    transform: translate(-50%, 100px);
   }
 
   .section-benefits {

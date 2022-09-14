@@ -83,8 +83,8 @@
                     <button class="btn btn_close" type="button" aria-label="Закрити меню"></button>
 
                     <ul class="menu">
-                        <li class="menu__item dropdown"><a href="#" class="menu__link js-default-prevented">Про
-                            продукт</a>
+                        <li class="menu__item dropdown">
+                            <a href="#" class="menu__link js-default-prevented">Про продукт</a>
                             <button type="button" class="sub-menu__toggle">
                                 <svg>
                                     <use xlink:href="#arrow-downward1"></use>
@@ -102,6 +102,22 @@
                                 </li>
                                 <li class="sub-menu__item">
                                     <a href="#indication" class="menu__link">Показання</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu__item dropdown">
+                            <a href="#" class="menu__link js-default-prevented">Види Гліцисед</a>
+                            <button type="button" class="sub-menu__toggle">
+                                <svg>
+                                    <use xlink:href="#arrow-downward1"></use>
+                                </svg>
+                            </button>
+                            <ul class="sub-menu">
+                                <li class="sub-menu__item">
+                                    <a href="#" class="menu__link">Гліцисед</a>
+                                </li>
+                                <li class="sub-menu__item">
+                                    <a href="index.html" class="menu__link">Гліцисед МАКС</a>
                                 </li>
                             </ul>
                         </li>
@@ -206,31 +222,34 @@
                             </div>
                         </div>
                     </div>
-                    <div class="wrap-slider">
-                        <!-- Swiper -->
-                        <div class="banner-slider">
-                            <div class="banner-slider__slide">
-                                <div class="banner-slider__wrap-img"
-                                     style="background-image: url(assets/img/photo_01.jpg);"></div>
-                            </div>
-                            <div class="banner-slider__slide">
-                                <div class="banner-slider__wrap-img"
-                                     style="background-image: url(assets/img/bg-banner2.jpg);">
-                                    <img src="assets/img/prep-2.png" alt="упаковка Гліцисед"
-                                         class="banner-slider__img"
-                                         width="698" height="362">
-                                </div>
-                            </div>
-                            <div class="wrap-anim">
-                                <a href="index.html" class="btn btn_main btn_warm slider-btn"><span class="mob-hide">ГЛІЦИСЕД МАКС</span>
-                                    <span class="btn__icon">
+                    <div class="helper-div">
+                        <div class="wrap-anim">
+                            <a href="index.html" class="btn btn_main btn_warm slider-btn"><span
+                                    class="mob-hide">ГЛІЦИСЕД МАКС</span>
+                                <span class="btn__icon">
                                     <picture>
                                     <source srcset="assets/img/arrow-back.svg" media="(max-width: 767px)">
                                     <img src="assets/img/arrow_b.gif" alt="" class="btn__icon" width="88"
                                          height="32">
                                 </picture>
                                </span>
-                                </a>
+                            </a>
+                        </div>
+                        <div class="wrap-slider">
+                            <!-- Swiper -->
+                            <div class="banner-slider">
+                                <div class="banner-slider__slide">
+                                    <div class="banner-slider__wrap-img"
+                                         style="background-image: url(assets/img/photo_01.jpg);"></div>
+                                </div>
+                                <div class="banner-slider__slide">
+                                    <div class="banner-slider__wrap-img"
+                                         style="background-image: url(assets/img/bg-banner2.jpg);">
+                                        <img src="assets/img/prep-2.png" alt="упаковка Гліцисед"
+                                             class="banner-slider__img"
+                                             width="698" height="362">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -509,7 +528,8 @@
         <section id="indication" class="section section-indication">
             <div class="container">
                 <h2 class="section__title">
-                    <span class="title-decor title-decor_left">ПОКАЗАННЯ ГЛІЦИСЕД<sup class="trademark">&reg;</sup></span>
+                    <span class="title-decor title-decor_left">ПОКАЗАННЯ ГЛІЦИСЕД<sup
+                            class="trademark">&reg;</sup></span>
                     <span class="title_sm">
                         Функціональні та органічні захворювання нервової системи (неврози, неврозоподібні стани,
                         вегето-судинні дистонії), які супроводжуються<sup>2</sup>:
