@@ -3363,10 +3363,6 @@ button[disabled] {
     padding-bottom: 0;
   }
 
-  .section-banner .wrap-slider .btn {
-    right: 15px;
-  }
-
   .section-benefits .part {
     min-height: 500px;
   }
@@ -3604,21 +3600,26 @@ button[disabled] {
     width: 100%;
   }
 
-  .section-banner .wrap-slider .wrap-anim.anim-active {
-    transform: translate(-50%, 0);
-  }
-
   .banner-slider__wrap-img {
     align-content: center;
     padding-bottom: 40px;
   }
 
+  .banner-slider .btn__icon {
+    position: absolute;
+    right: 20px;
+  }
+
   .banner-slider .wrap-anim {
     top: -82px;
     bottom: auto;
-    right: auto;
-    left: 50%;
-    transform: translate(-50%, 100px);
+    right: 0;
+    left: 0;
+  }
+
+  .banner-slider .btn_warm {
+    width: 100%;
+    justify-content: center;
   }
 
   .section-benefits {
@@ -4102,6 +4103,10 @@ button[disabled] {
   .consequent__icon {
     width: 31px;
     height: 31px;
+  }
+
+  .section-application {
+    padding-bottom: 50px;
   }
 
   .section-application .card {

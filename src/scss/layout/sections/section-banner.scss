@@ -282,10 +282,6 @@
     &__content {
       padding-bottom: 0;
     }
-
-    .wrap-slider .btn {
-      right: 15px;
-    }
   }
 }
 
@@ -340,9 +336,6 @@
       right: 0;
       left: 0;
       width: 100%;
-      .wrap-anim.anim-active{
-        transform: translate(-50%, 0);
-      }
     }
 
 
@@ -353,12 +346,21 @@
       padding-bottom: 40px;
     }
 
+    .btn__icon {
+      position: absolute;
+      right: 20px;
+    }
+
     .wrap-anim {
       top: -82px;
       bottom: auto;
-      right: auto;
-      left: 50%;
-      transform: translate(-50%, 100px);
+      right: 0;
+      left: 0;
+    }
+
+    .btn_warm {
+      width: 100%;
+      justify-content: center;
     }
   }
 }

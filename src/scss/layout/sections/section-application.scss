@@ -213,6 +213,7 @@
 
 @include respond-to($xxs) {
   .section-application {
+    padding-bottom: 50px;
     .card {
       padding: 10px 0 10px 20px;
 
