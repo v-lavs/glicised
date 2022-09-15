@@ -85,7 +85,7 @@
     line-height: 1;
   }
 
-  .popup__contact-list {
+  &__contact-list {
     display: flex;
     flex-wrap: wrap;
     margin-right: -15px;
@@ -94,7 +94,7 @@
     text-align: center;
   }
 
-  .popup__contact-item {
+  &__contact-item {
     flex: 0 0 33.33%;
     max-width: 33.33%;
     width: 100%;
@@ -111,20 +111,20 @@
     }
   }
 
-  .popup__contact-block {
+  &__contact-block {
     background-color: $blue;
     color: #fff;
     padding: 15px;
     border-radius: 0 0 10px 10px;
   }
 
-  .popup__content {
+  &__content {
     font-size: 14px;
     line-height: 1.57;
     padding-top: 20px;
   }
 
-  .popup__logo {
+  &__logo {
     display: inline-block;
     width: 175px;
     height: auto;
@@ -134,7 +134,7 @@
     }
   }
 
-  .popup__footer {
+  &__footer {
     text-align: center;
   }
 
@@ -144,6 +144,11 @@
   .popup {
     max-width: 704px;
     height: 717px;
+
+    &__contact-item {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
 
     &__footer {
       display: flex;
@@ -160,7 +165,6 @@
     }
   }
 }
-
 
 
 @include respond-to($xs) {

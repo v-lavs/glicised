@@ -20,14 +20,12 @@ $(document).ready(function () {
         e.preventDefault();
         nav.addClass('open');
         $('.dropdown').removeClass('active');
-        jQuery('.backdrop').fadeIn();
         $('.btn_close').show();
     });
 
     $('.btn_close, .menu__link:not(.js-default-prevented), .backdrop').click(function (e) {
         nav.removeClass('open');
         $('.sub-menu').removeClass('active');
-        jQuery('.backdrop').fadeOut();
         $('.btn_close').hide();
     });
 
