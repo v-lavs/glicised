@@ -82,7 +82,31 @@
 
     &__footer {
       display: none;
+      flex-direction: column;
+      align-items: center;
+      padding: 60px 0;
+      margin-top: auto;
+
     }
+  }
+
+  .phone {
+    background-color: $blue;
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+
+      svg path {
+        fill: $blue;
+      }
+    }
+  }
+
+  .footer__logo {
+    max-width: 183px;
+    display: inline-block;
+    margin-bottom: 30px;
   }
 }
 
@@ -101,7 +125,7 @@
       height: 100%;
 
       background-color: #ffffff;
-      padding: 100px 15px 20px;
+      padding: 80px 15px 20px;
       transition: transform .5s;
       transform: translateX(-100%);
       z-index: 999;
@@ -120,8 +144,7 @@
 
       &__footer {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+
       }
     }
 
@@ -133,6 +156,10 @@
       margin-left: 0;
       padding-left: 10px;
       padding-right: 10px;
+    }
+    .social-bar__item {
+      margin: 0 10px;
+      padding: 7px;
     }
   }
   .btn_burger {

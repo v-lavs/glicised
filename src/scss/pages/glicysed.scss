@@ -1,4 +1,7 @@
 .glicysed {
+  .literature-sources {
+    padding-bottom: 40px;
+  }
 
   .consequent {
 
@@ -323,6 +326,9 @@
     }
   }
   @include respond-to($xxs) {
+    .literature-sources {
+      padding-bottom: 60px;
+    }
     .section-effects {
       .sub-title {
         margin-bottom: 0;
@@ -390,7 +396,8 @@
         padding: 20px 16px;
         font-size: 16px;
       }
-      &__img{
+
+      &__img {
         transform: translate(-50%, 40%) rotate(0);
       }
     }

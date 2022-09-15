@@ -35,7 +35,6 @@ $(document).ready(function () {
         $(e.currentTarget).toggleClass('active');
     });
 
-
 // SMOOTH SCROLL TO ANCHOR
     let smoothScroll = location.hash;
     const offsetSize = $("header").innerHeight();
@@ -324,7 +323,6 @@ $(document).ready(function () {
             $options.prop('checked', false);
         }
     }
-
 
 
     // POPUP-CONTACTS

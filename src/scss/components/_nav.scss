@@ -71,6 +71,10 @@
           margin-bottom: 0;
         }
 
+        &.disabled {
+          opacity: .35;
+        }
+
         > a {
           display: inline-block;
           padding: 8px 0;
@@ -131,6 +135,11 @@
       color: $blue;
       -webkit-text-stroke-width: .9px;
     }
+    &__item.disabled:hover,
+    &__item.disabled:focus {
+      color: #343F3E!important;
+      -webkit-text-stroke-color: transparent;
+    }
   }
 }
 
@@ -179,6 +188,9 @@
       align-items: center;
     }
   }
+  .menu__item .sub-menu__toggle {
+    margin-left: 0;
+  }
   .sub-menu__toggle_active + .sub-menu {
     display: block !important;
     position: static !important;
@@ -187,8 +199,7 @@
     transform: none;
   }
   .dropdown {
-    flex-wrap: wrap;
-    justify-content: center;
+    display: block;
   }
   .dropdown > .menu__link {
     display: inline-block;
