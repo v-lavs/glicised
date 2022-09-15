@@ -73,12 +73,11 @@
     }
 
     ul {
-      padding-left: 15px;
       margin-bottom: 20px;
 
       > li {
         position: relative;
-        padding-left: 25px;
+        padding-left: 26px;
         margin-bottom: 8px;
 
         &:before {
@@ -125,6 +124,9 @@
 
       ul > li {
         font-size: 20px;
+        &:before {
+          top: 12px;
+        }
       }
     }
   }
@@ -136,7 +138,6 @@
       padding-left: 30px;
       padding-right: 30px;
     }
-
     .note {
       font-size: 20px;
     }
@@ -197,10 +198,8 @@
       font-size: 16px;
 
       ul {
-        padding-left: 11px;
-
         > li {
-          padding-left: 23px;
+          padding-left: 20px;
         }
       }
 
@@ -214,6 +213,7 @@
 @include respond-to($xxs) {
   .section-application {
     padding-bottom: 50px;
+
     .card {
       padding: 10px 0 10px 20px;
 
@@ -240,6 +240,7 @@
 
       left: calc((100% - 100vw) / 2);
     }
+
     &__img {
       transform: translate(-50%, 50%) rotate(11deg);
       left: 50%;

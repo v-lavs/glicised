@@ -53,6 +53,10 @@
     display: block;
     width: 183px;
 
+    img {
+      vertical-align: middle;
+    }
+
   }
 
   .container {
@@ -62,21 +66,10 @@
     position: relative;
   }
 
-  .lang-switch {
-    width: max-content;
+  .menu_2 {
     border: 1px dashed rgba(61, 64, 77, 0.15);
     border-radius: 5px;
     margin-left: 100px;
-
-    .sub-menu {
-      padding-left: 20px;
-      min-width: 0;
-      width: auto;
-    }
-
-    li:before {
-      display: none;
-    }
   }
 
   .nav {
@@ -124,9 +117,5 @@
   }
   .btn_burger {
     display: block !important;
-  }
-  .lang-switch {
-    display: none;
-
   }
 }

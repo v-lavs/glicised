@@ -1649,6 +1649,10 @@ button[disabled] {
   width: 183px;
 }
 
+.header__logo-site img {
+  vertical-align: middle;
+}
+
 .header .container {
   display: flex;
   align-items: center;
@@ -1656,21 +1660,10 @@ button[disabled] {
   position: relative;
 }
 
-.header .lang-switch {
-  width: max-content;
+.header .menu_2 {
   border: 1px dashed rgba(61, 64, 77, 0.15);
   border-radius: 5px;
   margin-left: 100px;
-}
-
-.header .lang-switch .sub-menu {
-  padding-left: 20px;
-  min-width: 0;
-  width: auto;
-}
-
-.header .lang-switch li:before {
-  display: none;
 }
 
 .header .nav__inner {
@@ -2197,6 +2190,7 @@ button[disabled] {
   background-position: center;
   background-size: contain;
   margin-bottom: 20px;
+  animation: pulse 1s infinite ease-out;
 }
 
 .consequent__text {
@@ -2217,6 +2211,20 @@ button[disabled] {
   left: 0;
   background-color: #61A1F4;
   z-index: 1;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.65);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0.65);
+  }
 }
 
 .section-application {
@@ -2295,13 +2303,12 @@ button[disabled] {
 }
 
 .section-application .card ul {
-  padding-left: 15px;
   margin-bottom: 20px;
 }
 
 .section-application .card ul > li {
   position: relative;
-  padding-left: 25px;
+  padding-left: 26px;
   margin-bottom: 8px;
 }
 
@@ -3104,6 +3111,10 @@ button[disabled] {
     font-size: 20px;
   }
 
+  .section-application .card ul > li:before {
+    top: 12px;
+  }
+
   .quiz-scale-wrap .triangle-top {
     margin-bottom: 2px;
   }
@@ -3252,10 +3263,6 @@ button[disabled] {
 
   .btn_burger {
     display: block !important;
-  }
-
-  .lang-switch {
-    display: none;
   }
 
   .section-banner__slogan {
@@ -3546,7 +3553,7 @@ button[disabled] {
   }
 
   .footer .social-bar__item {
-    margin: 0 20px;
+    margin: 0 10px;
     padding: 7px;
   }
 
@@ -3734,12 +3741,8 @@ button[disabled] {
     font-size: 16px;
   }
 
-  .section-application .card ul {
-    padding-left: 11px;
-  }
-
   .section-application .card ul > li {
-    padding-left: 23px;
+    padding-left: 20px;
   }
 
   .section-application .card .text_md {
@@ -4102,8 +4105,8 @@ button[disabled] {
   }
 
   .consequent__icon {
-    width: 31px;
-    height: 31px;
+    width: 80px;
+    height: 80px;
   }
 
   .section-application {
@@ -4255,8 +4258,8 @@ button[disabled] {
   }
 
   .glicysed .consequent__icon {
-    width: 31px;
-    height: 31px;
+    width: 80px;
+    height: 80px;
   }
 
   .glicysed .section-application .col_5 {
