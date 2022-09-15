@@ -63,6 +63,17 @@
       }
     }
   }
-
 }
 
+@media screen and (max-width: 350px) {
+  .section-buy{
+    .section__block-btns .btn_dark{
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .btn_light{
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+}

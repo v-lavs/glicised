@@ -187,10 +187,10 @@
     transform: none;
   }
   .dropdown {
-    display: block;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   .dropdown > .menu__link {
     display: inline-block;
-    padding-right: 15px;
   }
 }

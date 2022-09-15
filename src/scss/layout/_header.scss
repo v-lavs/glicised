@@ -113,9 +113,25 @@
         overflow-y: auto;
         flex-direction: column;
       }
+      &__footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+
+    .menu {
+      margin-bottom: 50px;
+    }
+
+    .menu_2 {
+      margin-left: 0;
+      padding-left: 10px;
+      padding-right: 10px;
     }
   }
   .btn_burger {
     display: block !important;
   }
+
 }

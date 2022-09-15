@@ -421,3 +421,16 @@
     }
   }
 }
+
+@media screen and (max-width: 350px) {
+  .section-banner {
+    .btn_main{
+      padding-left: 34px;
+      padding-right: 34px;
+    }
+    .btn_light{
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+}
