@@ -1347,7 +1347,7 @@ button[disabled] {
 
 .menu__link {
   display: block;
-  padding: 10px 0;
+  padding: 8px 0  10px;
   transition: .25s;
 }
 
@@ -1628,6 +1628,7 @@ button[disabled] {
 }
 
 .btn_close {
+  display: none;
   position: absolute;
   background-image: url(../assets/img/close.svg);
   left: 15px;
@@ -3347,6 +3348,7 @@ button[disabled] {
     padding: 7px;
   }
 
+  .btn_close,
   .btn_burger {
     display: block !important;
   }

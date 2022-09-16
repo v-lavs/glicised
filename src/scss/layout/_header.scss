@@ -17,6 +17,7 @@
 }
 
 .btn_close {
+  display: none;
   position: absolute;
   background-image: url(../assets/img/close.svg);
   left: 15px;
@@ -162,6 +163,7 @@
       padding: 7px;
     }
   }
+  .btn_close,
   .btn_burger {
     display: block !important;
   }
