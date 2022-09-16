@@ -14,6 +14,12 @@ $(document).ready(function () {
         e.preventDefault();
     });
 
+    const $headerSubMenus = $('.header .dropdown');
+
+    $(window).on('scroll', function () {
+        $headerSubMenus.removeClass('active');
+    });
+
     //MOBILE MENU
     const nav = $('nav');
     $('.btn_burger').click(function (e) {
@@ -21,15 +27,18 @@ $(document).ready(function () {
         nav.addClass('open');
         $('.dropdown').removeClass('active');
         $('.btn_close').show();
+        $('body').addClass('overflow-hidden');
     });
 
     $('.btn_close, .menu__link:not(.js-default-prevented), .backdrop').click(function (e) {
         nav.removeClass('open');
         $('.sub-menu').removeClass('active');
         $('.btn_close').hide();
+        $('body').removeClass('overflow-hidden');
     });
 
-    $('.header .dropdown').click(function (e) {
+    $headerSubMenus.click(function (e) {
+        $headerSubMenus.removeClass('active');
         $(e.currentTarget).toggleClass('active');
     });
 

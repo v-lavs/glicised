@@ -23,10 +23,6 @@
     }
 
     &.active {
-      //.color_toggle {
-      //  color: $blue;
-      //}
-
       .sub-menu__toggle {
         transform: rotate(270deg);
       }
@@ -73,6 +69,7 @@
 
         &.disabled {
           opacity: .35;
+          pointer-events: none;
         }
 
         > a {

@@ -265,6 +265,12 @@ sup {
   z-index: 910;
 }
 
+@include respond-to($md) {
+  .overflow-hidden {
+    overflow: hidden !important;
+  }
+}
+
 .literature-sources {
   font-size: 16px;
   line-height: 1.5;

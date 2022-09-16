@@ -1314,6 +1314,7 @@ button[disabled] {
 
 .menu__item .sub-menu__item.disabled {
   opacity: .35;
+  pointer-events: none;
 }
 
 .menu__item .sub-menu__item > a {
@@ -3201,6 +3202,10 @@ button[disabled] {
 }
 
 @media only screen and (max-width: 1160px) {
+  .overflow-hidden {
+    overflow: hidden !important;
+  }
+
   .section__title {
     font-size: 40px;
   }
