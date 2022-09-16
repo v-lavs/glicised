@@ -45,6 +45,7 @@
   }
 
   .card__icon {
+    animation: pulse 1s infinite ease-out;
     .st3 {
       opacity: 0;
       transform: scale(.7);

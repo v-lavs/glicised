@@ -1860,6 +1860,10 @@ button[disabled] {
   transform: translate(0%, -50%) !important;
 }
 
+.section-banner .card__icon {
+  animation: pulse 1s infinite ease-out;
+}
+
 .section-banner .card__icon .st3 {
   opacity: 0;
   transform: scale(0.7);
