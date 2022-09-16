@@ -2145,7 +2145,6 @@ button[disabled] {
 
 .section-effects .sub-title {
   position: relative;
-  max-width: 996px;
   width: 100%;
   text-align: center;
   padding-bottom: 40px;
@@ -2670,6 +2669,7 @@ button[disabled] {
 .quiz__question-sub-title {
   padding-left: 40px;
   padding-right: 40px;
+  font-weight: 700;
 }
 
 .quiz__questions {
@@ -2943,6 +2943,10 @@ button[disabled] {
   background-image: url(../assets/img/bg-section/pattern_02a.svg);
   background-position: left 48px bottom 30%;
   background-size: 146px 138px;
+}
+
+.glicysed .section-effects .sub-title {
+  max-width: 996px;
 }
 
 .glicysed .section-application {
