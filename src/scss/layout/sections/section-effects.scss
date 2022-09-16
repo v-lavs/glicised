@@ -1,9 +1,9 @@
 .section-effects {
   position: relative;
 
-    background-image: url(../assets/img/bg-section/m-svg.svg);
-    background-position: 0 0;
-    background-repeat: no-repeat;
+  background-image: url(../assets/img/bg-section/m-svg.svg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
   background-size: 28% 45vw;
 
   &:before {
@@ -170,6 +170,49 @@
   }
 }
 
+
+@media screen and (max-width: 1366px) {
+  .section__title {
+    font-size: 60px;
+  }
+  .section-effects {
+    .sub-title {
+      padding-bottom: 30px;
+      margin-bottom: 40px;
+    }
+
+    .slider-nav {
+      padding-top: 65px;
+    }
+
+    .section__block-btns {
+      padding-top: 0;
+    }
+  }
+  .consequent {
+    &__bg {
+      min-height: 0;
+    }
+
+    &__content {
+      padding-top: 10px;
+      padding-bottom: 20px;
+    }
+
+    &__text {
+      padding: 20px 40px;
+    }
+
+    &__icon {
+      margin-bottom: 10px;
+    }
+  }
+
+  .consequent-slider {
+    padding-bottom: 0;
+  }
+}
+
 @include respond-to($lg) {
   .section-effects {
     &:before {
@@ -180,7 +223,7 @@
 
 @include respond-to($md) {
   .consequent {
-      font-size: 20px;
+    font-size: 20px;
   }
   .section-effects {
     .slider-nav {

@@ -60,7 +60,8 @@
     background-image: url(../assets/img/bg-section/pattern_02a.svg);
     background-position: left 48px bottom 30%;
     background-size: 146px 138px;
-    .sub-title{
+
+    .sub-title {
       max-width: 996px;
     }
   }
@@ -203,6 +204,33 @@
     }
   }
 
+  @media screen and (max-width: 1366px) {
+    .section__title {
+      font-size: 60px;
+    }
+    .section-effects {
+    }
+    .consequent {
+      &__bg {
+        min-height: 0;
+      }
+
+      &__content {
+        padding-top: 10px;
+        padding-bottom: 20px;
+      }
+
+      &__text {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+      }
+
+      &__icon {
+        margin-bottom: 10px;
+      }
+    }
+  }
   @include respond-to($lg) {
     .consequent {
 
