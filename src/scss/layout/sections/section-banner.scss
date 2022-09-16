@@ -46,19 +46,12 @@
 
   .card__icon {
     animation: pulse 1s infinite ease-out;
-    //.st3 {
-    //  opacity: 0;
-    //  transform: scale(.7);
-    //  transition: 2s;
-    //}
 
-    //&.anim-active {
-      .st3 {
-        opacity: 1 !important;
-        transform: scale(1) !important;
-        transition-delay: 1.25s;
-      }
-    //}
+    .st3 {
+      opacity: 1 !important;
+      transform: scale(1) !important;
+      transition-delay: 1.25s;
+    }
   }
 
 
@@ -228,12 +221,24 @@
 
 @media screen and (max-width: 1366px) and (max-height: 768px) {
   .section-banner {
+    &__slogan {
+      padding-top: 30px;
+      padding-right: 20px;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      font-size: 58px;
+    }
+
+    &__content {
+      padding-bottom: 0;
+    }
+
     .section__block-btns {
       margin-top: auto;
     }
 
     &__inner {
-      min-height: 816px;
+      min-height: 690px;
       display: flex;
       flex-direction: column;
     }
@@ -262,11 +267,11 @@
 
 @include respond-to($md) {
   .section-banner {
- .wrap-slider   .btn_warm {
+    .wrap-slider .btn_warm {
       padding-left: 20px;
       padding-right: 20px;
       width: max-content;
-   font-size: 18px;
+      font-size: 18px;
     }
 
     &__slogan {
@@ -372,7 +377,8 @@
       left: 0;
       width: 100%;
     }
-    .wrap-slider .btn_warm{
+
+    .wrap-slider .btn_warm {
       width: 100%;
       justify-content: center;
     }
@@ -395,7 +401,8 @@
       right: 0;
       left: 0;
       transform: translate(0, 100px);
-      &.anim-active{
+
+      &.anim-active {
         transform: translate(0, 0);
       }
     }

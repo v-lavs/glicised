@@ -33,8 +33,9 @@
   &__footer {
     display: flex;
     width: 100%;
+
     .btn:disabled,
-    .btn_dark:disabled{
+    .btn_dark:disabled {
       background-color: #EEF3F7;
       color: #A5A8AB;
       border-color: #A5A8AB;
@@ -193,11 +194,15 @@
 
 .quiz-result-view {
   text-align: center;
-  padding: 60px 40px;
+  padding: 0px 40px 60px;
 
   .title_md {
     margin-bottom: 60px;
     color: $blue;
+    sup {
+      font-size: .95em;
+      vertical-align: baseline;
+    }
   }
 
   .links-list {
@@ -213,7 +218,12 @@
     }
   }
 }
-
+.quiz-result__note {
+  sup {
+    font-size: 1.5em;
+    vertical-align: baseline!important;
+  }
+}
 .quiz__question-title {
   width: 100%;
   text-align: center;
@@ -225,8 +235,6 @@
   font-size: 14px;
   margin-top: 10px;
 }
-
-
 
 
 @include respond-to($lg) {

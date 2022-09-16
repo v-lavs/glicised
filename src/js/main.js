@@ -350,7 +350,6 @@ $(document).ready(function () {
     setTimeout(() => {
         $('.section-banner .anim-up').addClass('anim-active');
         $('.section-banner .anim-right').addClass('anim-active');
-        // $('.section-banner .card__icon').addClass('anim-active');
         $('.section-banner .section-banner__slogan .line').addClass('anim-active');
         setTimeout(() => {
             $('.section-banner .wrap-anim').addClass('anim-active');
