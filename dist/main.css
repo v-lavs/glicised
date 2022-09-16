@@ -2578,6 +2578,10 @@ button[disabled] {
   margin-bottom: 20px;
 }
 
+.section-indication .card__icon {
+  animation: pulse 1s infinite ease-out;
+}
+
 .hidden {
   display: none !important;
 }
