@@ -261,7 +261,7 @@
 
 @include respond-to($md) {
   .section-banner {
- .wrap-slider   .btn_main {
+ .wrap-slider   .btn_warm {
       padding-left: 20px;
       padding-right: 20px;
       width: max-content;
@@ -371,7 +371,10 @@
       left: 0;
       width: 100%;
     }
-
+    .wrap-slider .btn_warm{
+      width: 100%;
+      justify-content: center;
+    }
 
   }
   .banner-slider {
@@ -394,11 +397,6 @@
       &.anim-active{
         transform: translate(0, 0);
       }
-    }
-
-    .wrap-slider .btn_warm{
-      width: 100%;
-      justify-content: center;
     }
   }
 }
@@ -453,8 +451,7 @@
     padding-top: 85%;
 
     .btn__icon {
-      width: 60px;
-      height: 23px;
+      display: none;
     }
   }
 }
