@@ -1865,12 +1865,6 @@ button[disabled] {
 }
 
 .section-banner .card__icon .st3 {
-  opacity: 0;
-  transform: scale(0.7);
-  transition: 2s;
-}
-
-.section-banner .card__icon.anim-active .st3 {
   opacity: 1 !important;
   transform: scale(1) !important;
   transition-delay: 1.25s;

@@ -46,19 +46,19 @@
 
   .card__icon {
     animation: pulse 1s infinite ease-out;
-    .st3 {
-      opacity: 0;
-      transform: scale(.7);
-      transition: 2s;
-    }
+    //.st3 {
+    //  opacity: 0;
+    //  transform: scale(.7);
+    //  transition: 2s;
+    //}
 
-    &.anim-active {
+    //&.anim-active {
       .st3 {
         opacity: 1 !important;
         transform: scale(1) !important;
         transition-delay: 1.25s;
       }
-    }
+    //}
   }
 
 
