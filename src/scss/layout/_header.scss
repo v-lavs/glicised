@@ -110,7 +110,11 @@
     margin-bottom: 30px;
   }
 }
-
+@include respond-to($lg){
+  .header .menu_2 {
+    margin-left: 28px;
+  }
+}
 
 @include respond-to($md) {
   .header {
