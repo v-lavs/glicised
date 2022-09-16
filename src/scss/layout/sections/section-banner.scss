@@ -136,8 +136,19 @@
     bottom: 0;
 
     .btn_warm {
+
       .desk-hide {
         display: none;
+      }
+    }
+
+    .fw-400 {
+      font-weight: 400;
+      text-transform: none;
+      margin: 0 10px;
+
+      &:first-child {
+        margin-left: 0;
       }
     }
 
@@ -195,7 +206,7 @@
     align-items: flex-end;
     justify-content: center;
     padding: 0 40px 158px;
-    transition: 1.5s clip-path  cubic-bezier(0.65, 0.05, 0.36, 1);
+    transition: 1.5s clip-path cubic-bezier(0.65, 0.05, 0.36, 1);
 
     clip-path: inset(0 0 0 100%);
   }
@@ -250,6 +261,12 @@
 
 @include respond-to($md) {
   .section-banner {
+ .wrap-slider   .btn_main {
+      padding-left: 20px;
+      padding-right: 20px;
+      width: max-content;
+   font-size: 18px;
+    }
 
     &__slogan {
       font-size: 40px;
@@ -270,6 +287,21 @@
 
       .btn_light .btn__icon {
         margin-left: 0;
+      }
+    }
+
+    .wrap-slider .btn__icon {
+      margin-left: 5px;
+      width: 62px;
+    }
+
+    .wrap-anim {
+      right: auto;
+      left: 50%;
+      transform: translate(-50%, 100px);
+
+      &.anim-active {
+        transform: translate(-50%, 0);
       }
     }
   }
@@ -358,9 +390,13 @@
       bottom: auto;
       right: 0;
       left: 0;
+      transform: translate(0, 100px);
+      &.anim-active{
+        transform: translate(0, 0);
+      }
     }
 
-    .btn_warm {
+    .wrap-slider .btn_warm{
       width: 100%;
       justify-content: center;
     }
@@ -415,7 +451,8 @@
 @media screen and (max-width: 480px) {
   .section-banner .wrap-slider {
     padding-top: 85%;
-    .btn__icon{
+
+    .btn__icon {
       width: 60px;
       height: 23px;
     }
@@ -424,11 +461,12 @@
 
 @media screen and (max-width: 350px) {
   .section-banner {
-    .btn_main{
+    .btn_main {
       padding-left: 34px;
       padding-right: 34px;
     }
-    .btn_light{
+
+    .btn_light {
       padding-left: 20px;
       padding-right: 20px;
     }
