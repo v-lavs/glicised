@@ -24,11 +24,7 @@
 
     &__text {
       border: none;
-      padding-left: 0;
-
-      &:before {
-        display: none;
-      }
+      padding-left: 20px;
     }
 
     &__text-body {
@@ -37,22 +33,7 @@
     }
 
     .title_sm {
-      position: relative;
       color: $blue;
-      padding-left: 11px;
-
-      &:before {
-        position: absolute;
-        content: '';
-        display: block;
-        width: 2px;
-        top: 50%;
-        transform: translateY(-50%);
-        height: 65%;
-        left: 0;
-        background-color: $blue;
-        z-index: 1;
-      }
     }
   }
 
@@ -205,9 +186,6 @@
   }
 
   @media screen and (max-width: 1366px) {
-    .section__title {
-      font-size: 60px;
-    }
     .section-effects {
     }
     .consequent {
@@ -231,16 +209,13 @@
       }
     }
   }
+
   @include respond-to($lg) {
     .consequent {
 
       &__icon {
         width: 120px;
         height: 120px;
-      }
-
-      &__bg {
-        min-height: 490px;
       }
     }
     .section-application {
@@ -267,10 +242,6 @@
   @include respond-to($sm) {
     .consequent {
       width: 680px;
-
-      &__bg {
-        min-height: 300px;
-      }
     }
     .section-application {
       padding-bottom: 88px;
@@ -398,7 +369,7 @@
       }
 
       &__text {
-        padding: 10px 10px 10px 0;
+        padding: 10px;
       }
 
       &__icon {

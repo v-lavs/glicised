@@ -827,6 +827,9 @@ body.modal_open {
 
 .wrapper {
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .hide {
@@ -854,6 +857,7 @@ body.modal_open {
 
 .main {
   padding-top: 96px;
+  flex-grow: 1;
 }
 
 .section {
@@ -1724,6 +1728,7 @@ button[disabled] {
   color: #3B4040;
   padding-bottom: 50px;
   background-color: #F4FAFE;
+  flex-shrink: 0;
 }
 
 .footer__logo {
@@ -2920,11 +2925,7 @@ button[disabled] {
 
 .glicysed .consequent__text {
   border: none;
-  padding-left: 0;
-}
-
-.glicysed .consequent__text:before {
-  display: none;
+  padding-left: 20px;
 }
 
 .glicysed .consequent__text-body {
@@ -2933,22 +2934,7 @@ button[disabled] {
 }
 
 .glicysed .consequent .title_sm {
-  position: relative;
   color: #61A1F4;
-  padding-left: 11px;
-}
-
-.glicysed .consequent .title_sm:before {
-  position: absolute;
-  content: '';
-  display: block;
-  width: 2px;
-  top: 50%;
-  transform: translateY(-50%);
-  height: 65%;
-  left: 0;
-  background-color: #61A1F4;
-  z-index: 1;
 }
 
 .glicysed .section-effects {
@@ -3137,10 +3123,6 @@ button[disabled] {
     padding-bottom: 0;
   }
 
-  .glicysed .section__title {
-    font-size: 60px;
-  }
-
   .glicysed .consequent__bg {
     min-height: 0;
   }
@@ -3278,10 +3260,6 @@ button[disabled] {
   .glicysed .consequent__icon {
     width: 120px;
     height: 120px;
-  }
-
-  .glicysed .consequent__bg {
-    min-height: 490px;
   }
 
   .glicysed .section-application .note {
@@ -3500,11 +3478,6 @@ button[disabled] {
     font-size: 20px;
   }
 
-  .section-effects .slider-nav {
-    position: relative;
-    padding-top: 20px;
-  }
-
   .section-application .card__body {
     padding-left: 30px;
     padding-right: 30px;
@@ -3588,6 +3561,14 @@ button[disabled] {
     padding-top: 20px;
   }
 
+  .consequent-slider {
+    padding-bottom: 30px;
+  }
+
+  .consequent-slider .swiper-pagination {
+    bottom: 0 !important;
+  }
+
   .section-application .card__body {
     padding-left: 20px;
     padding-right: 20px;
@@ -3616,10 +3597,6 @@ button[disabled] {
 
   .glicysed .consequent {
     width: 680px;
-  }
-
-  .glicysed .consequent__bg {
-    min-height: 300px;
   }
 
   .glicysed .section-application {
@@ -3865,6 +3842,10 @@ button[disabled] {
   .section-benefits__thumbs {
     grid-template-columns: repeat(11, 1fr);
     width: 100%;
+  }
+
+  .section-effects .section__block-btns {
+    padding-top: 40px;
   }
 
   .section-effects .section__title {
@@ -4289,10 +4270,6 @@ button[disabled] {
     right: calc((100% - 100vw) / 2);
   }
 
-  .section-effects .section__block-btns {
-    padding-top: 0;
-  }
-
   .consequent {
     font-size: 16px;
   }
@@ -4465,7 +4442,7 @@ button[disabled] {
   }
 
   .glicysed .consequent__text {
-    padding: 10px 10px 10px 0;
+    padding: 10px;
   }
 
   .glicysed .consequent__icon {

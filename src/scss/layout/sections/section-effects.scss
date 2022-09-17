@@ -225,17 +225,10 @@
   .consequent {
     font-size: 20px;
   }
-  .section-effects {
-    .slider-nav {
-      position: relative;
-      padding-top: 20px;
-    }
-  }
 }
 
 @include respond-to($sm) {
   .section-effects {
-
     .btn {
       margin-right: 6px;
     }
@@ -246,10 +239,20 @@
 
     }
   }
+  .consequent-slider {
+    padding-bottom: 30px;
+    .swiper-pagination{
+      bottom: 0!important;
+    }
+  }
 }
 
 @include respond-to($xs) {
   .section-effects {
+    .section__block-btns {
+      padding-top: 40px;
+    }
+
     .section__title {
       padding-bottom: 10px;
       margin-bottom: 0;
@@ -297,13 +300,7 @@
 }
 
 @include respond-to($xxs) {
-  .section-effects {
 
-
-    .section__block-btns {
-      padding-top: 0;
-    }
-  }
   .consequent {
     font-size: 16px;
 
