@@ -2593,7 +2593,7 @@ button[disabled] {
   padding: 40px 40px 0;
 }
 
-.quiz-preview__img {
+.quiz-preview__img-wrap {
   margin-bottom: 40px;
 }
 
@@ -2778,7 +2778,7 @@ button[disabled] {
 
 .quiz-result-view {
   text-align: center;
-  padding: 0px 40px 60px;
+  padding: 60px 40px;
 }
 
 .quiz-result-view .title_md {
@@ -4546,7 +4546,7 @@ button[disabled] {
     max-width: 280px;
   }
 
-  .quiz-preview__img {
+  .quiz-preview__img-wrap {
     margin-bottom: 20px;
   }
 

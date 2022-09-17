@@ -7,7 +7,7 @@
 }
 
 .quiz-preview {
-  &__img {
+  &__img-wrap {
     margin-bottom: 40px;
   }
 
@@ -194,7 +194,7 @@
 
 .quiz-result-view {
   text-align: center;
-  padding: 0px 40px 60px;
+  padding: 60px 40px;
 
   .title_md {
     margin-bottom: 60px;
@@ -362,7 +362,7 @@
   .quiz-scale-wrap {
     max-width: 280px;
   }
-  .quiz-preview__img {
+  .quiz-preview__img-wrap {
     margin-bottom: 20px;
   }
   .quiz-preview article {
