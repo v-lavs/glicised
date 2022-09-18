@@ -3164,35 +3164,6 @@ button[disabled] {
   }
 }
 
-@media screen and (max-width: 1366px) and (max-height: 768px) and (min-height: 668px) {
-  .section-banner__slogan {
-    padding-top: 30px;
-    padding-right: 20px;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-    font-size: 45px;
-  }
-
-  .section-banner .card {
-    font-size: 24px;
-    padding: 0;
-  }
-
-  .section-banner__content {
-    padding-bottom: 0;
-  }
-
-  .section-banner .section__block-btns {
-    margin-top: auto;
-  }
-
-  .section-banner__inner {
-    min-height: 620px;
-    display: flex;
-    flex-direction: column;
-  }
-}
-
 @media only screen and (max-width: 1280px) {
   body {
     font-size: 18px;
@@ -4652,5 +4623,34 @@ button[disabled] {
   .section-buy .btn_light {
     padding-left: 20px;
     padding-right: 20px;
+  }
+}
+
+@media screen and (max-height: 800px) and (orientation: landscape) {
+  .section-banner__slogan {
+    padding-top: 30px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    font-size: 45px;
+  }
+
+  .section-banner .card {
+    font-size: 24px;
+    padding: 0;
+  }
+
+  .section-banner__content {
+    padding-bottom: 0;
+  }
+
+  .section-banner .section__block-btns {
+    margin-top: auto;
+  }
+
+  .section-banner__inner {
+    min-height: 540px;
+    display: flex;
+    flex-direction: column;
   }
 }

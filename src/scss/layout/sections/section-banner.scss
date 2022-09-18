@@ -219,7 +219,7 @@
   }
 }
 
-@media screen and (max-height: 768px) and (orientation: landscape)  {
+@media screen and (max-height: 800px) and (orientation: landscape)  {
   .section-banner {
     &__slogan {
       padding-top: 30px;
@@ -243,7 +243,7 @@
     }
 
     &__inner {
-      min-height: 620px;
+      min-height: 540px;
       display: flex;
       flex-direction: column;
     }
