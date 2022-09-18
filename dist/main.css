@@ -4650,6 +4650,18 @@ button[disabled] {
     padding-bottom: 0;
   }
 
+  .quiz-wrap {
+    padding-top: 0;
+  }
+
+  .quiz__step {
+    margin-bottom: 30px;
+  }
+
+  .quiz-preview {
+    padding-top: 40px;
+  }
+
   .glicysed .consequent__bg {
     min-height: 0;
   }
