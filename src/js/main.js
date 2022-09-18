@@ -314,12 +314,13 @@ $(document).ready(function () {
             const score = $('<div></div>').text(finalScore);
             const label = $('<div class="quiz-result-text"></div>').text(level.label);
 
+
             res.append(score).append(label);
             $result.html(res);
 
             $form.addClass('hidden');
             $resultView.removeClass('hidden');
-
+            $(window).scrollTop($('#quiz').offset().top - $('.header').height());
             clearOptionsValue();
             currStep = 0;
 
