@@ -898,8 +898,7 @@ body.modal_open {
   padding: 0 10px;
 }
 
-.card:hover .card__icon .st2,
-.card:focus .card__icon .st2 {
+.card .card__icon .st2 {
   transition: .5s;
   opacity: 1;
   transform: scale(1);
@@ -2323,7 +2322,8 @@ button[disabled] {
   z-index: 1;
   bottom: 0;
   width: 40.75%;
-  transform: translateY(50%) rotate(11deg);
+  transform: translateY(50%) rotate(-11deg);
+  left: 30px;
 }
 
 .section-application__content {
@@ -4324,7 +4324,7 @@ button[disabled] {
   }
 
   .section-application__img {
-    transform: translate(-50%, 50%) rotate(11deg);
+    transform: translate(-50%, 50%) rotate(-11deg);
     left: 50%;
   }
 

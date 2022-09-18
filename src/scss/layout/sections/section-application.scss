@@ -35,7 +35,8 @@
     z-index: 1;
     bottom: 0;
     width: 40.75%;
-    transform: translateY(50%) rotate(11deg);
+    transform: translateY(50%) rotate(-11deg);
+    left: 30px;
   }
 
   &__content {
@@ -242,7 +243,7 @@
     }
 
     &__img {
-      transform: translate(-50%, 50%) rotate(11deg);
+      transform: translate(-50%, 50%) rotate(-11deg);
       left: 50%;
     }
   }

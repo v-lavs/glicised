@@ -92,14 +92,14 @@ body {
     padding: 0 10px;
   }
 
-  &:hover,
-  &:focus {
+  //&:hover,
+  //&:focus {
     .card__icon .st2 {
       transition: .5s;
       opacity: 1;
       transform: scale(1);
     }
-  }
+  //}
 
   &__icon-bg {
     background-position: center;
