@@ -320,7 +320,7 @@ $(document).ready(function () {
 
             $form.addClass('hidden');
             $resultView.removeClass('hidden');
-            $(window).scrollTop($('#quiz').offset().top - $('.header').height());
+            $(window).scrollTop($('.page-quiz').offset().top);
             clearOptionsValue();
             currStep = 0;
 

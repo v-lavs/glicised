@@ -185,7 +185,7 @@
     }
   }
 
-  @media screen and (max-width: 1366px) {
+  @media screen and (max-height: 900px) and (orientation: landscape) {
     .section-effects {
     }
     .consequent {
