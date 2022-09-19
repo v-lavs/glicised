@@ -6,6 +6,9 @@
   padding-bottom: 50px;
   background-color: $light;
   flex-shrink: 0;
+  &.height{
+    padding-bottom: calc(15vh + 50px);
+  }
   &__logo {
     display: inline-block;
     max-width: 183px;
@@ -88,10 +91,30 @@
 }
 
 .disclaimer-height {
+  position: fixed;
+  display: flex;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   height: 15vh;
+  z-index: 500;
   padding: 0;
-  margin: 0 0 20px;;
+  &:before {
+    position: absolute;
+    content: '';
+    display: block;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    background: rgba(255, 255, 255, .4);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+  }
 }
+
 
 @include respond-to($sm) {
   .footer {
@@ -106,7 +129,9 @@
 @include respond-to($xs) {
   .footer {
     padding-bottom: 20px;
-
+&.height{
+  padding-bottom: calc(15vh + 20px);
+}
     &__logo {
       margin-bottom: 20px;
       width: 100%;
