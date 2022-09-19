@@ -6,9 +6,11 @@
   padding-bottom: 50px;
   background-color: $light;
   flex-shrink: 0;
-  &.height{
+
+  &.height {
     padding-bottom: calc(15vh + 50px);
   }
+
   &__logo {
     display: inline-block;
     max-width: 183px;
@@ -84,7 +86,7 @@
 
   img {
     display: block;
-    width: 100%;
+    //width: 100%;
     height: 100%;
     max-width: 100%;
   }
@@ -100,6 +102,7 @@
   height: 15vh;
   z-index: 500;
   padding: 0;
+
   &:before {
     position: absolute;
     content: '';
@@ -129,9 +132,11 @@
 @include respond-to($xs) {
   .footer {
     padding-bottom: 20px;
-&.height{
-  padding-bottom: calc(15vh + 20px);
-}
+
+    &.height {
+      padding-bottom: calc(15vh + 20px);
+    }
+
     &__logo {
       margin-bottom: 20px;
       width: 100%;
