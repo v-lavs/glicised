@@ -92,15 +92,6 @@ body {
     padding: 0 10px;
   }
 
-  //&:hover,
-  //&:focus {
-    .card__icon .st2 {
-      transition: .5s;
-      opacity: 1;
-      transform: scale(1);
-    }
-  //}
-
   &__icon-bg {
     background-position: center;
     background-size: 100px 100px;
@@ -119,13 +110,6 @@ body {
       display: inline-block;
       width: 100%;
       height: auto;
-    }
-
-    .st2 {
-      opacity: 0;
-      transform: scale(0.9);
-      transform-origin: 50% 50%;
-      transition: .5s;
     }
   }
 }
