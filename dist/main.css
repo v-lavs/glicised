@@ -4278,11 +4278,7 @@ button[disabled] {
   }
 
   .section-banner .section__block-btns {
-    justify-content: space-between;
-  }
-
-  .section-banner .section__block-btns .btn {
-    margin: 0;
+    justify-content: center;
   }
 
   .section-banner .wrap-slider {
