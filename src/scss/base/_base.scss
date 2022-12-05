@@ -209,6 +209,67 @@ sup {
   }
 }
 
+.block-buy {
+  position: fixed;
+  right: 24px;
+  top: 343px;
+  width: 82px;
+  z-index: 600;
+
+  .hexagon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  width: 82px;
+    height: 98px;
+    background-image: url(../assets/img/hexagon.svg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-bottom: 16px;
+    overflow: hidden;
+    color: #0088EC;
+    svg{
+      display: block;
+      width: 28px;
+      height: 30px;
+    }
+  }
+
+  .buy {
+    width: 82px;
+    height: 26px;
+    font-size: 16px;
+    line-height: 1;
+    color: #0088EC;
+    text-align: center;
+    background-image: url(../assets/img/substrare.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  @include respond-to($xs) {
+    width: 65px;
+    height: 86px;
+    right: 0;
+    bottom: 14vh;
+    top: auto;
+    .buy {
+      display: none;
+    }
+    .hexagon {
+      width: 65px;
+      height: 86px;
+      padding-bottom: 20px;
+      svg{
+        width: 20px;
+        height: 28px;
+      }
+    }
+  }
+}
 
 .social-bar {
   display: flex;
