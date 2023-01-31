@@ -43,11 +43,14 @@ $(document).ready(function () {
     });
 
 // SMOOTH SCROLL TO ANCHOR
-    let smoothScroll = location.hash;
+    let hash = location.hash;
+    const anchorID = hash.split('?');
+
+    const anchor = $(anchorID)[0];
     const offsetSize = $("header").innerHeight();
-    location.hash = '';
-    if ($(smoothScroll).length > 0) {
-        $('html, body').animate({scrollTop: $(smoothScroll).offset().top - offsetSize}, 1500);
+
+    if ($(anchor).length > 0) {
+        $('html, body').animate({scrollTop: $(anchor).offset().top - offsetSize}, 1500);
     }
 
 
@@ -61,7 +64,8 @@ $(document).ready(function () {
                 location.hostname == this.hostname
             ) {
                 let target = $(this.hash);
-                target = target.length ? target : $('[id=' + this.hash.slice(1) + ']');
+                target = target.length ? target : $('[id="' + this.hash.slice(1) + '"]');
+
                 if (target.length) {
                     event.preventDefault();
                     $('html, body').animate({
